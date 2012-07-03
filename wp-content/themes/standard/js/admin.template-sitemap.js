@@ -13,7 +13,7 @@
 			$('select[name=page_template]').change(function() {
 
 				if($('option:selected[value="template-sitemap.php"]').length > 0) {
-					$('option[value="template-sitemap.php"]').attr('disabled', 'disabled');	
+			$('option[value="template-sitemap.php"]').attr('disabled', 'disabled');	
 				} else {
 					$('option[value="template-sitemap.php"]').removeAttr('disabled');
 				} // end if/else
@@ -23,7 +23,7 @@
 		} // end if
 		
 		// For 'Post Editor'
-		if($('select[name=page_template]').length > 0 && $('#page_template').length > 0) {
+		if($('select[name="page_template"]').length > 0 && $('#page_template').length > 0) {
 		
 			$('#page_template').children('option')
 				.each(function() {
@@ -45,7 +45,10 @@
 })(jQuery);
 
 /**
- * TODO
+ * Scans the JavaScript sources on the page to determine which page is using the sitemap template.
+ * 
+ * $		The jQuery function
+ * returns	The ID of the page serving as the sitemap
  */
 function sitemapPageID($) {
 
@@ -74,7 +77,9 @@ function sitemapPageID($) {
 } // end findSitemapPageID
 
 /**
- * TODO
+ * Removes the post editor if the user selects the Sitemap template.
+ * 
+ * $		The jQuery function
  */
 function togglePostBodyContent($) {
 

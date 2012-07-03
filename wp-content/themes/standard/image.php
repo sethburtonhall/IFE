@@ -7,17 +7,17 @@
  */
 ?>
 <?php get_header(); ?>
-<?php $options = get_option( 'standard_theme_layout_options' ); ?>
+<?php $presentation_options = get_option( 'standard_theme_presentation_options' ); ?>
 
 <div id="wrapper">
 	<div class="container">
 		<div class="row">
  
-			<?php if ( 'left_sidebar_layout' == $options['layout'] ) { ?>
+			<?php if ( 'left_sidebar_layout' == $presentation_options['layout'] ) { ?>
 				<?php get_sidebar(); ?>
 			<?php } // end if ?>
 			
-			<div id="main" class="<?php echo 'full_width_layout' == $options['layout'] ? 'span12 fullwidth' : 'span8'; ?>" role="main">
+			<div id="main" class="<?php echo 'full_width_layout' == $presentation_options['layout'] ? 'span12 fullwidth' : 'span8'; ?>" role="main">
 			
 				<?php get_template_part( 'breadcrumbs' ); ?>
 				
@@ -45,7 +45,14 @@
 									<?php $image_attributes = wp_get_attachment_image_src( $attachment_id, 'large' ); ?>
 									<img src="<?php echo esc_url( $image_attributes[0] ); ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" />
 								</div><!-- ./content -->
-								<?php previous_image_link(); next_image_link(); ?>
+								<div id="image-thumbnails" class="clearfix">
+									<div class="fl">
+										<?php previous_image_link(); ?>
+									</div>
+									<div class="fr">
+										<?php next_image_link(); ?>
+									</div>
+								</div><!-- /#image-thumbmails -->
 							</div><!-- /.entry-content -->
 						</div> <!-- /#post -->						
 						<?php comments_template( '', true ); ?>
@@ -55,7 +62,7 @@
 				<?php } // end if  ?>
 			</div><!-- /#main -->
 		
-			<?php if ( 'right_sidebar_layout' == $options['layout'] ) { ?>
+			<?php if ( 'right_sidebar_layout' == $presentation_options['layout'] ) { ?>
 				<?php get_sidebar(); ?>
 			<?php } // end if ?>
 	

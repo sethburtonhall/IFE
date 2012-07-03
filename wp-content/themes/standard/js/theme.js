@@ -4,31 +4,6 @@
 
 (function($) {
 	$(function() {
-	
-		// If the header image is present, we also need to fade the text.
-		if($('#header-image').length > 0) { 
-			$('#logo').hover(function() {
-				$('#header-image').fadeTo('fast', 0.5);
-			}, function() {
-				$('#header-image').fadeTo('fast', 1.0);
-			});
-		} // end if
-			
-		// Search
-		if($('#s').length > 0) {
-			
-			var sQuery = $('#s').val();
-			$('#s').focus(function() {
-				if($('#s').val() === 'Search...') {
-					$('#s').val('');
-				} // end if
-			}).blur(function() {
-				if($('#s').val() === 'Search...' || $('#s').val().length === 0) {
-					$('#s').val(sQuery);
-				} // end if
-			});
-			
-		} // end if
 		
 		// Bootstrap Multi-Level Menus
 		$('.submenu').hover(function() {
@@ -52,6 +27,14 @@
 			
 		});
 		
+		// Center Header Logo only if the background image is present
+		processLogoAndBackground($);
+		$(window).resize(function() {
+			processLogoAndBackground($);
+		}).load(function() {
+			processLogoAndBackground($);
+		});
+
 		// If the Activity Widget is present, activate the first tab
 		if($('.tabbed-widget').length > 0) { 
 			
@@ -85,24 +68,15 @@
 		
 		} // end if
 		
-		// Reveal available commenting options
-		if($('.form-allowed-tags').length > 0) {
-
-			$('.form-allowed-tags').children('a')
-				.click(function(evt) {
-					evt.preventDefault();
-					$(this).siblings('code')
-						.fadeToggle('fast');
-				});
-				
-		} // end if
-		
 		// FitVid
 		$('.entry-content').fitVids();
 		
 	});
 })(jQuery);
 
+/**
+ * In mobile view with the left-sidebar layout, repositions the sidebar below the content.
+ */
 function moveSidebarInLeftSidebarLayout($) {
 
 	if($('#wrapper').width() < 768) {
@@ -112,3 +86,32 @@ function moveSidebarInLeftSidebarLayout($) {
 	} // end if
 
 } // end moveSidebarInLeftSidebarLayout
+
+/**
+ * This positions the logo against the background so that it's centered and properly positioned for
+ * responsive behavior.
+ *
+ * @params	$	A reference to the jQuery function.
+ */
+function processLogoAndBackground($) {
+	
+	var $background = null;
+	if( ( $background = $('#header-image').children(':first').children('img') ).length > 0 ) {
+	
+		$('#hgroup').css({
+			padding: 0,
+			marginTop: Math.round( $background.height() / 2 ) - Math.round( $('#hgroup').height() / 2 )
+		});
+		
+	} // end if
+	
+	// Center header widgets only if the background is presents
+	if( $background.length > 0 && $('#header-logo').length > 0 ) {
+		$('#header-widget').css({
+			marginTop: $('#header-widget').height() / 2
+		});
+	} // end if
+		
+	
+
+} // end processLogoAndBackground

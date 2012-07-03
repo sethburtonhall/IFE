@@ -80,6 +80,10 @@ input[type="submit"]:hover {
 	padding-right: 40px;
 }
 
+#top-ad.imageyup {
+	float: left;
+}
+
 /* ------------------------------------------------------------------------ 4. Posts */
 
 .entry-content .wp-caption.alignleft {
@@ -227,6 +231,19 @@ input[type="submit"]:hover {
 .pre-comment-avatar.admin-avatar {
 	margin-left: 10px;
 	margin-right: 0;
+}
+
+#commentform #comment-form-wrapper {
+	float: right;
+}
+
+#commentform #comment-form-avatar {
+	float: right;
+}
+
+#commentform #comment-form-wrapper #comment-form-elements,
+#commentform #comment-form-wrapper #comment-form-elements-full {
+	float: left;
 }
 
 #commentform .code {
