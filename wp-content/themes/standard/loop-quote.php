@@ -18,16 +18,16 @@
 				<?php } else { ?>
 					<?php the_content( __( 'Continue Reading...', 'standard' ) ); ?>
 				<?php } // end if/else ?>
-			</div>
+			</div><!-- /.entry-content -->
 	</div> <!-- /.post-header -->
 
 	<div id="content-<?php the_ID(); ?>" class="entry-content clearfix">	
 		
 		<?php if( '' !== get_the_title() ) { ?>
 			<?php if( is_single() ) { ?>
-				<h1 class="post-title"><?php the_title(); ?></h1>	
+				<h1 class="post-title entry-title"><?php the_title(); ?></h1>	
 			<?php } else { ?>
-				<h2 class="post-title">
+				<h2 class="post-title entry-title">
 					<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf( esc_attr__( '%s', 'standard' ), the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a>
 				</h2>
 			<?php } // end if ?>
@@ -50,9 +50,9 @@
 			
 				<?php if( is_multi_author() ) { ?>
 					<span class="the-author"><?php _e( ' Posted by ', 'standard' ); ?><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php echo get_the_author_meta( 'display_name' ); ?>"><?php echo the_author_meta( 'display_name' ); ?></a></span>
-					<span class="the-time"><?php _e( ' on ', 'standard' ); echo get_the_time( get_option( 'date_format' ) ); ?></span>
+					<span class="the-time updated"><?php _e( ' on ', 'standard' ); echo get_the_time( get_option( 'date_format' ) ); ?></span>
 				<?php } else { ?>
-					<?php printf( '<span class="the-time">' . __( 'Posted on %1$s', 'standard' ) . '</span>', get_the_time( get_option( 'date_format' ) ) ); ?>
+					<?php printf( '<span class="the-time updated">' . __( 'Posted on %1$s', 'standard' ) . '</span>', get_the_time( get_option( 'date_format' ) ) ); ?>
 				<?php } // end if ?>
 			
 				<?php $category_list = get_the_category_list( __( ', ', 'standard' ) ); ?>

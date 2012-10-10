@@ -3,18 +3,17 @@ Contributors: Taylor Lovett
 Donate link: http://www.taylorlovett.com
 Tags: contact form, web form, custom contact form, custom forms, captcha form, contact fields, form mailers
 Requires at least: 2.8.1
-Tested up to: 3.3.1
-Stable tag: 5.0.0.1
+Tested up to: 3.4.1
+Stable tag: 5.1.0.1
 
-Gauranteed to be the most customizable and intuitive contact form plugin for Wordpress.
+A customizable and intuitive contact form plugin for Wordpress.
 
 == Description ==
 
-Guaranteed to be 1000X more customizable and intuitive than Fast Secure Contact Forms or Contact Form 7. Customize every aspect of your forms without any knowledge of CSS: borders, padding, sizes, colors. Ton's of great features. Required fields, captchas, tooltip popovers, unlimited fields/forms/form styles, use a custom thank you page or built-in popover with a custom success message set for each form.
+Customize every aspect of your forms without any knowledge of CSS: borders, padding, sizes, colors. Ton's of great features. Required fields, captchas, tooltip popovers, unlimited fields/forms/form styles, use a custom thank you page or built-in popover with a custom success message set for each form.
 
 Special Features:
 ------------------
-Custom Contact Forms 5.0 will revolutionize the idea of a Wordpress plugin.
 
 *	__NEW__ Rearrange fields with a drag-and-drop interface
 *	__NEW__ Export form submissions to .CSV
@@ -64,8 +63,7 @@ Custom Contact Forms 5.0 will revolutionize the idea of a Wordpress plugin.
 
 Restrictions/Requirements:
 -------------------------
-*	Works with Wordpress 2.8.1+
-*	PHP 5
+*	Works with Wordpress 3.0+
 *	PHP register_globals and safe_mode should be set to "Off" (this is done in your php.ini file)
 *	Your theme must call wp_head() and wp_footer()
 
@@ -143,6 +141,10 @@ We are planning to add popover forms and file attachments soon.
 Visit http://www.taylorlovett.com/wordpress-plugins for screenshots. Right now all the screenshots are from Version 1, thus are quite out-dated. Install the plugin to see what it looks like. You won't regret it. I promise!
 
 == Changelog ==
+
+= 5.0.0.1 =
+*   custom-contact-forms-admin.php - Small UI updates
+*   css/custom-contact-forms-admin.css - New admin styles
 
 = 5.0.0.1 =
 *	ishuman fixed field bug fixed

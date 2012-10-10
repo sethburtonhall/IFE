@@ -22,6 +22,8 @@ function processStandardHeader($) {
 	// If the header bottom element	$('#standard-theme-logo').hide(); is present, then there's a background image
 	if($('#header-bottom').length > 0) {
 		$('#header-top').addClass('has-background');
+	} else {
+		$('#header-top').addClass('no-background');
 	} // end if
 	
 	// Make sure the description color matches the color of the header, if custom colors are being used.			
@@ -50,14 +52,19 @@ function processStandardHeader($) {
 		
 		// Position the logo making sure that we can get the closest margins as possible
 		$background = $('#standard-theme-background');
-		var iTopMargin = Math.round( $background.height() / 2 ) - Math.round( $logo.height() / 4 );
-		if( Math.round( $background.height() / 2 ) - Math.round( $logo.height() / 2 ) ) {
-			iTopMargin = Math.round( $background.height() / 2 ) - Math.round( $logo.height() / 2 );
-		} // end if/else
+		var iTopMargin = Math.round( $background.height() / 2 ) - Math.round( $logo.height() / 2 );
+		if(0 < $.trim($('#name').text()).length) {
+			iTopMargin = Math.round( $background.height() / 2 ) - Math.round( ( $('#name').height() + $('#desc').height() ) / 2 );
+		} // end if
 		
 		$logo.css({
 			marginTop: iTopMargin
 		}).fadeIn('fast');
+		
+		// If the background image's height is smaller than the logo, then set the logo's height equal to background image's height
+		if($background.height() < $logo.height()) {
+			$logo.height($background.height());
+		} // end if
 		
 	} else {
 	

@@ -6,15 +6,15 @@
 					<div class="row">
 
 						<div id="left-footer-widgets" class="span4 clearfix">
-							<?php dynamic_sidebar( 'sidebar-2' ); ?>
+							<?php dynamic_sidebar( 'sidebar-3' ); ?>
 						</div><!-- /#left-footer-widget -->
 
 						<div id="center-footer-widgets" class="span4 clearfix">
-							<?php dynamic_sidebar( 'sidebar-3' ); ?>
+							<?php dynamic_sidebar( 'sidebar-4' ); ?>
 						</div><!-- /#center-footer-widget -->
 
 						<div id="right-footer-widgets" class="span4 clearfix">
-							<?php dynamic_sidebar( 'sidebar-4' ); ?>
+							<?php dynamic_sidebar( 'sidebar-5' ); ?>
 						</div><!-- /#right-footer-widget -->
 
 					</div><!-- /row -->
@@ -55,5 +55,14 @@
 		</div><!-- /#sub-floor -->
 	</div><!-- /#footer -->
 	<?php wp_footer(); ?>
+
+	<script type="text/javascript">
+		jQuery("h1").fitText(1.7, { minFontSize: '23px', maxFontSize: '33px' });
+	  jQuery("#hero-h1").fitText(1.2, { minFontSize: '30px', maxFontSize: '50px' });
+	  jQuery("h2").fitText(2, { minFontSize: '20px', maxFontSize: '24px' });
+	  jQuery("h3").fitText(1, { minFontSize: '14px', maxFontSize: '20px' });
+	  jQuery("").fitText(1, { minFontSize: '14px', maxFontSize: '20px' });
+	</script>
+
 	</body>
 </html>

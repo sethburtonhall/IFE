@@ -69,6 +69,40 @@ class Standard_SEO {
 
 			$html .= '<p id="search-results-title"><span id="post-title"></span>' . __( ' - ', 'standard' ) . '<span id="blog-title"></span></p>';
 			$html .= '<p id="search-results-meta"><span id="permalink"></span></p>';
+			
+			// Look to see if the user has the Google Profile URL specified
+			$current_user = wp_get_current_user();
+			if( '' != get_user_meta( $current_user->ID, 'google_plus', true ) ) {
+			
+				// Determine if the user is using a gplus.to address
+				$google_plus_url = user_trailingslashit( get_user_meta( $current_user->ID, 'google_plus', true ) );
+				if( standard_is_gplusto_url ( $google_plus_url ) ) {
+				
+					$google_plus_url = standard_get_google_plus_from_gplus( $google_plus_url ); 					
+
+					// Read the URL into an array
+					$google_plus_id = explode( '/',  trailingslashit( $google_plus_url ) );
+					
+					// Note the third index of this array should alwas be at 3 after user_trailingslashit
+					$google_plus_id = $google_plus_id[3];
+				
+				// The user isn't using gplus.to, so the index of the ID is different
+				} else {
+
+					// Read the URL into an array
+					$google_plus_id = explode( '/',  trailingslashit( $google_plus_url ) );
+					
+					// Note the third index of this array should alwas be at 5 after user_trailingslashit
+					$google_plus_id = $google_plus_id[5];
+				
+				} // end if/else
+								
+				// Now create the element
+				$html .= '<p id="google-plus-avatar">';
+					$html .= '<img src="https://profiles.google.com/s2/photos/profile/' . $google_plus_id . '" alt="" width="44" height="44" />';
+				$html .= '</p>';
+				
+			} // end if
 
 			$html .= '<p id="search-results-meta-description"><span id="date">Date</span> - <span id="description">' . get_post_meta( $post->ID, 'standard_seo_post_meta_description', true ) . '</span></p>';
 			$html .= '<span id="site-title" class="hidden">' . get_bloginfo( 'name' ) . '</span>';

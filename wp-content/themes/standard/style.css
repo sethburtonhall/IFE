@@ -1,7 +1,7 @@
 /*  
 Theme Name: Standard
 Theme URI: http://standardtheme.com
-Version: 3.0
+Version: 3.1
 Description: Standard is a sleek, exacting product designed for uncluttered and sophisticated presentation of your content on desktop and mobile devices.
 Tags: blog, professional, clean, minimal, simple, black, white, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, responsive-width, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, translation-ready
 Author: 8BIT
@@ -83,6 +83,21 @@ img {
 	margin-bottom: 20px;
 	margin-left: auto !important; 
 	margin-right: auto !important; 
+}
+
+
+/* 
+ * override Bootstrap span class that was 
+ * causing issues with some post_class() tags 
+ */
+[class*="span"] {
+    float: none;
+    margin-left: 0;
+}
+
+[class^="span"] {
+    float: left;
+    margin-left: 20px;
 }
 
 input[type="submit"] {
@@ -220,9 +235,8 @@ pre {
 /* ------------------------------------------------------------------------ 3. Main Styles */
 
 html {
-	background: #000; /* color of footer bucket */
 	overflow-y: auto;
-	-webkit-text-size-adjust: none;
+	-webkit-text-size-adjust: auto;
 }
 
 body {
@@ -230,7 +244,7 @@ body {
 }
 
 #wrapper {
-	padding: 0 0 40px;
+	padding: 20px 0 40px;
 }
 
 /* ------------------------------------------------------------------------ 4. Menu-Navigation */
@@ -275,7 +289,7 @@ body {
 }
 
 #menu-under-header {
-	margin: 0 0 20px;
+	margin: 0;
 	z-index: auto;
 }
 
@@ -371,14 +385,19 @@ body {
 
 #head-wrapper {
 	position: relative;
+	overflow: hidden;
 }
 
 
 #hgroup {
-	padding: 45px 0;
+	padding: 45px 0 20px;
 	position: relative;
 }
 
+
+#header {
+	min-height: 20px;
+}
 
 #logo {
 	float: left;
@@ -417,18 +436,15 @@ body {
 
 /* if header image is present lets adjust a few things */ 
 
-
-.imageyup #head-wrapper {
-	margin-top: 45px;
-	margin-bottom: 45px;
-}
-
 .imageyup #hgroup {
 	position: absolute;
 	width: 94%;
 	margin: 0 4%;
 }
 
+#header-image a {
+	display: block;
+}
 
 /* ------------------------------------------------------------------------ 6. Posts */
 
@@ -609,7 +625,6 @@ p.wp-caption-text {
 	margin-top: -1px;
 }
 
-
 #single-post-nav .pager {
 	margin-bottom: 20px;
 }
@@ -718,29 +733,33 @@ p.wp-caption-text {
 
 .wp-pagenavi a, .wp-pagenavi .pages, .wp-pagenavi .current {
 	background: #fff;
-  float: left;
-  display: block;
-  padding: 0 14px;
-  line-height: 34px;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-left-width: 0;
+	float: left;
+	display: block;
+	padding: 0 14px;
+	line-height: 34px;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	border-left-width: 0;
+}
+
+.wp-pagenavi .extend { 
+	display: none; 
 }
 
 .wp-pagenavi a:hover,
 .wp-pagenavi .active a {
-  background-color: #f5f5f5;
+ 	background-color: #f5f5f5;
 }
 
 .wp-pagenavi .current {
-  color: #999999;
-  cursor: default;
+	color: #999999;
+	cursor: default;
 }
 
 .wp-pagenavi .current {
-  color: #999999;
-  cursor: default;
-  background-color: transparent;
+	color: #999999;
+	cursor: default;
+	background-color: transparent;
 }
 
 .wp-pagenavi .pages {
@@ -969,6 +988,10 @@ a.post-permalink:hover {
 
 .post.format-link .the-comment-link {
 	float: right;
+}
+
+.post.format-link .link-description {
+	margin-top: 20px;
 }
 
 #standard-post-advertisement-image,
@@ -1519,50 +1542,6 @@ table#wp-calendar th, table#wp-calendar td {
 	-webkit-border-radius: 4px;
 }
 
-/* 125x125 Standard ad widget */
-
-.ad-125x125 .thumbnails {
-	margin-left: -20px;
-}
-
-.ad-125x125 .thumbnails > li .thumbnail {
-	/* max-height: 125px; */
-	display: block;
-	overflow: hidden;
-	background: #fff;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	border-radius: 0;
-	border-color: #ddd;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.015);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.015);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.015);
-}
-
-.ad-125x125 .thumbnails > li a.thumbnail:hover {
-	border-color: #dedede;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-
-
-.ad-125x125 .thumbnails > li .thumbnail > img {
-	padding: 2px 0;
-	width: 125px;
-	height: auto;
-}
-
-/* 300x250 Standard ad widget */
-.ad-300x250 {
-	
-}
-
-.ad-300x250 img {
-	width: 100%;
-}
-
-
 /* Jetpack Widgets */
 
 .entry-content .twitter-tweet-rendered {
@@ -1678,11 +1657,15 @@ table#wp-calendar th, table#wp-calendar td {
 	padding: 10px 0;
 }
 
+#footer-links {
+	float: left;
+}
 
 #sub-floor #credit {
 	color: #666;
-	padding: 10px 0;
+	padding: 13px 0;
 	text-align: right;
+	float: right;
 }
 
 #sub-floor #credit a {
@@ -1741,6 +1724,7 @@ body.error404 {
 .no-results .entry-content {
 	padding: 20px 0;
 }
+
 
 /* ------------------------------------------------------------------------ 11. Page Templates */
 
@@ -1849,6 +1833,16 @@ ul#sitemap-posts ul {
 
 /* ------------------------------------------------------------------------ 12. IE8 Styles */
 
+#ie8 .thumbnail,
+#ie8 .thumbnail a,
+#ie8 .thumbnail a img {
+	width: auto;
+}
+
+#ie8 .post-title a {
+	display: block;
+}
+
 #ie8 .format-image img {
 	width: auto\9;
 }
@@ -1883,6 +1877,10 @@ ul#sitemap-posts ul {
 #ie8 body #comment-form-avatar img {
 	min-width: 50px;
 	min-height: 50px;
+}
+
+#ie8 .menu-navigation {
+	min-height: 40px;
 }
 
 /* ------------------------------------------------------------------------ 13. inline-grid */
@@ -1936,7 +1934,7 @@ ul#sitemap-posts ul {
 		line-height: 1;
 	}
 	
-	#header-widget .ad-468x60 {
+	#header-widget .standard-billboard {
 		width: 92%;
 		margin: 0 auto;
 		text-align: center;
@@ -1995,7 +1993,7 @@ ul#sitemap-posts ul {
 	}
 	
 	/* sidebar / widgets */
-	.ad-125x125 .thumbnails > li .thumbnail > img {
+	.standard-ad-125x125 .thumbnails > li .thumbnail > img {
 		max-width: 112px;
 		padding: 0;
 	}
@@ -2027,7 +2025,7 @@ ul#sitemap-posts ul {
 	}
 	
 
-	#header-widget .ad-468x60 {
+	#header-widget .standard-ad-billboard {
 		margin-top: 10px;
 	}
 
@@ -2096,6 +2094,12 @@ ul#sitemap-posts ul {
 		margin-left: 15px;
 	}
 	
+	/* wp-pagnavi */
+	.wp-pagenavi .larger, 
+	.wp-pagenavi .smaller { 
+		display: none; 
+	}
+	
 			
 }
 
@@ -2107,7 +2111,7 @@ ul#sitemap-posts ul {
 		line-height: 1;
 	}
 	
-	#header-widget .ad-468x60 {
+	#header-widget .standard-billboard {
 		width: 92%;
 		margin: 0 auto;
 		text-align: center;
@@ -2134,14 +2138,31 @@ ul#sitemap-posts ul {
 		padding-right: 20px;
 	}
 	
-	#sub-floor #credit {
+	#footer .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	#footer #footer-links {
+		float: none;
+		padding: 0 20px;
+	}
+	
+	#footer #credit {
 		text-align: center;
+		float: none;
+		padding: 0 20px;
 	}
 	
 	/* post format status */
 	.post.format-status .post-avatar {
 		float: left;
 		margin: 0 20px 20px 0;
+	}
+	
+	/* WP-pagenavi */
+	.wp-pagenavi { 
+		margin-bottom: 25px; 
 	}
 	
 }

@@ -36,22 +36,14 @@
 		<?php } // end if ?>
 		<?php wp_head(); ?>
 
+			<script src="/wp-content/themes/standard-child-theme-kit/js/lib/jquery.fittext.js"></script>
 
-			<link rel="stylesheet" href="wp-content/themes/standard-child-theme-kit/css/flexslider.css" type="text/css">
-			<link rel="stylesheet" href="http://localhost:8888/ife/wp-content/themes/standard-child-theme-kit/css/font-awesome.css">
-			<script src="wp-content/themes/standard-child-theme-kit/js/jquery.flexslider.js"></script>
+			<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
 
-			<script type="text/javascript" charset="utf-8">
-			  jQuery(window).load(function() {
-			    jQuery('.flexslider').flexslider();
-			  });
-			</script>
-
-			<script type="text/javascript">
+			<script>
 				$('#myModal').modal(options)
 			</script>
-
-
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -74,7 +66,7 @@
 						</a>
 
 						<div class="nav-collapse above-header-nav-collapse">
-							<div class="home-icon"> <a href="http://localhost:8888/ife" title="Home"><img src="http://localhost:8888/ife/wp-content/uploads/2012/07/symbol.png" alt="Indie Film Equities Home Icon"></a></div>
+							<div class="home-icon"> <a href="http://localhost:8888" title="Home"><img src="http://localhost:8888/wp-content/uploads/2012/07/symbol.png" alt="Indie Film Equities Home Icon"></a></div>
 
 							<?php
 								wp_nav_menu(

@@ -19,14 +19,18 @@
 							
 				<div id="main" class="<?php echo 'full_width_layout' == $presentation_options['layout'] ? 'span12 fullwidth' : 'span8'; ?> clearfix" role="main">
 				
-					<?php get_template_part( 'breadcrumbs' ); ?>
+					<?php 
+					if( ! is_front_page() ) {
+						get_template_part( 'breadcrumbs' );
+					} // end if
+					?>
 				
 					<?php if ( have_posts() ) { ?>
 						<?php while ( have_posts() ) {
 							 the_post(); ?>
 							<div id="post-<?php the_ID(); ?> format-standard" <?php post_class( 'post' ); ?>>
 								<div class="post-header clearfix">
-									<h1 class="post-title"><?php the_title(); ?></h1>	
+									<h1 class="post-title entry-title"><?php the_title(); ?></h1>	
 								</div> <!-- /.post-header -->						
 								<div id="content-<?php the_ID(); ?>" class="entry-content clearfix">
 									<div class="content">

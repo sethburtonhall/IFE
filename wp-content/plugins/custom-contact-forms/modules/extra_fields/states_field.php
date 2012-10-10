@@ -17,7 +17,7 @@ if (!class_exists('ccf_states_field')) {
 				$tooltip_class = '';
 			} else {
 				$instructions_attr = ' title="'.$field_instructions.'" ';
-				$tooltip_class = 'ccf_tooltip_field';
+				$tooltip_class = 'ccf-tooltip-field';
 			}
 			$this->field_code .= '<select name="usaStates" class="'.$tooltip_class.' ' . $class_attr . '" ' . $id_attr . $instructions_attr . '>' . "\n";
 			$states = array('Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida',

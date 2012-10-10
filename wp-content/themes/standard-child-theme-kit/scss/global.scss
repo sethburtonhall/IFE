@@ -1,0 +1,471 @@
+/* ------------------------------------------------------------------------ Import Standard Styles */
+
+@import "../../standard/style.css";
+@import "font-awesome";
+@import "font-awesome-ie7";
+
+@import "compass";
+@import "compass/css3";
+@import "compass/typography";
+
+@import "variables";
+
+@import "wells";
+
+@include establish-baseline;
+
+/* ------------------------------------------------------------------------ Global */
+
+p:empty {
+  display: none;
+}
+
+*,
+::after,
+::before {
+  @include box-sizing(border-box);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  display: inline-block;
+  width: 100%;
+  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body p, h2, h3, h4, h5, h6{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.post .entry-content,
+.post .entry-summary {
+  padding: 18px 20px 20px;
+}
+
+#film-page h1 {
+  border-top: 2px solid $darkgray;
+  border-bottom: 2px solid $darkgray;
+  padding-left: 10px;
+  margin-bottom: $basespace;
+}
+
+.awesome {
+  @include adjust-font-size-to(30px);
+  position: relative;
+  top: 3px;
+  padding-right:5px;
+}
+
+.post-header {
+	display: none;
+}
+
+.module {
+  float: left;
+  margin-bottom: 40px;
+}
+
+#text-4 h4{
+  color: #FFF;
+}
+
+.twitter {
+  color: $twitter;
+}
+
+.wp-caption-text {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+.widget ul li a {
+color: $link;
+}
+
+.widget ul li a:hover {
+  color: $link-hover;
+}
+
+/* ------------------------------------------------------------------------ Bootstrap Add-Ons */
+
+.container-fluid {
+  padding: 0px;
+}
+
+.btn-flat {
+  filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+  @include box-shadow(0);
+  background-image:none;
+  border:0;
+  @include border-radius(0);
+}
+
+/*#film-page .offset1 {
+  margin-left: 95px;
+}*/
+
+blockquote {
+  border-left: 5px solid #7CAACD;
+  font-style: italic;
+}
+
+.img-rounded {
+    -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+        border-radius: 4px;
+}
+
+.img-circle {
+    -webkit-border-radius: 500px;
+      -moz-border-radius: 500px;
+        border-radius: 500px;
+  margin-bottom: 0px;
+}
+
+/* ------------------------------------------------------------------------ Nav */
+
+.nav.social-icons li:nth-child(3) {
+  display: none;
+}
+
+.navbar .social-icons > li {
+  margin: 2px 0 0px 12px;
+}
+
+.home-icon {
+  float:left;
+  padding-top: 2px;
+  width: 35px;
+  height: 35px;
+}
+
+.navbar .nav {
+  margin-left: 10px;
+}
+
+.spotlight-hr {
+  border-top: 1px solid $darkgray;
+  margin: 18px 0px;
+}
+
+/* ------------------------------------------------------------------------ Home */
+
+.home .marbot {
+  margin-bottom: 40px;
+}
+
+.home .breadcrumb {
+  display: none;
+}
+
+/*.home .hero-unit {
+  margin: $basespace 0px 30px 0px;
+  padding:10px 60px;
+  text-align: center;
+}
+
+.home .hero-unit h1 {
+  @include adjust-font-size-to(49px);
+}*/
+
+/*.home h2:first-child{
+
+}*/
+
+.home #wrapper img {
+  margin-bottom: $basespace;
+}
+
+#spotlight-image {
+ margin-bottom: 0px !important;
+}
+
+.fademe img,
+a img {
+  @include opacity(1);
+  @include transition(opacity 0s ease-in-out)
+}
+
+.fademe img:hover,
+a img:hover {
+  @include opacity(0.9);;
+}
+
+/* ------------------------------------------------------------------------ Sidebar */
+
+.standard-pi-pic {
+  padding: 13px;
+}
+#sidebar .widget-title {
+  color: #fff;
+}
+
+#mc_embed_signup {
+  background:transparent;
+  clear:left;
+  @include adjust-font-size-to(14px);
+  font-family: 'Helvetica-Neue' Helvetica,Arial,sans-serif;
+}
+
+#mc_embed_signup form {
+  padding: 10px 0 10px 0 !important;
+}
+
+#mc_embed_signup input.email {
+  width: 100% !important;
+  padding: 17px 0px !important;
+}
+
+/* ------------------------------------------------------------------------ FAQ */
+
+#faq h3 {
+  text-align: center;
+  margin-bottom: $basespace;
+}
+
+#faq .icon-large {
+  display: block;
+  line-height: normal;
+  height: 50px;
+}
+
+#faq .icon-large::before {
+  @include adjust-font-size-to(64px);
+}
+
+#faq p {
+  text-align: center;
+}
+
+#faq ul {
+  margin: 0px;
+}
+
+#faq li {
+  list-style: none;
+}
+
+.accordion {
+  margin-bottom: 18px;
+}
+
+.accordion-group {
+  margin-bottom: 2px;
+  border: 1px solid #e5e5e5;
+  @include border-radius (4);
+}
+
+.accordion-heading {
+  border-bottom: 0;
+}
+
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+}
+
+.accordion-inner {
+  padding: 9px 15px;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ------------------------------------------------------------------------ Contact */
+
+#myModal input[type="submit"] {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  background-color: #5BB75B;
+/*  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(top, #5bc0de, #2f96b4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);*/
+
+  filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+  @include box-shadow(0);
+  background-image:none;
+  border:0;
+  @include border-radius(0);
+  padding: 9px 14px !important;
+  @include adjust-font-size-to(15px);
+  line-height: normal;
+}
+
+/*
+  input:hover [type="submit"] {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  background-color: #2F96B4;
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(top, #5bc0de, #2f96b4);
+}
+
+input:active [type="submit"] {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #2f96b4;
+}
+*/
+
+#myModal input[type="submit"]:hover {
+  background-position: 0 -15px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #51A351;
+}
+
+#myModal input[type="submit"]:active {
+  background-position: 0 -15px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#mc_embed_signup input[type="submit"]{
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  background-color: $darkgray;
+  filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+  @include box-shadow(0);
+  background-image:none;
+  border:0;
+  @include border-radius(0);
+  padding: 9px 14px !important;
+  @include adjust-font-size-to(15px);
+  line-height: normal;
+}
+
+#mc_embed_signup input[type="submit"]:hover {
+  background-position: 0 -15px;
+  color: #fff;
+  text-decoration: none;
+  background-color: $darkgray;
+}
+
+#mc_embed_signup input[type="submit"]:active {
+  background-position: 0 -15px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/*form input[type="text"], textarea {
+    width: 100% !important;
+  }
+
+form select {
+  width: 100% !important;
+}*/
+
+/* ------------------------------------------------------------------------ Footer */
+
+/*#footer {
+  background: url('../images/footer-bg.jpg') no-repeat 99% 50%;
+}*/
+
+/* ------------------------------------------------------------------------ Media Queries */
+
+/* Smartphones */
+@media (max-width: 480px) {
+
+#site-description {
+  color: $darkgray;
+  @include adjust-font-size-to(13px);
+  letter-spacing: .1em;
+}
+
+#hgroup {
+  padding: 10px 0px 28px 0;
+  position: relative;
+}
+
+.home .hero-unit {
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.home-well {
+  padding: 87px 0px 0px 0px;
+}
+
+.well, .investment-well {
+  margin-bottom: $basespace !important;
+}
+
+.step-one-well,
+.step-two-well,
+.step-three-well,
+.step-four-well,
+.home2-well,
+.home3-well {
+  margin-bottom: $basespace !important;
+}
+
+.spotlight-hr {
+  border-top: 1px solid $darkgray;
+  margin: 18px 0px !important;
+}
+
+}
+
+/* Tablet and Mobile */
+@media (max-width: 979px) {
+
+.home-icon{
+  display: none;
+}
+
+.navbar .social-icons > li {
+  margin: 5px 0 0px 12px;
+}
+
+.step-three-well {
+  padding: 67px 14px 19px 19px;
+}
+
+.well::before {
+  @include adjust-font-size-to(18px);
+}
+
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+
+#footer .container {
+  padding-left: $basespace;
+  padding-right: $basespace;
+}
+
+}
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+
+}
+

@@ -275,7 +275,7 @@ function fav_icon_display() {
 		$html .= '<input type="button" class="button" id="delete_fav_icon" value="' . __( 'Delete', 'standard' ) . '"/>';
 	} // end if
 
-	$html .= '&nbsp;<span class="description">' . __( 'Dimensions: 144px x 144px. Used for favicon and mobile devices. <a href="http://docs.8bit.io/standard/admin-panel/presentation/" target="_blank">' . __( 'Learn more', 'standard' ) . '</a>. ', 'standard' ) . '</span>';
+	$html .= '&nbsp;<span class="description">' . __( 'Dimensions: 144px x 144px. Used for favicon and mobile devices.', 'standard' ) . '<a href="http://docs.8bit.io/standard/admin-panel/presentation/" target="_blank">' . __( 'Learn more', 'standard' ) . '</a></span>';
 
 	echo $html;
 
@@ -331,7 +331,7 @@ function logo_display() {
 /**
  * Renders the left-sidebar layout option.
  *
- * @params	$args	The array of options used for rendering the option. Includes a path to the option's image.
+ * @param	$args	The array of options used for rendering the option. Includes a path to the option's image.
  */
 function left_sidebar_presentation_display( $args ) {
 
@@ -347,7 +347,7 @@ function left_sidebar_presentation_display( $args ) {
 /**
  * Renders the right-sidebar layout option.
  *
- * @params	$args	The array of options used for rendering the option. Includes a path to the option's image.
+ * @param	$args	The array of options used for rendering the option. Includes a path to the option's image.
  */
 function right_sidebar_presentation_display( $args ) {
 
@@ -363,7 +363,7 @@ function right_sidebar_presentation_display( $args ) {
 /**
  * Renders the full width layout option.
  *
- * @params	$args	The array of options used for rendering the option. Includes a path to the option's image.
+ * @param	$args	The array of options used for rendering the option. Includes a path to the option's image.
  */
 function full_width_presentation_display( $args ) {
 
@@ -379,7 +379,7 @@ function full_width_presentation_display( $args ) {
 /**
  * Renders the breadcrumb options.
  *
- * @params	$args	The array of options used for rendering the option.
+ * @param	$args	The array of options used for rendering the option.
  */
 function display_breadcrumbs_display() {
 
@@ -404,7 +404,7 @@ function display_breadcrumbs_display() {
 /**
  * Renders the options for displaying Featured Images.
  *
- * @params	$args	The array of options used for rendering the option.
+ * @param	$args	The array of options used for rendering the option.
  */
 function display_featured_images_display( $args ) {
 
@@ -427,9 +427,9 @@ function display_featured_images_display( $args ) {
  * this function loops through the incoming options and verifies they are either empty strings
  * or the number 1.
  *
- * @params	$input	The unsanitized collection of options.
+ * @param	$input	The unsanitized collection of options.
  *
- * @returns			The collection of sanitized values.
+ * @return			The collection of sanitized values.
  */
 function standard_theme_presentation_options_validate( $input ) {
 
@@ -456,26 +456,12 @@ function standard_theme_presentation_options_validate( $input ) {
  */
 function get_standard_theme_default_social_options() {
 
-	// Build up the semicolon delimited string of the default icons
-	$available_icons = '';
-	if( $handle = opendir( get_template_directory() . '/images/social/small' ) ) {
-
-		while( false !== ( $filename = readdir( $handle ) ) ) {
-			if( $filename != '.' && $filename != '..' ) {
-				$available_icons .= get_template_directory_uri() . '/images/social/small/' . $filename . ';';
-			} // end if
-		} // end while
-
-		closedir( $handle );
-
-	} // end if
-
 	$defaults = array(
 		'active-social-icons'		=> '',
-		'available-social-icons' 	=> $available_icons
+		'available-social-icons' 	=> ''
 	);
 
-	return apply_filters ( 'standard_theme_default_social_options', $defaults );
+	return apply_filters ( 'standard_theme_social_options', $defaults );
 
 } // end get_standard_theme_default_social_options
 
@@ -488,6 +474,9 @@ function standard_setup_theme_social_options() {
 	if( false == get_option( 'standard_theme_social_options' ) ) {
 		add_option( 'standard_theme_social_options', apply_filters( 'standard_theme_default_social_options', get_standard_theme_default_social_options() ) );
 	} // end if
+
+	// Look to see if any new icons have been added to the library since the last version of the theme
+	get_standard_theme_default_social_options();
 
 	/* ------------------ Social Networks ------------------ */
 
@@ -528,7 +517,7 @@ add_action( 'admin_init', 'standard_setup_theme_social_options' );
  */
 function standard_theme_social_options_display() {
 
-	_e( 'This section controls social network icons in the site header. Drag, drop, and position desired icons from the Icon Library to the Active Icons area.', 'standard' );
+	_e( 'This section controls social network icons in the site header. Drag, drop, and position desired icons from the Icon Library to the Active Icons area. This section controls social network icons in the site header. Drag, drop, and position desired icons from the Icon Library to the Active Icons area. You can also delete all icons and <a href="javascript:;" id="reset-social-icons" class="ad_delete">restore defaults.</a>', 'standard' );
 
 	$html = '<div class="social-icons-wrapper">';
 
@@ -570,9 +559,8 @@ function standard_theme_social_options_display() {
 		$html .= '</div><!-- /.social-icons-available -->';
 
 		$html .= '<span id="standard-save-social-icons-nonce" class="hidden">' . wp_create_nonce( 'standard_save_social_icons_nonce' ) . '</span>';
-
 		$html .= '<span id="standard-wordpress-rss-url" class="hidden">' . esc_url( standard_get_rss_feed_url() ) . '</span>';
-
+		$html .= '<span id="standard-reset-social-icons" class="hidden">' . wp_create_nonce( 'standard_reset_social_icons_nonce' ) . '</span>';
 
 	$html .= '</div><!-- /.social-icons-wrapper -->';
 
@@ -605,6 +593,16 @@ function standard_save_social_icons( ) {
 
 } // end standard_save_social_icons
 add_action( 'wp_ajax_standard_save_social_icons', 'standard_save_social_icons' );
+
+/**
+ * Callback function used in the Ajax request for resetting the Social Icons.
+ */
+function standard_reset_social_icons( ) {
+	if( wp_verify_nonce( $_REQUEST['nonce'], 'standard_reset_social_icons_nonce' ) ) {
+		die( delete_option( 'standard_theme_social_options' ) );
+	} // end if/else
+} // end standard_save_social_icons
+add_action( 'wp_ajax_standard_reset_social_icons', 'standard_reset_social_icons' );
 
 /**
  * Displays the message for users attempting to delete the core set of Standard social icons.
@@ -662,9 +660,9 @@ function standard_active_icons_display() {
  * this function loops through the incoming option and strips all tags and slashes from the value
  * before serializing it.
  *
- * @params	$input	The unsanitized collection of options.
+ * @param	$input	The unsanitized collection of options.
  *
- * @returns			The collection of sanitized values.
+ * @return			The collection of sanitized values.
  */
 function standard_theme_social_options_validate( $input ) {
 
@@ -681,6 +679,52 @@ function standard_theme_social_options_validate( $input ) {
 	return apply_filters( 'standard_theme_social_options_validate', $output, $input, $defaults );
 
 } // end standard_theme_options_validate
+
+/**
+ * When upgrading to newer versions of Standard, looks for any new icons that may exist in the social
+ * icons directory.
+ *
+ * If so, it will add them to the available icons. It exempts icons that are already active.
+ *
+ * If users have uploaded their own icons for ones that we have included, such as LinkedIn or
+ * SoundCloud then they'll need to 'Restore Defaults' and configure their own.
+ *
+ * @since	3.1
+ */
+function standard_find_new_social_icons() {
+
+	// Be sure to look for any additional social icons
+	$social_options = get_option( 'standard_theme_social_options' );
+
+	if( $handle = opendir( get_template_directory() . '/images/social/small' ) ) {
+
+		$available_icons = '';
+		while( false != ( $filename = readdir( $handle ) ) ) {
+
+			// If we're not looking at the current directory, the directory above, or DS_Store...
+			if( '.' != $filename && '..' != $filename && '.ds_store' != strtolower( $filename) ) {
+
+				// Get the icons filename
+				$new_icon_filename = '/images/social/small/' . $filename . ';';
+
+				// Now if this filename is not found in the active icons, we'll add it
+				if( ! is_numeric ( strpos( $social_options['active-social-icons'], substr($new_icon_filename, 0, strlen( $new_icon_filename ) - 1) ) ) ) {
+					$available_icons .= get_template_directory_uri() . $new_icon_filename;
+				} // end if
+
+			} // end if
+
+		} // end while
+
+		// Set the new icons
+		$social_options['available-social-icons'] = $available_icons;
+
+		// Update the option
+		update_option( 'standard_theme_social_options', $social_options );
+
+	} // end if
+
+} // end standard_find_new_social_icons
 
 /* ----------------------------- *
  * 	Global Options
@@ -896,9 +940,9 @@ function offline_message_display() {
 /**
  * Sanitization callback for the global options.
  *
- * @params	$input	The unsanitized collection of options.
+ * @param	$input	The unsanitized collection of options.
  *
- * @returns			The collection of sanitized values.
+ * @return			The collection of sanitized values.
  */
 function standard_theme_global_options_validate( $input ) {
 
@@ -1027,7 +1071,7 @@ function standard_theme_page_options_display() {
 /**
  * Renders the author box option.
  *
- * @params	$args	The array of options used for rendering the option.
+ * @param	$args	The array of options used for rendering the option.
  */
 function display_author_box_display() {
 
@@ -1204,9 +1248,9 @@ add_action( 'wp_ajax_standard_delete_comment_policy_page', 'standard_delete_comm
 /**
  * Sanitization callback for the post options in the Publishing options.
  *
- * @params	$input	The unsanitized collection of options.
+ * @param	$input	The unsanitized collection of options.
  *
- * @returns			The collection of sanitized values.
+ * @return			The collection of sanitized values.
  */
 function standard_theme_publishing_options_validate( $input ) {
 
@@ -1223,34 +1267,6 @@ function standard_theme_publishing_options_validate( $input ) {
 	return apply_filters( 'standard_theme_publishing_options_validate', $output, $input, get_standard_theme_default_publishing_options() );
 
 } // end standard_theme_publishing_options_validate
-
-/**
- * Retrieves and optionally sets the version of the theme.
- */
-function standard_is_current_version() {
-
-	$is_current_version = false;
-
-	// For now, we need also look to see if they are running a Preview.
-	// The Previews had options in the 'general' section so we'll look for that key, first.
-	if( ( '' || false || null ) == get_option( 'standard_theme_general_options' ) ) {
-
-		// If we're here, then this is the first time the user is installing a version of Standard
-		// that isn't following a preview.
-		update_option( 'standard_theme_version', '3.0' );
-		$is_current_version = true;
-
-	} // end if
-
-	// Now we'll look to see if the version is actually 3.0. This will be the standard way to detect moving forward.
-	if( ! $is_current_version ) {
-		$is_current_version = '3.0' == get_option( 'standard_theme_version' );
-	} // end if
-
-	return $is_current_version;
-
-} // end standard_is_current_version
-add_action( 'admin_init', 'standard_is_current_version' );
 
 /* ----------------------------- *
  * 	Options Page
@@ -1317,7 +1333,9 @@ function standard_theme_options_display() {
 
 				} // end if/else
 
+				// Display the 'Save Changes' button
 				submit_button();
+
 			?>
 		</form>
 	</div><!-- /.wrap -->
@@ -1331,7 +1349,7 @@ function standard_theme_options_display() {
 /**
  * Implements the Theme Customizer for installations that are on WordPress 3.4 or greater.
  *
- * @params	$wp_customize	The WordPress Theme Customizer
+ * @param	$wp_customize	The WordPress Theme Customizer
  */
 if( standard_is_on_wp34() ) {
 
@@ -1527,20 +1545,25 @@ if( standard_is_on_wp34() ) {
 			wp.customize('header_textcolor', function(value) {
 				value.bind(function(to) {
 
-					// If 'to' is blank or empty then we're toggling the display
-					if( 'blank' === to ) {
+					// We only care about this if there's no logo
+					if($('#header-logo').length === 0) {
 
-						$('#site-title').hide();
-						$('#site-description').hide();
+						// If 'to' is blank or empty then we're toggling the display
+						if( 'blank' === to ) {
 
-					} else {
+							$('#site-title').hide();
+							$('#site-description').hide();
 
-						$('#site-title').show();
-						$('#site-description').show();
+						} else {
 
-						$('#site-title a, #site-title, #site-description').css('color', to.toString());
+							$('#site-title').show();
+							$('#site-description').show();
 
-					} // end if/else
+							$('#site-title a, #site-title, #site-description').css('color', to.toString());
+
+						} // end if/else
+
+					} // end if
 
 				});
 			})
@@ -1576,7 +1599,7 @@ add_action( 'add_meta_boxes', 'standard_add_full_width_single_post' );
 /**
  * Renders the display for the full-width post option.
  *
- * @params	$post	The post on which the box should be rendered.
+ * @param	$post	The post on which the box should be rendered.
  */
 function standard_post_level_layout_display( $post ) {
 
@@ -1597,7 +1620,7 @@ function standard_post_level_layout_display( $post ) {
 /**
  * Saves the post data to post defined by the incoming ID.
  *
- * @params	$post_id	The ID of the post to which we're saving the post data.
+ * @param	$post_id	The ID of the post to which we're saving the post data.
  */
 function standard_save_post_layout_data( $post_id ) {
 
@@ -1640,6 +1663,81 @@ function standard_save_post_layout_data( $post_id ) {
 add_action( 'save_post', 'standard_save_post_layout_data' );
 
 /**
+ * Add the post meta box for the link post format URL.
+ */
+function standard_add_url_field_to_link_post_format() {
+
+	add_meta_box(
+		'link_format_url',
+		__( 'Link URL', 'standard' ),
+		'standard_link_url_field_display',
+		'post',
+		'side',
+		'high'
+	);
+
+} // end hudson_add_url_to_link_post_type
+add_action( 'add_meta_boxes', 'standard_add_url_field_to_link_post_format' );
+
+/**
+ * Renders the input field for the URL.
+ *
+ * @param	$post	The post on which this meta box is attached.
+ */
+function standard_link_url_field_display( $post ) {
+
+	wp_nonce_field( plugin_basename( __FILE__ ), 'standard_link_url_field_nonce' );
+
+	echo '<input type="text" id="standard_link_url_field" name="standard_link_url_field" value="' . get_post_meta( $post->ID, 'standard_link_url_field', true ) . '" />';
+
+} // end standard_link_url_field_display
+
+/**
+ * Sets the URL for the given post.
+ *
+ * @param	$post_id	The ID of the post that we're serializing
+ */
+function standard_save_link_url_data( $post_id ) {
+
+	if( isset( $_POST['standard_link_url_field_nonce'] ) && isset( $_POST['post_type'] ) ) {
+
+		// Don't save if the user hasn't submitted the changes
+		if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		} // end if
+
+		// Verify that the input is coming from the proper form
+		if( ! wp_verify_nonce( $_POST['standard_link_url_field_nonce'], plugin_basename( __FILE__ ) ) ) {
+			return;
+		} // end if
+
+		// Make sure the user has permissions to post
+		if( 'post' == $_POST['post_type']) {
+			if( ! current_user_can( 'edit_post', $post_id ) ) {
+				return;
+			} // end if
+		} // end if/else
+
+		// Read the Link's URL
+		$link_url = '';
+		if( isset( $_POST['standard_link_url_field'] ) ) {
+			$link_url = esc_url( $_POST['standard_link_url_field'] );
+		} // end if
+
+		// If the value exists, delete it first. I don't want to write extra rows into the table.
+		if ( 0 == count( get_post_meta( $post_id, 'standard_link_url_field' ) ) ) {
+			delete_post_meta( $post_id, 'standard_link_url_field' );
+		} // end if
+
+		// Update it for this post.
+		update_post_meta( $post_id, 'standard_link_url_field', $link_url );
+
+	} // end if
+
+} // end standard_save_post_layout_data
+add_action( 'save_post', 'standard_save_link_url_data' );
+
+/**
  * Adds the 'Standard' menu to the admin bar on the non-admin pages.
  */
 function standard_add_admin_bar_option() {
@@ -1652,7 +1750,7 @@ function standard_add_admin_bar_option() {
 			array(
 				'id'	=>	'standard_options',
 				'title'	=>	__( 'Standard', 'standard' ),
-				'href'	=>	home_url() . '/wp-admin/admin.php?page=theme_options'
+				'href'	=>	site_url() . '/wp-admin/admin.php?page=theme_options'
 			)
 		);
 
@@ -1662,7 +1760,7 @@ function standard_add_admin_bar_option() {
 				'id'		=>	'standard_theme_global_options',
 				'title'		=>	__( 'Global', 'standard' ),
 				'parent'	=>	'standard_options',
-				'href'		=>	home_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_global_options'
+				'href'		=>	site_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_global_options'
 			)
 		);
 
@@ -1672,7 +1770,7 @@ function standard_add_admin_bar_option() {
 				'id'		=>	'standard_theme_presentation_options',
 				'title'		=>	__( 'Presentation', 'standard' ),
 				'parent'	=>	'standard_options',
-				'href'		=>	home_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_presentation_options'
+				'href'		=>	site_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_presentation_options'
 			)
 		);
 
@@ -1682,7 +1780,7 @@ function standard_add_admin_bar_option() {
 				'id'		=>	'standard_theme_social_options',
 				'title'		=>	__( 'Social', 'standard' ),
 				'parent'	=>	'standard_options',
-				'href'		=>	home_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_social_options'
+				'href'		=>	site_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_social_options'
 			)
 		);
 
@@ -1692,7 +1790,7 @@ function standard_add_admin_bar_option() {
 				'id'		=>	'standard_theme_publishing_options',
 				'title'		=>	__( 'Publishing', 'standard' ),
 				'parent'	=>	'standard_options',
-				'href'		=>	home_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_publishing_options'
+				'href'		=>	site_url() . '/wp-admin/admin.php?page=theme_options&tab=standard_theme_publishing_options'
 			)
 		);
 
@@ -1713,7 +1811,7 @@ function standard_add_site_mode_admin_bar_note() {
 			array(
 				'id'	=>	'standard_theme_site_mode',
 				'title'	=>	__( 'The site is currently offline. To bring it back online, click here.', 'standard' ),
-				'href'	=>	home_url() . '/wp-admin/themes.php?page=theme_options'
+				'href'	=>	site_url() . '/wp-admin/themes.php?page=theme_options'
 			)
 		);
 	} // end if
@@ -1734,22 +1832,32 @@ function standard_detect_wordpress_seo() {
 
 	if( 'true' != get_option( 'standard_theme_seo_notification_options' ) ) {
 
+		$html = '';
+
 		// WordPress SEO
 		if( defined( 'WPSEO_URL' ) ) {
 
-			echo '<div id="standard-hide-seo-message-notification" class="error"><p>' . __( 'Standard has detected the activation of WordPress SEO and is now running in SEO compatibility mode. <a href="http://docs.8bit.io/standard/seo" target="_blank">' . __( 'Learn more', 'standard' ) . '</a> or <a id="standard-hide-seo-message" href="javascript:;">hide this message</a>.', 'standard') . '</p><span id="standard-hide-seo-message-nonce" class="hidden">' . wp_create_nonce( 'standard_hide_seo_message_nonce' ) . '</span></div>';
+			$html = '<div id="standard-hide-seo-message-notification" class="error"><p>' . __( 'Standard has detected the activation of WordPress SEO and is now running in SEO compatibility mode. <a href="http://docs.8bit.io/standard/seo" target="_blank">' . __( 'Learn more', 'standard' ) . '</a> or <a id="standard-hide-seo-message" href="javascript:;">hide this message</a>.', 'standard') . '</p><span id="standard-hide-seo-message-nonce" class="hidden">' . wp_create_nonce( 'standard_hide_seo_message_nonce' ) . '</span></div>';
 
 		// All-in-One SEO
 		} elseif( class_exists( 'All_in_One_SEO_Pack' ) ) {
 
-			echo '<div id="standard-hide-seo-message-notification" class="error"><p>' . __( 'Standard has detected the activation of All-In-One SEO and is now running in SEO compatibility mode.  <a href="http://docs.8bit.io/standard/seo" target="_blank">' . __( 'Learn more', 'standard' ) . '</a> or <a id="standard-hide-seo-message" href="javascript:;">hide this message</a>.', 'standard') . '</p><span id="standard-hide-seo-message-nonce" class="hidden">' . wp_create_nonce( 'standard_hide_seo_message_nonce' ) . '</span></div>';
+			$html = '<div id="standard-hide-seo-message-notification" class="error"><p>' . __( 'Standard has detected the activation of All-In-One SEO and is now running in SEO compatibility mode.  <a href="http://docs.8bit.io/standard/seo" target="_blank">' . __( 'Learn more', 'standard' ) . '</a> or <a id="standard-hide-seo-message" href="javascript:;">hide this message</a>.', 'standard') . '</p><span id="standard-hide-seo-message-nonce" class="hidden">' . wp_create_nonce( 'standard_hide_seo_message_nonce' ) . '</span></div>';
 
-		} // end if/else
+		// Platinum SEO
+		} elseif( class_exists( 'Platinum_SEO_Pack' ) ) {
+
+			$html =  '<div id="standard-hide-seo-message-notification" class="error"><p>' . __( 'Standard has detected the activation of Platinum SEO and is now running in SEO compatibility mode.  <a href="http://docs.8bit.io/standard/seo" target="_blank">' . __( 'Learn more', 'standard' ) . '</a> or <a id="standard-hide-seo-message" href="javascript:;">hide this message</a>.', 'standard') . '</p><span id="standard-hide-seo-message-nonce" class="hidden">' . wp_create_nonce( 'standard_hide_seo_message_nonce' ) . '</span></div>';
+
+		} // end if/ese
+
+		// Return the notice
+		echo $html;
 
 	} // end if
 
 	// Set the option to false if the plugin is deactivated
-	if( 'true' == get_option( 'standard_theme_seo_notification_options') && ! defined( 'WPSEO_URL' ) ) {
+	if( 'true' == get_option( 'standard_theme_seo_notification_options') && standard_using_native_seo() ) {
 		update_option( 'standard_theme_seo_notification_options', 'false' );
 	} // end if
 
@@ -1793,7 +1901,7 @@ add_action( 'wp_ajax_standard_save_wordpress_seo_message_setting', 'standard_sav
  *
  * @param	ulclass		The classname for the menu
  *
- * @returns	The markup for the unordered list.
+ * @return	The markup for the unordered list.
  */
 if( ! function_exists( 'standard_page_menu' ) ) {
 	function standard_page_menu( $ulclass ) {
@@ -1970,9 +2078,9 @@ if( ! function_exists( 'standard_add_theme_features' ) ) {
 
 		standard_add_plugin( '/lib/activity/plugin.php' );
 		standard_add_plugin( '/lib/google-custom-search/plugin.php' );
-		standard_add_plugin( '/lib/ad-300x250/plugin.php' );
-		standard_add_plugin( '/lib/ad-125x125/plugin.php' );
-		standard_add_plugin( '/lib/ad-468x60/plugin.php' );
+		standard_add_plugin( '/lib/standard-ad-300x250/plugin.php' );
+		standard_add_plugin( '/lib/standard-ad-125x125/plugin.php' );
+		standard_add_plugin( '/lib/standard-ad-billboard/plugin.php' );
 		standard_add_plugin( '/lib/personal-image/plugin.php' );
 		standard_add_plugin( '/lib/influence/plugin.php' );
 
@@ -2024,6 +2132,39 @@ if( ! function_exists( 'standard_set_theme_colors' ) ) {
 	} // end standard_set_theme_colors
 	add_action( 'init', 'standard_set_theme_colors' );
 } // end if
+
+/**
+ * Determine which search form to display based on if the author has enabled
+ * Google Custom Search Widget activated.
+ */
+function standard_get_search_form() {
+
+	// First, detect if the Google Custom Search widget is active
+	if( standard_google_custom_search_is_active() ) {
+
+		// Read the author's Google Search Engine ID. If they have multiple instances,
+		// then we need to read the most recent instance of the widget.
+		$gcse = get_option( 'widget_standard-google-custom-search' );
+		$gcse = array_shift( array_values ( $gcse ) );
+
+		// Programmatically create the widget
+		$o = new Google_Custom_Search();
+		$o->widget(
+			array(
+				'before_widget' => '',
+				'after_widget' 	=> ''
+			),
+			array(
+				'gcse_content' 	=> 	trim( $gcse['gcse_content'] )
+			)
+		);
+
+	// Otherwise, display the default
+	} else {
+		get_search_form();
+	} // end if
+
+} // end standard_get_google_search_form
 
 /* ----------------------------------------------------------- *
  * 4. Custom Header
@@ -2086,7 +2227,6 @@ if( ! function_exists( 'standard_header_style' ) ) {
 					#site-title,
 					#site-description,
 					#logo {
-						position: absolute !important;
 						clip: rect(1px 1px 1px 1px);
 						clip: rect(1px, 1px, 1px, 1px);
 					}
@@ -2111,6 +2251,9 @@ if( ! function_exists( 'standard_admin_header_style' ) ) {
 			.appearance_page_custom-header #headimg {
 				border: none;
 				margin-left: 40px;
+			}
+			#header-top.no-background {
+				margin-left: -40px;
 			}
 			#headimg h1,
 			#desc {
@@ -2200,72 +2343,74 @@ if( ! function_exists( 'standard_admin_header_image' ) ) {
  /**
  * Generates the content container for each post (and page if enabled).
  *
- * @comment	The current comment being displayed.
- * @args	Array containing arguments for displaying the comment.
- * @depth	The depth of where this comment falls in the tree.
+ * @param	$comment	The current comment being displayed.
+ * @param	$args		Array containing arguments for displaying the comment.
+ * @param	$depth		The depth of where this comment falls in the tree.
  */
-function custom_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class( 'clearfix' ); ?> id="li-comment-<?php comment_ID(); ?>">
-		<div class="comment-container">
-			<?php if ( "comment" == get_comment_type() ) { ?>
-				<div class="avatar-holder">
-					<?php
-					$default = null;
-					if( get_comment_author_email() == get_the_author_meta( 'user_email' ) ) {
-						$default = get_the_author_meta( 'user_email' );
-					} else {
-						$default = get_comment_author_email();
-					} // end if/else
-					echo get_avatar( $default, '50' );
-					?>
-				</div><!-- /.avatar-holder -->
-			<?php } // end if ?>
-
-			<div class="comment-entry"	id="comment-<?php comment_ID(); ?>">
-
-				<div class="comment-head">
-					<span class="name">
-						<?php if( '' == get_comment_author_url() ) { ?>
-							<?php comment_author(); ?>
-						<?php } else { ?>
-							<a href="<?php comment_author_url(); ?>" target="_blank"><?php comment_author(); ?></a>
-						<?php } // end if/else ?>
-					</span>
-					<?php if ( get_comment_type() == "comment" ) { ?>
-						<span class="date"><a href="<?php echo get_comment_link(); ?>" title="<?php esc_attr_e( 'Permalink', 'standard'); ?>"><?php printf( __( '%1$s at %2$s', '_s' ), get_comment_date( get_option( 'date_format' ) ), get_comment_time( get_option( 'time_format' ) ) ); ?></a></span>
-						<span class="edit"><?php edit_comment_link( __( 'Edit', 'standard' ), '', '' ); ?></span>
-					<?php } // end if ?>
-				</div><!-- /.comment-head -->
-
-				<?php if ( '0' == $comment->comment_approved ) { ?>
-					<span class='unapproved label warning'>
-						<?php _e( 'Your comment will appear after being approved.', 'standard' ); ?>
-					</span>
+if( ! function_exists( 'custom_comment' ) ) {
+	function custom_comment( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment; ?>
+		<li <?php comment_class( 'clearfix' ); ?> id="li-comment-<?php comment_ID(); ?>">
+			<div class="comment-container">
+				<?php if ( "comment" == get_comment_type() ) { ?>
+					<div class="avatar-holder">
+						<?php
+						$default = null;
+						if( get_comment_author_email() == get_the_author_meta( 'user_email' ) ) {
+							$default = get_the_author_meta( 'user_email' );
+						} else {
+							$default = get_comment_author_email();
+						} // end if/else
+						echo get_avatar( $default, '50' );
+						?>
+					</div><!-- /.avatar-holder -->
 				<?php } // end if ?>
 
-				<div class="comment-text">
-					<?php comment_text(); ?>
-				</div><!-- /.comment-text -->
+				<div class="comment-entry"	id="comment-<?php comment_ID(); ?>">
 
-				<div class="reply">
-					<?php
-						comment_reply_link(
-							array_merge(
-								$args,
-								array(
-									'depth' 		=> $depth,
-									'max_depth' 	=> $args['max_depth'],
-									'reply_text' 	=> __( 'Reply', 'standard')
+					<div class="comment-head">
+						<span class="name">
+							<?php if( '' == get_comment_author_url() ) { ?>
+								<?php comment_author(); ?>
+							<?php } else { ?>
+								<a href="<?php comment_author_url(); ?>" target="_blank"><?php comment_author(); ?></a>
+							<?php } // end if/else ?>
+						</span>
+						<?php if ( get_comment_type() == "comment" ) { ?>
+							<span class="date"><a href="<?php echo get_comment_link(); ?>" title="<?php esc_attr_e( 'Permalink', 'standard'); ?>"><?php printf( __( '%1$s at %2$s', '_s' ), get_comment_date( get_option( 'date_format' ) ), get_comment_time( get_option( 'time_format' ) ) ); ?></a></span>
+							<span class="edit"><?php edit_comment_link( __( 'Edit', 'standard' ), '', '' ); ?></span>
+						<?php } // end if ?>
+					</div><!-- /.comment-head -->
+
+					<?php if ( '0' == $comment->comment_approved ) { ?>
+						<span class='unapproved label warning'>
+							<?php _e( 'Your comment will appear after being approved.', 'standard' ); ?>
+						</span>
+					<?php } // end if ?>
+
+					<div class="comment-text">
+						<?php comment_text(); ?>
+					</div><!-- /.comment-text -->
+
+					<div class="reply">
+						<?php
+							comment_reply_link(
+								array_merge(
+									$args,
+									array(
+										'depth' 		=> $depth,
+										'max_depth' 	=> $args['max_depth'],
+										'reply_text' 	=> __( 'Reply', 'standard')
+									)
 								)
-							)
-						);
-						?>
-				</div><!-- /.reply -->
+							);
+							?>
+					</div><!-- /.reply -->
 
-			</div><!-- /.comment-entry -->
-		</div><!-- /comment-container -->
-<?php } // end custom_comment
+				</div><!-- /.comment-entry -->
+			</div><!-- /comment-container -->
+	<?php } // end custom_comment
+} // end if
 
 /**
  * Generates the list of pings for the given post.
@@ -2310,6 +2455,14 @@ function standard_add_theme_stylesheets() {
 	wp_register_style( 'bootstrap-responsive', get_template_directory_uri() . '/css/lib/bootstrap-responsive.css' );
 	wp_enqueue_style( 'bootstrap-responsive' );
 
+	// if VideoPress is loaded, we need to add styles for responsive
+	if( class_exists( 'VideoPress' ) ) {
+
+		wp_register_style( 'standard-videopress', get_template_directory_uri() . '/css/theme.videopress.css' );
+		wp_enqueue_style( 'standard-videopress' );
+
+	} // end if
+
 	// theme
 	wp_register_style( 'standard', get_stylesheet_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'standard' );
@@ -2318,21 +2471,13 @@ function standard_add_theme_stylesheets() {
 	$options = get_option( 'standard_theme_presentation_options' );
 	if( 'dark' == $options['contrast'] ) {
 
-		wp_register_style( 'standard-contrast', get_stylesheet_directory_uri() . '/css/theme.contrast-light.css' );
+		wp_register_style( 'standard-contrast', get_template_directory_uri() . '/css/theme.contrast-light.css' );
 		wp_enqueue_style( 'standard-contrast' );
 
  	} // end if
 
-	// if video press is loaded, we need to add styles for responsive
-	if( class_exists( 'VideoPress' ) ) {
-
-		wp_register_style( 'standard-videopress', get_stylesheet_directory_uri() . '/css/theme.videopress.css' );
-		wp_enqueue_style( 'standard-videopress' );
-
-	} // end if
-
 } // end add_theme_stylesheets
-add_action( 'wp_enqueue_scripts', 'standard_add_theme_stylesheets' );
+add_action( 'wp_enqueue_scripts', 'standard_add_theme_stylesheets', 999 );
 
 
 /**
@@ -2368,10 +2513,12 @@ function standard_add_theme_scripts() {
 	wp_register_script( 'theme', get_template_directory_uri() . '/js/theme.js' );
 	wp_enqueue_script( 'theme' );
 
-	// if video press is loaded, we need to add scripts for responsive
+	// if VideoPress is loaded, we need to add scripts for responsive
 	if( class_exists( 'VideoPress' ) ) {
-			wp_register_script( 'standard-videopress', get_stylesheet_directory_uri() . '/js/theme.videopress.js' );
-			wp_enqueue_script( 'standard-videopress' );
+
+		wp_register_script( 'standard-videopress', get_template_directory_uri() . '/js/theme.videopress.js' );
+		wp_enqueue_script( 'standard-videopress' );
+
 	} // end if
 
 } // end add_theme_scripts
@@ -2428,8 +2575,10 @@ function standard_add_admin_scripts() {
 
 	// sitemap management script.
 	if( 'post'  == $screen->id || 'edit-page' == $screen->id || 'page' == $screen->id ) {
+
 		wp_register_script( 'standard-admin-sitemap', get_template_directory_uri() . '/js/admin.template-sitemap.js?using_sitemap=' . get_option( 'standard_using_sitemap' ) );
 		wp_enqueue_script( 'standard-admin-sitemap' );
+
 	} // end if
 
 	// widgets
@@ -2440,7 +2589,7 @@ function standard_add_admin_scripts() {
 
 	} // end if
 
-	// favicon upload script
+	// favicon and post/page upload script
 	if( 'toplevel_page_theme_options' == $screen->id || 'appearance_page_theme_options' == $screen->id ) {
 
 		// jquery ui
@@ -2471,6 +2620,14 @@ function standard_add_admin_scripts() {
 
 	} // end if
 
+	// standard's post-title notification
+	if( 'post' == $screen->id || 'page' == $screen->id ) {
+
+		wp_register_script( 'standard-post-editor', get_template_directory_uri() . '/js/admin.post.js' );
+		wp_enqueue_script( 'standard-post-editor' );
+
+	} // end if
+
 	// standard's admin menu controller
 	wp_register_script( 'standard-admin-menu', get_template_directory_uri() . '/js/admin.menu.js' );
 	wp_enqueue_script( 'standard-admin-menu' );
@@ -2485,60 +2642,45 @@ add_action( 'admin_enqueue_scripts', 'standard_add_admin_scripts' );
 /**
  * This function is fired  if the current version of Standard is not the latest version. If it's not, then the user will be prompted to reset their settings.
  * Once reset, all options will be reset to their default values.
+ *
+ * TODO review this function for 3.2
  */
 function standard_activate_theme() {
 
+	// If we're not using the most recent version of Standard...
 	if( ! standard_is_current_version() ) {
 
+		// .. and the user has opted to reset the otpions
 		if( array_key_exists( 'standard_theme_reset_options', $_GET ) && 'true' == $_GET['standard_theme_reset_options'] ) {
 
-			// Remove the Preview settings
-			delete_option( 'standard_theme_general_options' );
-			delete_option( 'standard_theme_social_options' );
-			delete_option( 'standard_theme_layout_options' );
+				// Remove the Preview settings. TODO remove this in 3.2.
+				delete_option( 'standard_theme_general_options' );
+				delete_option( 'standard_theme_social_options' );
+				delete_option( 'standard_theme_layout_options' );
 
-			// Set defaults for Standard
-			get_standard_theme_default_global_options();
-			get_standard_theme_default_presentation_options();
-			get_standard_theme_default_social_options();
-			get_standard_theme_default_publishing_options();
+				// Set defaults for Standard
+				get_standard_theme_default_global_options();
+				get_standard_theme_default_presentation_options();
+				get_standard_theme_default_social_options();
+				get_standard_theme_default_publishing_options();
 
-			// Set the default gravatar only if this is the first install
-			if( '3.0' != get_option( 'standard_theme_version' ) ) {
-				update_option( 'avatar_default', 'retro' );
-			} // end if
-
-			// Set the version
-			update_option( 'standard_theme_version', '3.0' );
-
+		// Otherwise, we have some other things to do...
 		} else {
 
-			// Set the reset query string value
-			$url = '?standard_theme_reset_options=true';
+			// Set the default gravatar only if this is the first install
+			if( '3.1' != get_option( 'standard_theme_version' ) ) {
 
-			// If there are already query string values present...
-			if( isset( $_SERVER['argv'][0] ) ) {
-
-				// And if we're on the theme activation page
-				if( $_SERVER['argv'][0] == 'activated=true' ) {
-
-					// Rebuild the query string
-					$url = 'themes.php?' . $_SERVER['argv'][0] . '&standard_theme_reset_options=true';
-
-				} else {
-
-					// Otherwise, use the page we're on
-					$url = '?' . $_SERVER['argv'][0] . '&standard_theme_reset_options=true';
-
-				} // end if/else
+				update_option( 'standard_theme_version', '3.1' );
+				update_option( 'avatar_default', 'retro' );
 
 			} // end if
-
-			echo '<div id="standard-old-version" class="updated"><p>' . __( 'A previous version of Standard has been detected. In order to continue installation, your Standard option settings must be reset. <a href="' . $url . '">Click here to reset your options</a>.', 'standard') . '</p></div>';
 
 		} // end if/else
 
-	} // end if
+	} // end if/else
+
+	// Reset the icons
+	standard_find_new_social_icons();
 
 } // end standard_activate_theme
 add_action( 'admin_notices', 'standard_activate_theme' );
@@ -2550,9 +2692,9 @@ remove_action( 'wp_head', 'wp_generator' );
  * Adds fields for Twitter, Facebook, and Google+ to the User Profile page so that users can populate this
  * information and have it render in the author box.
  *
- * @params	$user_contactmethods	The array of contact fields for the user's profile.
+ * @param	$user_contactmethods	The array of contact fields for the user's profile.
  *
- * @returns	The updated array of contact methods.
+ * @return	The updated array of contact methods.
  */
 function standard_add_user_profile_fields( $user_contactmethods ) {
 
@@ -2574,7 +2716,7 @@ add_filter( 'user_contactmethods', 'standard_add_user_profile_fields' );
  */
 function standard_meta_description() {
 
-	// If we're rolling with Standard's native SEO, let's do the following...
+	// If we're using Standard's native SEO, let's do the following...
 	if( standard_using_native_seo() ) {
 
 		// If we're on the homepage, we're going to use the site's description
@@ -2588,7 +2730,7 @@ function standard_meta_description() {
 		} // end if/else
 
 		// And if we're on the categories or any other archives, we'll be using the description if it has been provided
-		if( is_archive() && '' != category_description() ) {
+		if( is_archive() && '' != trim( category_description() ) ) {
 			echo '<meta name="description" content="' . trim( str_replace( '</p>', '', str_replace( '<p>', '', category_description() ) ) ) . '" />';
 		} // end if
 
@@ -2602,7 +2744,7 @@ add_action( 'wp_head', 'standard_meta_description' );
  * These are invalid HTML5 attributes.
  *
  * @param   $str    The default set of attributes.
- * @returns         The stripped relationship tag.
+ * @return         The stripped relationship tag.
  */
 function standard_remove_category_anchor_rel( $str ) {
 
@@ -2622,7 +2764,7 @@ add_filter( 'the_category', 'standard_remove_category_anchor_rel' );
  * These are invalid HTML5 attributes.
  *
  * @param   $str    The default set of attributes.
- * @returns         The stripped relationship tag.
+ * @return         The stripped relationship tag.
  */
 function standard_remove_anchor_attachment_rel( $str ) {
     return preg_replace( '/(rel="attachment)[a-zA-Z0-9\s\-]*\"/', trim( '' ), trim( $str ) );
@@ -2632,8 +2774,8 @@ add_filter( 'the_content', 'standard_remove_anchor_attachment_rel' );
 /**
  * Adds a "previous" relationship attribute to the 'Next' pagination option.
  *
- * @params  $attrs  The current set of attributes of the anchor
- * @returns         The pagination link with the additional attribute.
+ * @param  $attrs  The current set of attributes of the anchor
+ * @return         The pagination link with the additional attribute.
  */
 function standard_add_rel_to_next_pagination( $attrs ) {
     $attrs .= 'rel="previous"';
@@ -2644,8 +2786,8 @@ add_filter( 'next_posts_link_attributes', 'standard_add_rel_to_next_pagination' 
 /**
  * Adds a "next" relationship attribute to the 'Previous' pagination option.
  *
- * @params  $attrs  The current set of attributes of the anchor
- * @returns         The pagination link with the additional attribute.
+ * @param  $attrs  The current set of attributes of the anchor
+ * @return         The pagination link with the additional attribute.
  */
 function standard_add_rel_to_previous_pagination( $attrs ) {
     $attrs .= 'rel="next"';
@@ -2661,7 +2803,7 @@ add_filter( 'previous_posts_link_attributes', 'standard_add_rel_to_previous_pagi
  * @param   $id     The ID of the image
  * @param   $alt    The alternative text of the image
  * @param   $title  The title of the image (autogenerated by WordPress or editing by users)
- * @returns         The markup with an alt tag.
+ * @return         The markup with an alt tag.
  */
 function standard_apply_image_alt_in_editor( $html, $id, $alt, $title ) {
 
@@ -2684,13 +2826,13 @@ function standard_fallback_nav_menu( ) {
 /**
  * Removes any paragraph tags that are wrapping anchors.
  *
- * @params		$content	The post content
- * @returns					The anchor without paragraph tags.
+ * @param		$content	The post content
+ * @return					The anchor without paragraph tags.
  */
 if( ! function_exists( 'standard_process_link_post_format_content' ) ) {
 	function standard_process_link_post_format_content( $content ) {
 
-		// If this is an image post type, remove the paragraph wrapper from it.
+		// If this is an link post type, remove the paragraph wrapper from it
 		if( 'link' == get_post_format( get_the_ID() ) ) {
 			$content = preg_replace( '/<p>\s*(<a .*>)?\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content );
 		} // end if
@@ -2705,9 +2847,9 @@ if( ! function_exists( 'standard_process_link_post_format_content' ) ) {
  * Removes any paragraph tags that are wrapping images, anchors around images,
  * or paragraphs around iframes or objects.
  *
- * @params		$title		The the of the post
- * @params		$id			The ID of the current post
- * @returns					The title based on the status of the post and the link
+ * @param		$title		The the of the post
+ * @param		$id			The ID of the current post
+ * @return					The title based on the status of the post and the link
  */
 if( ! function_exists( 'standard_process_link_post_format_title' ) ) {
 	function standard_process_link_post_format_title( $title, $id ) {
@@ -2743,8 +2885,8 @@ if( ! function_exists( 'standard_process_link_post_format_title' ) ) {
  * Removes any paragraph tags that are wrapping images, anchors around images,
  * or paragraphs around iframes or objects.
  *
- * @params		$content	The post content
- * @returns					The [optional] anchor and image.
+ * @param		$content	The post content
+ * @return					The [optional] anchor and image.
  */
 if( ! function_exists( 'standard_remove_paragraph_on_media' ) ) {
 	function standard_remove_paragraph_on_media( $content ) {
@@ -2776,7 +2918,7 @@ if( ! function_exists( 'standard_remove_paragraph_on_media' ) ) {
  * @param	$html	The content of the video post format
  * @param	$url	The url of the post
  * @param	$args	Additional arguments passed in by WordPress core
- * @returns			The post content wrapped in a container.
+ * @return			The post content wrapped in a container.
  */
 if( ! function_exists( 'standard_wrap_embeds' ) ) {
 	function standard_wrap_embeds( $html, $url, $args ) {
@@ -2794,7 +2936,7 @@ if( ! function_exists( 'standard_wrap_embeds' ) ) {
 /**
  * Renders a simplified version of the search form.
  *
- * @returns		The search form.
+ * @return		The search form.
  */
 if( ! function_exists( 'standard_search_form' ) ) {
 	function standard_search_form() {
@@ -2816,35 +2958,53 @@ if( ! function_exists( 'standard_search_form' ) ) {
 /**
  * Formats the link post format properly for the RSS feed.
  *
- * @params		$content	The post content
- * @returns					The properly content formatted for RSS
+ * @param		$content	The post content
+ * @return					The properly content formatted for RSS
  */
 if( ! function_exists( 'standard_post_format_rss' ) ) {
 	function standard_post_format_rss( $content ) {
 
+		// If it's a link post format, make sure the link and title are properly rendered
 		if( 'link' == get_post_format( get_the_ID() ) ) {
 
+			// Get the post title and the post content
 			global $post;
 			$post_content = $post->post_content;
 			$post_title = $post->post_title;
 
-			// Read the attribute of the anchor from the post format
-			$title = standard_get_link_post_format_attribute( 'title' );
-			$href = standard_get_link_post_format_attribute( 'href' );
-			$target = standard_get_link_post_format_attribute( 'target' );
+			// If there's no link meta data, then we'll handle this the 3.0 way. TODO mark this as deprecated.
+			if( '' == get_post_meta( get_the_ID(), 'standard_link_url_field', true ) ) {
 
-			// Build up the link
-			$content = '<a href="' . $href . '" title="' . $title . '" target="' . $target . '">';
+				// Read the attribute of the anchor from the post format
+				$title = standard_get_link_post_format_attribute( 'title' );
+				$href = standard_get_link_post_format_attribute( 'href' );
+				$target = standard_get_link_post_format_attribute( 'target' );
 
-				if( strlen( trim( $post_title ) ) > 0 ) {
-					$content .= $post_title;
-				} elseif( strlen( trim( $title ) ) > 0 ) {
-					$content .= $title;
-				} else {
-					$content .= $post_content;
-				} // end if/else
+				// Build up the link
+				$content = '<a href="' . $href . '" title="' . $title . '" target="' . $target . '">';
 
-			$content .= '</a>';
+					if( strlen( trim( $post_title ) ) > 0 ) {
+						$content .= $post_title;
+					} elseif( strlen( trim( $title ) ) > 0 ) {
+						$content .= $title;
+					} else {
+						$content .= $post_content;
+					} // end if/else
+
+				$content .= '</a>';
+
+			} // end if
+
+		// If it's an image post format, make sure the featured image is prepended to the content
+		} elseif ( 'image' == get_post_format( get_the_ID() ) && '' != get_the_post_thumbnail( get_the_ID() ) ) {
+
+			$featured_image = '<p>';
+				$featured_image .= '<a href="' . get_permalink( get_the_ID() ) . '" target="_blank" title="' . get_the_title() . '">';
+					$featured_image .= get_the_post_thumbnail( get_the_ID(), 'large' );
+				$featured_image .= '</a>';
+			$featured_image .= '</p>';
+
+			$content = $featured_image . $content;
 
 		} // end if
 
@@ -2858,7 +3018,7 @@ if( ! function_exists( 'standard_post_format_rss' ) ) {
  * Calls the Standard SEO Titles plugin during the wp_title action to render
  * SEO-friendly page titles.
  */
-if( ! ( defined( 'WPSEO_URL' ) || class_exists( 'All_in_One_SEO_Pack' ) ) ) {
+if( standard_using_native_seo() ) {
 	function standard_seo_titles() {
 
 		include_once( get_template_directory() . '/lib/seotitles/standard_seotitles.php' );
@@ -2872,8 +3032,8 @@ if( ! ( defined( 'WPSEO_URL' ) || class_exists( 'All_in_One_SEO_Pack' ) ) ) {
  * Place all widget titles in h4 tags rather than h3 tags to improve SEO. Also adds the
  * 'widget-title' class to the heading elements.
  *
- * @params	$params		The array of parameters that provide styling for the widget.
- * @returns				The updated array of parameters.
+ * @param	$params		The array of parameters that provide styling for the widget.
+ * @return				The updated array of parameters.
  */
 if( ! function_exists( 'standard_modify_widget_titles' ) ) {
 	function standard_modify_widget_titles( $params ) {
@@ -2890,8 +3050,8 @@ if( ! function_exists( 'standard_modify_widget_titles' ) ) {
 /**
  * Adds the title attribute to the 'Next and 'Previous' post pagination anchors.
  *
- * @params	$attrs	The current set of attributes of the anchor
- * @returns			The pagination link with the additional attribute.
+ * @param	$attrs	The current set of attributes of the anchor
+ * @return			The pagination link with the additional attribute.
  */
 if( ! function_exists( 'standard_add_title_to_single_post_pagination' ) ) {
 	function standard_add_title_to_single_post_pagination( $link ) {
@@ -2940,7 +3100,7 @@ add_action( 'save_post', 'standard_save_post' );
 /**
  * Updates the Standard Sitemap Flag if the post being deleted is the actual sitemap.
  *
- * @params	$id		The ID of the post being deleted.
+ * @param	$id		The ID of the post being deleted.
  */
 function standard_delete_post( $id ) {
 
@@ -2957,8 +3117,10 @@ add_action( 'before_delete_post', 'standard_delete_post' );
  * Also marks the alternate tag as required. Will populate it with the title
  * if it is left empty.
  *
- * @params	$form_fields	The array of form fields in the uploader
- * @params	$post			The post object
+ * @param	$form_fields	The array of form fields in the uploader
+ * @param	$post			The post object
+ * @return					The updated array of form fields
+ * @since	3.1
  */
 function standard_attachment_fields_to_edit( $form_fields, $post ) {
 
@@ -2969,9 +3131,19 @@ function standard_attachment_fields_to_edit( $form_fields, $post ) {
 	$form_fields['post_title']['helps'] =	__( 'A title is required for search engines.', 'standard' );
 	$form_fields['image_alt']['helps'] = __( 'An alternate text description is required for search engines.', 'standard' );
 
-	// If the alt field is empty, then we're populating it with the title
-	if( '' == $form_fields['image_alt']['value'] ) {
-		$form_fields['image_alt']['value'] = $form_fields['post_title']['value'];
+	// If the image alt is empty, then we'll provide it by cleaning up the image's file name
+	if( empty( $form_fields['image_alt']['value'] ) ) {
+
+		// First, we grab the image's file name
+		$filename = $form_fields['post_title']['value'];
+
+		// Next, we strip out all anything that isn't alphanumeric
+		$filename = preg_replace('/[^a-z0-9.]+/i', ' ', $filename);
+
+		// Then we update both the image and the post title
+		$form_fields['image_alt']['value'] = $filename;
+		$form_fields['post_title']['value'] = $filename;
+
 	} // end if
 
 	return $form_fields;
@@ -3042,6 +3214,37 @@ if( standard_is_offline() ) {
 
 } // end if
 
+/**
+ * Custom action that is used to initialize the Standard menu separator.
+ *
+ * @param	$position	Where you want the separator to appear.
+ */
+function standard_add_admin_menu_separator( $position ) {
+
+  global $menu;
+
+  $menu[$position] = array(
+  	0	=>	'',
+  	1	=>	'read',
+  	2	=>	'separator' . $position,
+  	3	=>	'',
+  	4	=>	'wp-menu-separator'
+  );
+
+} // end standard_add_admin_separator
+add_action( 'init_standard_menu', 'standard_add_admin_menu_separator' );
+
+/**
+ * Defines the function used to set the position of the custom separator.
+ */
+function standard_set_admin_menu_separator() {
+
+	// Eventually, we should make the 57 value more flexible
+	do_action( 'init_standard_menu', 57 );
+
+} // end standard_set_admin_menu_separator
+add_action( 'init', 'standard_set_admin_menu_separator' );
+
 /* ----------------------------------------------------------- *
  * 8. Helper Functions
  * ----------------------------------------------------------- */
@@ -3049,7 +3252,7 @@ if( standard_is_offline() ) {
 /**
  * Determines whether or not the user is viewing a date archive.
  *
- * @returns	True if the current page is for a date archive.
+ * @return	True if the current page is for a date archive.
  */
 function standard_is_date_archive() {
 	return '' != get_query_var( 'year' ) || '' != get_query_var( 'monthnum' ) || '' != get_query_var( 'day' ) || '' != get_query_var( 'm' );
@@ -3059,7 +3262,7 @@ function standard_is_date_archive() {
  * Generates a label for the current archive based on whether or not the user is viewing year, month, or day. Uses the
  * users date format to properly format the date.
  *
- * @returns	The label for the current archive
+ * @return	The label for the current archive
  */
 function standard_get_date_archive_label() {
 
@@ -3109,7 +3312,7 @@ function standard_get_date_archive_label() {
  *
  * @param	$attr	The attribute to extract from the link.
  *
- * @returns			The value of the attribute or empty for none.
+ * @return			The value of the attribute or empty for none.
  */
 function standard_get_link_post_format_attribute( $attr ) {
 
@@ -3141,7 +3344,6 @@ function standard_get_link_post_format_attribute( $attr ) {
 			break;
 
 		default:
-			$result = '';
 			break;
 
 	} // end switch
@@ -3153,7 +3355,7 @@ function standard_get_link_post_format_attribute( $attr ) {
 /**
  * Looks at the active widgets to determine whether or not the Google Custom Search widget is active.
  *
- * @returns	Whether or not the Google Custom Search is active
+ * @return	Whether or not the Google Custom Search is active
  */
 function standard_google_custom_search_is_active() {
 
@@ -3196,9 +3398,9 @@ function standard_comment_form() {
 
 	// The field elements with wrappers so we can access them via CSS and JavaScript
 	$fields =  array(
-		'author' 	=> '<div id="comment-form-elements' . $layout . '"><p class="comment-form-author">' . '<label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'email'  	=> '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
-		'url'		=> '<p class="comment-form-url"><label for="url">' . __( 'Website', 'domainreference' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p></div><!-- /#comment-form-elements --></div><!-- /#comment-form-wrapper -->',
+		'author' 	=> '<div id="comment-form-elements' . $layout . '"><p class="comment-form-author">' . '<label for="author">' . __( 'Name', 'standard' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+		'email'  	=> '<p class="comment-form-email"><label for="email">' . __( 'Email', 'standard' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+		'url'		=> '<p class="comment-form-url"><label for="url">' . __( 'Website', 'standard' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p></div><!-- /#comment-form-elements --></div><!-- /#comment-form-wrapper -->',
 	);
 
 	// Now actually render the form
@@ -3245,10 +3447,10 @@ function standard_truncate_text( $string, $character_limit = 50, $truncation_ind
 /**
  * Helper function for determining if any other SEO plugins are installed. Returns true, if so.
  *
- * @returns	True if 'WordPress SEO' or 'All In One SEO' are installed.
+ * @return	True if 'WordPress SEO', 'All In One SEO', 'Platinum SEO Pack', or 'wpSEO' are installed.
  */
 function standard_using_native_seo() {
-	return ! ( defined( 'WPSEO_URL' ) || class_exists( 'All_in_One_SEO_Pack' ) );
+	return ! ( defined( 'WPSEO_URL' ) || class_exists( 'All_in_One_SEO_Pack' ) || class_exists( 'Platinum_SEO_Pack' ) );
 } // end standard_using_native_seo
 
 /**
@@ -3271,11 +3473,11 @@ function standard_is_offline() {
 /**
  * Helper function for programmatically creating a page.
  *
- * @params	$slug		The slug by which the page will be accessed
- * @params	$title		The title of the page
- * @params	$template	The name of the template file (without the file extension)
+ * @param	$slug		The slug by which the page will be accessed
+ * @param	$title		The title of the page
+ * @param	$template	The name of the template file (without the file extension)
  *
- * @returns	The ID of the page once it was created, or 0 if it failed.
+ * @return	The ID of the page once it was created, or 0 if it failed.
  */
 function standard_create_page( $slug, $title, $template = '' ) {
 
@@ -3315,9 +3517,9 @@ function standard_create_page( $slug, $title, $template = '' ) {
 /**
  * Helper function for programmatically deleting a page.
  *
- * @params	$id			The ID of the page to delete
+ * @param	$id			The ID of the page to delete
  *
- * @returns True if deleting of the page was successful; otherwise, false.
+ * @return True if deleting of the page was successful; otherwise, false.
  */
 function standard_delete_page( $id ) {
 	return null != wp_delete_post( $id, true );
@@ -3326,7 +3528,7 @@ function standard_delete_page( $id ) {
 /**
  * If not already active, includes the plugin by using the specified path.
  *
- * @params	$str_path	The path to the plugin to include.
+ * @param	$str_path	The path to the plugin to include.
  */
 function standard_add_plugin( $str_path ) {
 	if( ! in_array( get_template_directory() . $str_path, apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
@@ -3338,7 +3540,7 @@ function standard_add_plugin( $str_path ) {
 /**
  * Determines whether or not Standard is on WordPress 3.4.
  *
- * @returns	true	If Standard is running on WordPress 3.4 or greater.
+ * @return	true	If Standard is running on WordPress 3.4 or greater.
  */
 function standard_is_on_wp34() {
 	return function_exists( 'get_custom_header' );
@@ -3362,34 +3564,87 @@ function standard_get_rss_feed_url() {
 } // end standard_get_rss_feed_url
 
 /**
- * Custom action that is used to initialize the Standard menu separator.
+ * Returns whether or not the user has uploaded a logo.
  *
- * @params	$position	Where you want the separator to appear.
+ * @return	True if the user has uploaded a logo, false, if not.
  */
-function standard_add_admin_menu_separator( $position ) {
+function standard_has_logo() {
 
-  global $menu;
+    $presentation_options = get_option( 'standard_theme_presentation_options' );
 
-  $menu[$position] = array(
-  	0	=>	'',
-  	1	=>	'read',
-  	2	=>	'separator' . $position,
-  	3	=>	'',
-  	4	=>	'wp-menu-separator'
-  );
+    $logo = '';
+    if( isset( $presentation_options['logo'] ) ) {
+        $logo = $presentation_options['logo'];
+    } // end if
 
-} // end standard_add_admin_separator
-add_action( 'init_standard_menu', 'standard_add_admin_menu_separator' );
+    return $logo;
+
+} // end standard_has_logo
 
 /**
- * Defines the function used to set the position of the custom separator.
+ * Returns whether or not the user has specified to display header text.
+ *
+ * @return	True if the user wants to display header text; otherwise, false.
  */
-function standard_set_admin_menu_separator() {
+function standard_has_header_text() {
+	return ! ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) );
+} // end standard_has_header_text
 
-	// Eventually, we should make the 57 value more flexible
-	do_action( 'init_standard_menu', 57 );
+/**
+ * Determines if the incoming URL is a gplus.to URL or a raw Google+ URL.
+ *
+ * @param	$url	The URL to evaluate
+ * @return			Whether or not the URL is a gplus.to URL
+ * @since	3.1
+ */
+function standard_is_gplusto_url( $url ) {
+	return strpos( $url, 'gplus.to' );
+} // end standard_is_gplusto_url
 
-} // end standard_set_admin_menu_separator
-add_action( 'init', 'standard_set_admin_menu_separator' );
+/**
+ * Retrieves the user's Google+ ID from their gplus.to address.
+ *
+ * @param	$url	The URL to evaluate
+ * @return			The full Google+ URL from the incoming URL.
+ * @since	3.1
+ */
+function standard_get_google_plus_from_gplus( $url ) {
+
+	$gplus_url = $url;
+
+	// Get the headers from the gplus.to, URL
+	$headers = @get_headers( $url );
+	$url_parts = explode( '/', $headers[5] );
+
+	// If the 5th index exists, the Google+ ID will be here
+	if( isset( $url_parts[5] ) ) {
+		$gplus_url = 'https://plus.google.com/' . $url_parts[5];
+	} // end if
+
+	return user_trailingslashit( $gplus_url );
+
+} // standard_get_google_plus_from_gplus
+
+/**
+ * Determines whether or not the user is using pretty permalinks.
+ *
+ * @return	True if pretty permalinks are enabled; false, otherwise.
+ * @since	3.1
+ */
+function standard_is_using_pretty_permalinks() {
+
+	global $wp_rewrite;
+	return '/%postname%/' == $wp_rewrite->permalink_structure;
+
+} // end standard_is_using_pretty_premalinks
+
+/**
+ *
+ * @returns	True if the current version of Standard is 3.1; false, otherwise.
+ * @since 	3.1
+ */
+function standard_is_current_version() {
+	return '3.1' == get_option( 'standard_theme_version' ) ? true : false;
+} // end standard_is_current_version
 
 ?>

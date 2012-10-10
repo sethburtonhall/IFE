@@ -170,6 +170,23 @@
 }
 #customcontactforms-admin  .genesis span { color:red; font-weight:bold; }
 
+#customcontactforms-admin  .gravity {
+	text-align:center;
+	background-color:#FFFEEB;
+	border:1px solid #cccccc;
+	display:block;
+	height:20px;
+	color: red;
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:7px 7px 7px 7px;
+	margin:.5em 5px .8em 5px;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;	line-height:normal;
+}
+
 #customcontactforms-admin  .checkbox-warning {
 	text-align:center;
 	background-color:#FF3333;

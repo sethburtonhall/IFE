@@ -2,21 +2,30 @@
 /** {{{ http://code.activestate.com/recipes/414334/ (r1) */
 // This is Javascript, not PHP!
 
+function is_int(value){ 
+  if((parseFloat(value) == parseInt(value)) && !isNaN(value)){
+      return true;
+  } else { 
+      return false;
+  } 
+}
+
 function js_array_to_php_array (a)
 {
     var a_php = "";
     var total = 0;
     for (var key in a)
     {
-        ++ total;
-        a_php = a_php + "s:" +
-                String(key).length + ":\"" + String(key) + "\";s:" +
-                String(a[key]).length + ":\"" + String(a[key]) + "\";";
-    }
+		if (is_int(key)) {
+			++ total;
+			a_php = a_php + "s:" +
+					String(key).length + ":\"" + String(key) + "\";s:" +
+					String(a[key]).length + ":\"" + String(a[key]) + "\";";
+		}
+	}
     a_php = "a:" + total + ":{" + a_php + "}";
     return a_php;
 }
-
 
 function print_r(x, max, sep, l) {
 
@@ -216,6 +225,7 @@ $j(document).ready(function() {
 	});
 	
 	$j(".single-delete").click(function () {
+            if (confirm(ccfLang.delete_confirm)) {
 		var single_delete = $j(this);
 		var object_type = single_delete.parent().find(".object-type").attr("value");
 		single_delete.parentsUntil("form").parent().ajaxSubmit({
@@ -257,7 +267,8 @@ $j(document).ready(function() {
 				return true;
 			}				
 		});
-		return false;
+            }
+	    return false;
 	});
 	
 	$j(".ccfsort").find("span").click(function() { $j(this).parent().hide().remove(); });

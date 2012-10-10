@@ -121,3 +121,44 @@ form.customcontactform-sidebar div select { width:auto; }
 	margin:0;
 	padding:0;
 }
+
+/* reCaptcha */
+#recaptcha_widget {
+	width: 425px;
+	padding: 10px !important;
+	min-height: 100px;
+	height: auto;
+	border: 1px solid #ccc;
+}
+#recaptcha_image {
+	border: 1px solid #ccc;
+}
+#recaptcha_widget .left {
+	width: 295px;
+}
+#recaptcha_widget .right {
+	float: right;
+	width: 110px;
+}
+#recaptcha_widget input {
+	width: 294px !important;
+	margin-top: 6px !important;
+}
+#recaptcha_widget .logo {
+	width: 75px;
+	height: 80px;
+	float: right;
+}
+#recaptcha_widget .reload {
+	width:  25px;
+	height: 18px;
+}
+#recaptcha_widget .audio {
+	width:  25px;
+	height: 15px;
+	margin: -1px 0 2px 0;
+}
+#recaptcha_widget .help {
+	width:  25px;
+	height: 16px;
+}

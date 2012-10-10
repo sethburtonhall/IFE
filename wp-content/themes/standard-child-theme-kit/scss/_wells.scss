@@ -1,0 +1,139 @@
+/* ------------------------------------------------------------------------ Wells*/
+
+.well {
+  position: relative;
+  padding: 65px 19px 19px 19px;
+  @include border-radius(0);
+  border: none;
+}
+
+.well::before {
+  content: attr(rel);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @include adjust-font-size-to(18px);
+  font-weight: bold;
+  color: $darkgray;
+  padding: 14px 28px 14px 8px;
+  line-height: 1em;
+}
+
+.global-well {
+  background-color: lighten($blue, 20%);
+}
+
+.global-well::before {
+  background: $blue url('../images/info.png') no-repeat 99% 50%;
+  @include background-size(30px auto);
+}
+
+.home-well {
+  background: #fff;
+  padding: 67px 0px 0px 0px;
+}
+
+.home-well::before {
+  background: $blue url('../images/symbol2.png') no-repeat 99% 50%;
+  @include background-size(32px auto);
+}
+
+.home2-well {
+  background: #fff;
+  padding: 67px 5px 0px 5px;
+}
+
+.home2-well::before {
+  background: $blue url('../images/loop.png') no-repeat 98% 50%;
+  @include background-size(30px auto);
+}
+
+.home3-well {
+  background: #fff;
+  padding: 67px 5px 0px 5px;
+}
+
+.home3-well::before {
+  background: $blue url('../images/metrics.png') no-repeat 98% 50%;
+  @include background-size(30px auto);
+}
+
+.get-info-well {
+  background-color: lighten($green, 20%);
+  padding: 67px 19px 1px 19px;
+}
+
+.get-info-well::before {
+  background: $green url('../images/info.png') no-repeat 98% 50%;
+  @include background-size(30px auto);
+}
+
+.investment-well {
+  background-color: lighten($blue, 20%);
+  margin-bottom: $basespace;
+}
+
+.investment-well::before {
+  background: $blue url('../images/investment2.png') no-repeat 97% 50%;
+  @include background-size(50px auto);
+}
+
+.fluid-width-video-wrapper {
+  margin-bottom: 0px;
+}
+
+.video-well {
+  background-color: lighten($darkgray, 40%);
+  margin-bottom: $basespace;
+}
+
+.video-well::before {
+  background: $darkgray url('../images/video.png') no-repeat 97% 50%;
+  @include background-size(30px auto);
+  color: #fff;
+}
+
+.step-one-well {
+  background-color: lighten($green, 20%);
+}
+
+.step-one-well::before {
+  background: $green url('../images/glasses.png') no-repeat 93% 50%;
+  @include background-size(43px auto);
+}
+
+.step-one-well p,
+.step-two-well p,
+.step-three-well p,
+.step-four-well p {
+  margin-bottom: 0px;
+}
+
+.step-two-well {
+  background-color: lighten($yellow, 20%);
+}
+
+.step-two-well::before {
+  background: $yellow url('../images/pen.png') no-repeat 93% 50%;
+  @include background-size(40px auto);
+}
+
+.step-three-well {
+  background-color: lighten($orange, 20%);
+}
+
+.step-three-well::before {
+  background: $orange url('../images/documents.png') no-repeat 93% 50%;
+  @include background-size(25px auto);
+}
+
+.step-four-well {
+  background-color: lighten($red, 20%);
+}
+
+.step-four-well::before {
+  background: $red url('../images/handshake.png') no-repeat 93% 50%;
+  @include background-size(45px auto);
+}

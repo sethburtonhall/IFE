@@ -14,7 +14,6 @@ if (!class_exists('CustomContactFormsFront')) {
 
 		function frontInit() {
 			ccf_utils::startSession();
-			//print_r($_SESSION);
 			$this->processForms();
 		}
 		
@@ -112,7 +111,7 @@ if (!class_exists('CustomContactFormsFront')) {
 			if (empty($this_form)) return '';
 			$admin_options = parent::getAdminOptions();
 			if ($admin_options['enable_form_access_manager'] == 1 && !$this->userCanViewForm($this_form))
-				return $admin_options['default_form_bad_permissions'];
+				return esc_html($admin_options['default_form_bad_permissions']);
 			
 			return $this->getFormCode($this_form);
 		}
@@ -126,12 +125,12 @@ if (!class_exists('CustomContactFormsFront')) {
 			$errors = $this->getAllFormErrors();
 			if (!empty($errors)) {
 				$admin_options = parent::getAdminOptions();
-				$out = '<div id="custom-contact-forms-errors"><p>'.$admin_options['default_form_error_header'].'</p><ul>' . "\n";
+				$out = '<div id="custom-contact-forms-errors"><p>'.esc_html($admin_options['default_form_error_header']).'</p><ul>' . "\n";
 				//$errors = $this->getAllFormErrors();
 				foreach ($errors as $error) {
-					$out .= '<li>'.$error.'</li>' . "\n";
+					$out .= '<li>'.esc_html($error).'</li>' . "\n";
 				}
-				$err_link = (!empty($this->error_return)) ? '<p><a href="'.$this->error_return.'" title="'.__('Go Back', 'custom-contact-forms').'">&lt; ' . __('Go Back to Form.', 'custom-contact-forms') . '</a></p>' : '';
+				$err_link = (!empty($this->error_return)) ? '<p><a href="'.esc_attr($this->error_return).'" title="'.__('Go Back', 'custom-contact-forms').'">&lt; ' . __('Go Back to Form.', 'custom-contact-forms') . '</a></p>' : '';
 				$this->emptyFormErrors();
 				return $out . '</ul>' . "\n" . $err_link . '</div>';
 			}
@@ -151,23 +150,21 @@ if (!class_exists('CustomContactFormsFront')) {
 				$style = parent::selectStyle($form->form_style);
 				?>
                 <style type="text/css">
-					<!--
-					#ccf-form-success { z-index:10000; border-color:#<?php echo parent::formatStyle($style->success_popover_bordercolor); ?>; height:<?php $style->success_popover_height; ?>; }
-					#ccf-form-success div { background-color:#<?php echo parent::formatStyle($style->success_popover_bordercolor); ?>; }
-					#ccf-form-success div h5 { color:#<?php echo parent::formatStyle($style->success_popover_title_fontcolor); ?>; font-size:<?php echo $style->success_popover_title_fontsize; ?>; }
-					#ccf-form-success div a { color:#<?php echo parent::formatStyle($style->success_popover_title_fontcolor); ?>; }
-					#ccf-form-success p { font-size:<?php echo $style->success_popover_fontsize; ?>; color:#<?php echo parent::formatStyle($style->success_popover_fontcolor); ?>; }
-					-->
+					#ccf-form-success { z-index:10000; border-color:#<?php echo esc_attr(parent::formatStyle($style->success_popover_bordercolor)); ?>; height:<?php echo esc_attr($style->success_popover_height); ?>; }
+					#ccf-form-success div { background-color:#<?php echo esc_attr(parent::formatStyle($style->success_popover_bordercolor)); ?>; }
+					#ccf-form-success div h5 { color:#<?php echo esc_attr(parent::formatStyle($style->success_popover_title_fontcolor)); ?>; font-size:<?php echo esc_attr($style->success_popover_title_fontsize); ?>; }
+					#ccf-form-success div a { color:#<?php echo esc_attr(parent::formatStyle($style->success_popover_title_fontcolor)); ?>; }
+					#ccf-form-success p { font-size:<?php echo esc_attr($style->success_popover_fontsize); ?>; color:#<?php echo esc_attr(parent::formatStyle($style->success_popover_fontcolor)); ?>; }
 				</style>
                 <?php
 			}
 		?>
         	<div id="ccf-form-success">
             	<div>
-            		<h5><?php echo $success_title; ?></h5>
+            		<h5><?php echo esc_html($success_title); ?></h5>
                 	<a href="javascript:void(0)" class="close">&times;</a>
                 </div>
-                <p><?php echo $success_message; ?></p>
+                <p><?php echo esc_html($success_message); ?></p>
                 
             </div>
 
@@ -205,7 +202,7 @@ if (!class_exists('CustomContactFormsFront')) {
 			$out = '';
 			$form_styles = '';
 			$style_class = (!$is_widget_form) ? ' customcontactform' : ' customcontactform-sidebar';
-			$form_id = 'form-' . $form->id . '-'.$form_key;
+			$form_id = esc_attr('form-' . $form->id . '-'.$form_key);
 			if ($form->form_style != 0) {
 				$style = parent::selectStyle($form->form_style, '');
 				$style_class = $style->style_slug;
@@ -216,7 +213,7 @@ if (!class_exists('CustomContactFormsFront')) {
 			$file_upload_form = '';
 			//$out .= '<form id="'.$form_id.'" method="'.$form_method.'" action="'.$action.'" class="'.$style_class.'">' . "\n";
 			$out .= ccf_utils::decodeOption($form->custom_code, 1, 1) . "\n";
-			if (!empty($form_title) && !$is_widget_form) $out .= '<h4 id="h4-' . $form->id . '-' . $form_key . '">' . $form_title . '</h4>' . "\n";
+			if (!empty($form_title) && !$is_widget_form) $out .= '<h4 id="h4-' . esc_attr($form->id) . '-' . $form_key . '">' . esc_html($form_title) . '</h4>' . "\n";
 			$fields = parent::getAttachedFieldsArray($form->id);
 			$hiddens = '';
 			$code_type = ($admin_options['code_type'] == 'XHTML') ? ' /' : '';
@@ -227,7 +224,7 @@ if (!class_exists('CustomContactFormsFront')) {
 				$req_long = ($field->field_required == 1) ? ' ' . __('(required)', 'custom-contact-forms') : '';
 				$input_id = 'id="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'-'.$form_key.'"';
 				$field_value = ccf_utils::decodeOption($field->field_value, 1, 1);
-				$instructions = (empty($field->field_instructions)) ? '' : 'title="' . $field->field_instructions . $req_long . '" ';
+				$instructions = (empty($field->field_instructions)) ? '' : 'title="' . esc_attr($field->field_instructions) . $req_long . '" ';
 				$tooltip_class = (empty($field->field_instructions)) ? '' : 'ccf-tooltip-field';
 				if ($admin_options['enable_widget_tooltips'] == 0 && $is_widget_form) $instructions = '';
 				if (isset($_SESSION['ccf_fields'][$field->field_slug])) {
@@ -235,6 +232,8 @@ if (!class_exists('CustomContactFormsFront')) {
 						$field_value = $_SESSION['ccf_fields'][$field->field_slug];
 				} if ($field->field_slug == 'captcha') {
 					$out .= '<div>' . "\n" . $this->getCaptchaCode($field, $form->id) . "\n" . '</div>' . "\n";
+				} elseif ( $field->field_slug == 'recaptcha' ) {
+					$out .= '<div>' . "\n" . $this->getReCaptchaCode( $field, $form->id ) . "\n" . '</div>' . "\n";
 				} elseif ($field->field_slug == 'usaStates') {
 					$field->field_value = $field_value;
 					$out .= '<div>' . "\n" . $this->getStatesCode($field, $form->id) . "\n" . '</div>' . "\n";
@@ -245,36 +244,34 @@ if (!class_exists('CustomContactFormsFront')) {
 					$field->field_value = $field_value;
 					$out .= '<div>' . "\n" . $this->getCountriesCode($field, $form->id) . "\n" . '</div>' . "\n";
 				} elseif ($field->field_slug == 'resetButton') {
-					$add_reset = ' <input type="reset" '.$instructions.' class="reset-button '.$field->field_class.' '.$tooltip_class.'" value="' . $field->field_value . '" />';
+					$add_reset = ' <input type="reset" '.$instructions.' class="reset-button '.$field->field_class.' '.$tooltip_class.'" value="' . esc_attr($field->field_value) . '" />';
 				} elseif ($field->field_type == 'Text') {
-					$maxlength = (empty($field->field_maxlength) or $field->field_maxlength <= 0) ? '' : ' maxlength="'.$field->field_maxlength.'"';
-					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<input class="'.$field->field_class.' '.$tooltip_class.'" '.$instructions.' '.$input_id.' type="text" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.$field_value.'"'.$maxlength.''.$code_type.'>'."\n".'</div>' . "\n";
+					$maxlength = (empty($field->field_maxlength) or $field->field_maxlength <= 0) ? '' : ' maxlength="'.esc_attr($field->field_maxlength).'"';
+					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<input class="'.esc_attr($field->field_class).' '.$tooltip_class.'" '.$instructions.' '.$input_id.' type="text" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.$field_value.'"'.$maxlength.''.$code_type.'>'."\n".'</div>' . "\n";
 				} elseif ($field->field_type == 'File') {
 					$file_upload_form = ' enctype="multipart/form-data" ';
-					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<input class="'.$field->field_class.' '.$tooltip_class.'" '.$instructions.' '.$input_id.' type="file" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.$field_value.'"'.$code_type.'>'."\n".'</div>' . "\n";
+					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<input class="'.esc_attr($field->field_class).' '.$tooltip_class.'" '.$instructions.' '.$input_id.' type="file" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.$field_value.'"'.$code_type.'>'."\n".'</div>' . "\n";
 				} elseif ($field->field_type == 'Date') {
 					$maxlength = (empty($field->field_maxlength) or $field->field_maxlength <= 0) ? '' : ' maxlength="'.$field->field_maxlength.'"';
-					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<input class="'.$field->field_class.' ccf-datepicker '.$tooltip_class.'" '.$instructions.' '.$input_id.' type="text" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.$field_value.'"'.$maxlength.''.$code_type.'>'."\n".'</div>' . "\n";
+					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<input class="'.esc_attr($field->field_class).' ccf-datepicker '.$tooltip_class.'" '.$instructions.' '.$input_id.' type="text" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.$field_value.'"'.$maxlength.''.$code_type.'>'."\n".'</div>' . "\n";
 				} elseif ($field->field_type == 'Hidden') {
 					$hiddens .= '<input type="hidden" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.$field_value.'" '.$input_id.''.$code_type.'>' . "\n";
-				} /*elseif ($field->field_type == 'Checkbox') {
-					$out .= '<div>'."\n".'<input class="'.$field->field_class.' '.$tooltip_class.'" '.$instructions.' type="checkbox" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.ccf_utils::decodeOption($field->field_value, 1, 1).'" '.$input_id.''.$code_type.'> '."\n".'<label class="checkbox" for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">' . $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'</div>' . "\n";
-				}*/ elseif ($field->field_type == 'Textarea') {
-					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<textarea class="'.$field->field_class.' '.$tooltip_class.'" '.$instructions.' '.$input_id.' rows="5" cols="40" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'.$field_value.'</textarea>'."\n".'</div>' . "\n";
+				} elseif ($field->field_type == 'Textarea') {
+					$out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<textarea class="'.esc_attr($field->field_class).' '.$tooltip_class.'" '.$instructions.' '.$input_id.' rows="5" cols="40" name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'.$field_value.'</textarea>'."\n".'</div>' . "\n";
 				} elseif ($field->field_type == 'Dropdown') {
 					$field_options = '';
 					$options = parent::getAttachedFieldOptionsArray($field->id);
 					foreach ($options as $option_id) {
 						$option = parent::selectFieldOption($option_id);
 						$option_sel = (($field_value == $option->option_label || $field_value == $option->option_value) && !empty($field_value)) ? ' selected="selected"' : '';
-						$option_value = (!empty($option->option_value)) ? ' value="' . $option->option_value . '"' : '';
+						$option_value = (!empty($option->option_value)) ? ' value="' . esc_attr($option->option_value) . '"' : '';
 						// Weird way of marking a state dead. TODO: Find another way.
 						$option_value = ($option->option_dead == 1) ? ' value="' . CCF_DEAD_STATE_VALUE . '"' : $option_value;
-						$field_options .= '<option'.$option_sel.''.$option_value.'>' . $option->option_label . '</option>' . "\n";
+						$field_options .= '<option'.$option_sel.''.$option_value.'>' . esc_attr($option->option_label) . '</option>' . "\n";
 					}
 					if (!empty($options)) {
-						if (!$is_widget_form) $out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<select '.$instructions.' '.$input_id.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" class="'.$field->field_class.' '.$tooltip_class.'">'."\n".$field_options.'</select>'."\n".'</div>' . "\n";
-						else  $out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<select class="'.$field->field_class.' '.$tooltip_class.'" '.$instructions.' '.$input_id.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'."\n".$field_options.'</select>'."\n".'</div>' . "\n";
+						if (!$is_widget_form) $out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<select '.$instructions.' '.$input_id.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" class="'.esc_attr($field->field_class).' '.$tooltip_class.'">'."\n".$field_options.'</select>'."\n".'</div>' . "\n";
+						else  $out .= '<div>'."\n".'<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>'."\n".'<select class="'.esc_attr($field->field_class).' '.$tooltip_class.'" '.$instructions.' '.$input_id.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'."\n".$field_options.'</select>'."\n".'</div>' . "\n";
 					}
 				} elseif ($field->field_type == 'Radio') {
 					$field_options = '';
@@ -282,7 +279,7 @@ if (!class_exists('CustomContactFormsFront')) {
 					foreach ($options as $option_id) {
 						$option = parent::selectFieldOption($option_id);
 						$option_sel = (($field_value == $option->option_label || $field_value == $option->option_value) && !empty($field_value)) ? ' checked="checked"' : '';
-						$field_options .= '<div><input'.$option_sel.' class="'.$field->field_class.' '.$tooltip_class.'" type="radio" '.$instructions.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.ccf_utils::decodeOption($option->option_value, 1, 1).'"'.$code_type.'> <label class="select" for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">' . ccf_utils::decodeOption($option->option_label, 1, 1) . '</label></div>' . "\n";
+						$field_options .= '<div><input'.$option_sel.' class="'.esc_attr($field->field_class).' '.$tooltip_class.'" type="radio" '.$instructions.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'" value="'.ccf_utils::decodeOption($option->option_value, 1, 1).'"'.$code_type.'> <label class="select" for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">' . ccf_utils::decodeOption($option->option_label, 1, 1) . '</label></div>' . "\n";
 					}
 					$field_label = (!empty($field->field_label)) ? '<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>' : '';
 					if (!empty($options)) $out .= '<div>'."\n".$field_label."\n".$field_options."\n".'</div>' . "\n";
@@ -294,8 +291,8 @@ if (!class_exists('CustomContactFormsFront')) {
 						$option = parent::selectFieldOption($option_id);
 						$field_value_array = (!is_array($field_value)) ? array() : $field_value;
 						$option_sel = (in_array($option->option_label, $field_value_array) || in_array($option->option_value, $field_value_array)) ? ' checked="checked"' : '';
-						$check_value = (empty($option->option_value)) ? $option->option_label : ccf_utils::decodeOption($option->option_value, 1, 1);
-						$field_options .= '<div><input'.$option_sel.' class="'.$field->field_class.' '.$tooltip_class.'" type="checkbox" '.$instructions.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'['.$z.']" value="'.$check_value.'"'.$code_type.'> <label class="select" for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">' . ccf_utils::decodeOption($option->option_label, 1, 1) . '</label></div>' . "\n";
+						$check_value = (empty($option->option_value)) ? esc_html($option->option_label) : ccf_utils::decodeOption($option->option_value, 1, 1);
+						$field_options .= '<div><input'.$option_sel.' class="'.esc_attr($field->field_class).' '.$tooltip_class.'" type="checkbox" '.$instructions.' name="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'['.$z.']" value="'.$check_value.'"'.$code_type.'> <label class="select" for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">' . ccf_utils::decodeOption($option->option_label, 1, 1) . '</label></div>' . "\n";
 						$z++;
 					}
 					$field_label = (!empty($field->field_label)) ? '<label for="'.ccf_utils::decodeOption($field->field_slug, 1, 1).'">'. $req .ccf_utils::decodeOption($field->field_label, 1, 1).'</label>' : '';
@@ -303,32 +300,33 @@ if (!class_exists('CustomContactFormsFront')) {
 				}
 			}
 			if (!empty($file_upload_form))
-				$out = '<input type="hidden" name="MAX_FILE_SIZE" value="'.($admin_options['max_file_upload_size'] * 1000 * 1000).'" />' . "\n" . $out;
-			$out = '<form id="'.$form_id.'" method="'.$form_method.'" action="'.$action.'" class="'.$style_class.'"'.$file_upload_form.'>' . "\n" . $out;
-			$submit_text = (!empty($form->submit_button_text)) ? ccf_utils::decodeOption($form->submit_button_text, 1, 0) : 'Submit';
-			$out .= '<input name="form_page" value="'.$_SERVER['REQUEST_URI'].'" type="hidden"'.$code_type.'>'."\n".'<input type="hidden" name="fid" value="'.$form->id.'"'.$code_type.'>'."\n".$hiddens."\n".'<input type="submit" id="submit-' . $form->id . '-'.$form_key.'" class="submit" value="' . $submit_text . '" name="customcontactforms_submit"'.$code_type.'>';
+				$out = '<input type="hidden" name="MAX_FILE_SIZE" value="'.(intval($admin_options['max_file_upload_size']) * 1000 * 1000).'" />' . "\n" . $out;
+			$out = '<form id="'.$form_id.'" method="'.esc_attr($form_method).'" action="'.esc_url($action).'" class="'.esc_attr($style_class).'"'.$file_upload_form.'>' . "\n" . $out;
+			$submit_text = (!empty($form->submit_button_text)) ? ccf_utils::decodeOption($form->submit_button_text, 1, 0) : __('Submit', 'custom-contact-forms');
+			$out .= '<input name="form_page" value="'.esc_url($_SERVER['REQUEST_URI']).'" type="hidden"'.$code_type.'>'."\n".'<input type="hidden" name="fid" value="'.esc_attr($form->id).'"'.$code_type.'>'."\n".$hiddens."\n".'<input type="submit" id="submit-' . esc_attr($form->id) . '-'.$form_key.'" class="submit" value="' . $submit_text . '" name="customcontactforms_submit"'.$code_type.'>';
 			if (!empty($add_reset)) $out .= $add_reset;
 			$out .= "\n" . '</form>';
 			
 			if ($form->form_style != 0) {
 				$no_border = array('', '0', '0px', '0%', '0pt', '0em');
-				$round_border = (!in_array($style->field_borderround, $no_border)) ? '-moz-border-radius:'.$style->field_borderround.'; -khtml-border-radius:'.$style->field_borderround.'; -webkit-border-radius:'.$style->field_borderround.'; ' : '';
+				$round_border = (!in_array($style->field_borderround, $no_border)) ? '-moz-border-radius:'.esc_attr($style->field_borderround).'; -khtml-border-radius:'.esc_attr($style->field_borderround).'; -webkit-border-radius:'.esc_attr($style->field_borderround).'; ' : '';
 				$round_border_none = '-moz-border-radius:0px; -khtml-border-radius:0px; -webkit-border-radius:0px; ';
 				$form_styles .= '<style type="text/css">' . "\n";
-				$form_styles .= '#' . $form_id . " { width: ".$style->form_width."; text-align:left; padding:".$style->form_padding."; margin:".$style->form_margin."; border:".$style->form_borderwidth." ".$style->form_borderstyle." #".parent::formatStyle($style->form_bordercolor)."; background-color:#".parent::formatStyle($style->form_backgroundcolor)."; font-family:".$style->form_fontfamily."; } \n";
+				$form_styles .= '#' . $form_id . " { width: ".esc_attr($style->form_width)."; text-align:left; padding:".esc_attr($style->form_padding)."; margin:".esc_attr($style->form_margin)."; border:".esc_attr($style->form_borderwidth)." ".esc_attr($style->form_borderstyle)." #".esc_attr(parent::formatStyle($style->form_bordercolor))."; background-color:#".esc_attr(parent::formatStyle($style->form_backgroundcolor))."; font-family:".esc_attr($style->form_fontfamily)."; } \n";
 				$form_styles .= '#' . $form_id . " div { margin-bottom:6px; background-color:inherit; }\n";
 				$form_styles .= '#' . $form_id . " div div { margin:0; background-color:inherit; padding:0; }\n";
-				$form_styles .= '#' . $form_id . " h4 { padding:0; background-color:inherit; margin:".$style->title_margin." ".$style->title_margin." ".$style->title_margin." 0; color:#".parent::formatStyle($style->title_fontcolor)."; font-size:".$style->title_fontsize."; } \n";
-				$form_styles .= '#' . $form_id . " label { padding:0; background-color:inherit; margin:".$style->label_margin." ".$style->label_margin." ".$style->label_margin." 0; display:block; color:#".parent::formatStyle($style->label_fontcolor)."; width:".$style->label_width."; font-size:".$style->label_fontsize."; } \n";
+				$form_styles .= '#' . $form_id . " h4 { padding:0; background-color:inherit; margin:".esc_attr($style->title_margin)." ".esc_attr($style->title_margin)." ".esc_attr($style->title_margin)." 0; color:#".esc_attr(parent::formatStyle($style->title_fontcolor))."; font-size:".esc_attr($style->title_fontsize)."; } \n";
+				$form_styles .= '#' . $form_id . " label { padding:0; background-color:inherit; margin:".esc_attr($style->label_margin)." ".esc_attr($style->label_margin)." ".esc_attr($style->label_margin)." 0; display:block; color:#".esc_attr(parent::formatStyle($style->label_fontcolor))."; width:".esc_attr($style->label_width)."; font-size:".esc_attr($style->label_fontsize)."; } \n";
 				$form_styles .= '#' . $form_id . " div div input { margin-bottom:2px; line-height:normal; }\n";
 				$form_styles .= '#' . $form_id . " input[type=checkbox] { margin:0; }\n";
 				$form_styles .= '#' . $form_id . " label.checkbox, #" . $form_id . " label.radio, #" . $form_id . " label.select { display:inline; } \n";
-				$form_styles .= '#' . $form_id . " input[type=text], #" . $form_id . " select { ".$round_border." color:#".parent::formatStyle($style->field_fontcolor)."; margin:0; width:".$style->input_width."; font-size:".$style->field_fontsize."; background-color:#".parent::formatStyle($style->field_backgroundcolor)."; border:1px ".$style->field_borderstyle." #".parent::formatStyle($style->field_bordercolor)."; } \n";
-				$form_styles .= '#' . $form_id . " select { ".$round_border_none." width:".$style->dropdown_width."; }\n";
-				$form_styles .= '#' . $form_id . " .submit { color:#".parent::formatStyle($style->submit_fontcolor)."; width:".$style->submit_width."; height:".$style->submit_height."; font-size:".$style->submit_fontsize."; } \n";
-				$form_styles .= '#' . $form_id . " .reset-button { color:#".parent::formatStyle($style->submit_fontcolor)."; width:".$style->submit_width."; height:".$style->submit_height."; font-size:".$style->submit_fontsize."; } \n";
-				$form_styles .= '#' . $form_id . " textarea { ".$round_border." color:#".parent::formatStyle($style->field_fontcolor)."; width:".$style->textarea_width."; margin:0; background-color:#".parent::formatStyle($style->textarea_backgroundcolor)."; font-family:".$style->form_fontfamily."; height:".$style->textarea_height."; font-size:".$style->field_fontsize."; border:1px ".$style->field_borderstyle." #".parent::formatStyle($style->field_bordercolor)."; } \n";
-				$form_styles .= '.ccf-tooltip { background-color:#'.parent::formatStyle($style->tooltip_backgroundcolor).'; font-family:'.$style->form_fontfamily.'; font-color:#'.parent::formatStyle($style->tooltip_fontcolor).'; font-size:'.$style->tooltip_fontsize.'; }' . "\n"; 
+				$form_styles .= '#' . $form_id . " input[type=text], #" . $form_id . " select { ".$round_border." color:#".esc_attr(parent::formatStyle($style->field_fontcolor))."; margin:0; width:".esc_attr($style->input_width)."; font-size:".esc_attr($style->field_fontsize)."; background-color:#".esc_attr(parent::formatStyle($style->field_backgroundcolor))."; border:1px ".esc_attr($style->field_borderstyle)." #".esc_attr(parent::formatStyle($style->field_bordercolor))."; } \n";
+				$form_styles .= '#' . $form_id . " select { ".$round_border_none." width:".esc_attr($style->dropdown_width)."; }\n";
+				$form_styles .= '#' . $form_id . " .submit { color:#".esc_attr(parent::formatStyle($style->submit_fontcolor))."; width:".esc_attr($style->submit_width)."; height:".esc_attr($style->submit_height)."; font-size:".esc_attr($style->submit_fontsize)."; } \n";
+				if (!empty($style->submit_background)) $form_styles .= '#' . $form_id . " .submit { background:url(" . esc_attr($style->submit_background) . ") " . esc_attr($style->submit_background_repeat) . " top left; border:0; }";
+				$form_styles .= '#' . $form_id . " .reset-button { color:#".esc_attr(parent::formatStyle($style->submit_fontcolor))."; width:".esc_attr($style->submit_width)."; height:".esc_attr($style->submit_height)."; font-size:".esc_attr($style->submit_fontsize)."; } \n";
+				$form_styles .= '#' . $form_id . " textarea { ".$round_border." color:#".esc_attr(parent::formatStyle($style->field_fontcolor))."; width:".esc_attr($style->textarea_width)."; margin:0; background-color:#".esc_attr(parent::formatStyle($style->textarea_backgroundcolor))."; font-family:".esc_attr($style->form_fontfamily)."; height:".esc_attr($style->textarea_height)."; font-size:".esc_attr($style->field_fontsize)."; border:1px ".esc_attr($style->field_borderstyle)." #".esc_attr(parent::formatStyle($style->field_bordercolor))."; } \n";
+				$form_styles .= '.ccf-tooltip { background-color:#'.esc_attr(parent::formatStyle($style->tooltip_backgroundcolor)).'; font-family:'.esc_attr($style->form_fontfamily).'; font-color:#'.esc_attr(parent::formatStyle($style->tooltip_fontcolor)).'; font-size:'.esc_attr($style->tooltip_fontsize).'; }' . "\n"; 
 				$form_styles .= '</style>' . "\n";
 			}
 			return $form_styles . $out;
@@ -469,6 +467,17 @@ if (!class_exists('CustomContactFormsFront')) {
 								$this->setFormError('captcha', __('You copied the number from the captcha field incorrectly.', 'custom-contact-forms'));
 							else $this->setFormError('captcha', $field->field_error);
 						}
+					} elseif ( $field->field_slug == 'recaptcha' ) {
+						require_once( CCF_BASE_PATH . 'modules/recaptcha/recaptchalib.php' );
+						
+						$resp = recaptcha_check_answer( $admin_options['recaptcha_private_key'], $_SERVER['REMOTE_ADDR'], $_POST['recaptcha_challenge_field'], $_POST['recaptcha_response_field'] );
+						
+						if ( ! $resp->is_valid ) {
+							if ( empty( $field->field_error ) )
+								$this->setFormError( 'recaptcha', __( 'You copied the text from the captcha field incorrectly.', 'custom-contact-forms' ) );
+							else $this->setFormError( 'recaptcha', $field->field_error );
+						}
+						
 					} elseif ($field->field_slug == 'fixedEmail' && $field->field_required == 1 && !empty($_POST['fixedEmail'])) {
 						if (!$this->validEmail($_POST['fixedEmail'])) {
 							if (empty($field->field_error))
@@ -586,7 +595,7 @@ if (!class_exists('CustomContactFormsFront')) {
 						$mail->MsgHTML(stripslashes($body));
 						$mail->Send();
 					} if (!empty($form->form_thank_you_page)) {
-						ccf_utils::redirect($form->form_thank_you_page);
+						ccf_utils::redirect(str_replace('&amp;', '&', $form->form_thank_you_page));
 					}
 					$this->current_form = $form->id;
 					add_action('wp_footer', array(&$this, 'insertFormSuccessCode'), 1);
@@ -609,6 +618,13 @@ if (!class_exists('CustomContactFormsFront')) {
 			$out = '<img width="96" height="24" alt="' . __('Captcha image for Custom Contact Forms plugin. You must type the numbers shown in the image', 'custom-contact-forms') . '" id="captcha-image" src="' . get_bloginfo('wpurl') . '/wp-content/plugins/custom-contact-forms/image.php?fid='.$form_id.'"'.$code_type.'> 
 			<div><label for="captcha'.$form_id.'">* '.$field_object->field_label.'</label> <input class="'.$field_object->field_class.' '.$tooltip_class.'" type="text" '.$instructions.' name="captcha" id="captcha'.$form_id.'" maxlength="20"'.$code_type.'></div>';
 			return $out;
+		}
+		
+		function getReCaptchaCode( $field_object, $form_id ) {
+			ccf_utils::load_module( 'extra_fields/recaptcha_field.php' );
+			$admin_options = parent::getAdminOptions();
+			$recaptcha_field = new ccf_recaptcha_field( $admin_options['recaptcha_public_key'], $field_object->field_label, $field_object->field_slug, $field_object->field_class, $field_object->field_value, $field_object->field_instructions );
+			return "\n" . $recaptcha_field->getCode();
 		}
 		
 		function getIsHumanCode($field_object, $form_id) {
@@ -669,4 +685,3 @@ if (!class_exists('CustomContactFormsFront')) {
 		}
 	}
 }
-?>

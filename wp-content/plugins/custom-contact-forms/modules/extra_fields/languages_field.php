@@ -17,7 +17,7 @@ if (!class_exists('ccf_languages_field')) {
 				$tooltip_class = '';
 			} else {
 				$instructions_attr = ' title="'.$field_instructions.'" ';
-				$tooltip_class = 'ccf_tooltip_field';
+				$tooltip_class = 'ccf-tooltip-field';
 			}
 			$this->field_code .= '<select name="alllanguages" class="'.$tooltip_class.' ' . $class_attr . '" ' . $id_attr . $instructions_attr . '>' . "\n";
 			$languages = array('Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica', 'Antigua And Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia And Herzegowina', 'Botswana', 
