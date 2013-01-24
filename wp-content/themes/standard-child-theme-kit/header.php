@@ -64,6 +64,34 @@
 						  <span class="icon-bar"></span>
 						  <span class="icon-bar"></span>
 						</a>
+						
+						<div class="accounts">
+
+							<?php
+							if ( is_user_logged_in () ) {
+								echo '<a class="btn btn-success btn-flat" href="/the-study" title="The Study">The Study</a>';
+							} else {
+								echo '<a class="btn btn-success btn-flat" href="/signup">Join the Study</a>';
+							}			
+							?>
+
+							
+
+							<?php
+							if ( is_user_logged_in () ) {
+
+								echo '<a class="btn btn-success btn-flat" href="';
+
+								echo wp_logout_url();
+
+								echo '" title="Logout">Logout</a>';
+
+							} else {
+								echo '<a class="btn btn-success btn-flat" href="/login">Login</a>';
+							}			
+							?>
+
+						</div>
 
 						<div class="nav-collapse above-header-nav-collapse">
 							<div class="home-icon"> <a href="http://localhost:8888" title="Home"><img src="http://localhost:8888/wp-content/uploads/2012/07/symbol.png" alt="Indie Film Equities Home Icon"></a></div>
@@ -89,10 +117,12 @@
 							</div><!-- /#social-networking -->
 						<?php } // end if ?>
 
+
 					</div> <!-- /container -->
 				</div><!-- /navbar-inner -->
 			</div> <!-- /#menu-above-header -->
 		<?php } // end if ?>
+
 
 		<?php
 			// Check to see if there is a header image, to set a class for the positioning of the logo

@@ -1,0 +1,1223 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"octo",
+				"octo	Backtick Code"
+			],
+			[
+				"text",
+				"text-align	zen:css_properties"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"border-ra",
+				"border-radius	zen:css_properties"
+			],
+			[
+				"text-d",
+				"text-decoration"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"a",
+				"a	<a>"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"u",
+				"url()"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"img",
+				"img	Image - Placeholder"
+			],
+			[
+				"background",
+				"background"
+			],
+			[
+				"url",
+				"url(image-url.gif)"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"border-b",
+				"border-bottom"
+			],
+			[
+				"ba",
+				"basemargin"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"log",
+				"logo-grid"
+			],
+			[
+				"font-w",
+				"font-weight	zen:css_properties"
+			],
+			[
+				"color",
+				"color"
+			],
+			[
+				"site",
+				"site-title"
+			],
+			[
+				"backgroudn",
+				"background-image"
+			],
+			[
+				"lorem",
+				"lorem	lorem"
+			],
+			[
+				"Twi",
+				"twitter-bootstrap"
+			],
+			[
+				"last",
+				":last-child"
+			],
+			[
+				"line-spac",
+				"letter-spacing"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"base",
+				"basepadding"
+			],
+			[
+				"display",
+				"display	display: block"
+			],
+			[
+				"bo",
+				"border	border: size style color"
+			],
+			[
+				"last-of-type",
+				":last-of-type"
+			],
+			[
+				"div",
+				"divider	divider"
+			],
+			[
+				"vertical",
+				"vertical-align"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"p",
+				"padding	padding-left: length"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"ali",
+				"vertical-align"
+			],
+			[
+				"liste",
+				"list-style"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"letter",
+				"letter-spacing"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"link",
+				"link	link - stylesheet"
+			],
+			[
+				"list",
+				"list	list-style-type: numeric"
+			],
+			[
+				"dash",
+				":dashed"
+			],
+			[
+				"double",
+				":groove"
+			],
+			[
+				"padd",
+				"padding	padding-bottom: length"
+			],
+			[
+				"op",
+				"opacity	opacity: [for Safari, FF & IE]"
+			],
+			[
+				"video",
+				"video: <video>"
+			],
+			[
+				"html",
+				"html: html"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "wp-content/themes/standard-child-theme-kit/scss/global.scss",
+			"settings":
+			{
+				"buffer_size": 7487,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/standard-child-theme-kit/scss/_wells.scss",
+			"settings":
+			{
+				"buffer_size": 3069,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/standard-child-theme-kit/header.php",
+			"settings":
+			{
+				"buffer_size": 9402,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "  <div class=\"row-fluid\">\n    <div class=\"span12\">\n  [caption align=\"aligncenter\" width=\"900\"]<img class=\"size-full\" title=\"Wrightsville\" src=\"[bloginfo key='stylesheet_directory']/images/wrightsville-logo.jpg\" alt=\"Wrightsville\" width=\"900\" height=\"392\" />Wrightsville - Where Love Conquers Fear[/caption]\n    </div>\n  </div>\n\n<div class=\"container-fluid\">\n  <div id=\"film-page\" class=\"row-fluid\">\n      <div class=\"span7\">\n      <h1>The Motion Picture</h1>\n      <h3>Tagline:</h3>\n      <p>Where love conquers fear.</p>\n      <h3>Logline:</h3>\n      <p>A college coed confronts her fear of breast cancer and reveals a dark secret about her mother’s death.</p>\n      <h2>Rating</h2>\n      PG-13\n      Production Company: Highway 29 Motion Pictures\n      <h3>Synopsis:</h3>\n      <p></p>\n      <h3>Themes:</h3>\n      <p></p>\n      <h3>Production Overview:</h3>\n      <p></p>\n      <h3>Target Market:</h3>\n      <p></p>\n      <h3>Marketing Hook:</h3>\n      <p></p>\n    </div>\n    \n    <div class=\"span5\">\n      <div class=\"row-fluid\">\n        <div rel=\"The Investment\" class=\"span12 well investment-well\">\n          <p></p>\n          <h3>Marketing Attributes:</h3>\n          <p></p>\n          <h3>Features of the Investment:</h3>\n          <ul>\n            <li>100% Priority Return</li>\n            <li>100% Tax Deduction</li>\n            <li>40% Percentage of LLC (40% Profit Distribution after breakeven)</li>\n          </ul>\n        </div>\n      </div>\n\n      <div class=\"row-fluid\">\n        <div rel=\"Video\" class=\"span12 well video-well\">\n          <iframe src=\"http://player.vimeo.com/video/21266868\" width=\"500\" height=\"281\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\n        </div>\n      </div>\n\n      <div class=\"row-fluid\">\n        <div rel=\"Get More Info\" class=\"span12 well get-info-well\"><p> To see the full business plan and register as an IFE Accredited Investor, click the green button below.</p>\n        <a class=\"btn btn-success btn-large btn-flat\" href=\"#myModal\" data-toggle=\"modal\">Get More Info</a>\n      </div>\n    \n      <div id=\"myModal\" class=\"modal hide fade\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h3>Please fill out this form. Thank you.</h3>\n        </div>\n        <div class=\"modal-body\">\n          [customcontact form=3]\n        </div>\n      </div>\n\n      </div>\n\n  </div>\n</div>\n</div>",
+			"settings":
+			{
+				"buffer_size": 2449,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"lint",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"lorem",
+				"Snippet: lorem - Medium paragraph <p>"
+			],
+			[
+				"octopress",
+				"Snippet: Octopress - Insert code block"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"div",
+				"Snippet: divider2"
+			],
+			[
+				"mail",
+				"Snippet: <a href=\"mailto:\">"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"divi",
+				"Snippet: divider2"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLint – User"
+			],
+			[
+				"comb",
+				"Sort via CSScomb"
+			],
+			[
+				"diver",
+				"Snippet: divider2"
+			],
+			[
+				"<p>",
+				"Snippet: <p>"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet script",
+				"Snippet: script-src"
+			],
+			[
+				"bootstrapsta",
+				"Snippet: Bootstrap starter"
+			],
+			[
+				"bootstra",
+				"Snippet: Bootstrap starter"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"doctyp",
+				"Snippet: DOCTYPE HTML"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"fetch",
+				"Fetch: Manage"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"prefixr",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"prefix",
+				"Preferences: Prefixr Key Bindings – User"
+			],
+			[
+				"finder",
+				"Finder: Open here"
+			],
+			[
+				"zurb",
+				"Snippet: Zurb 2 Column Layout"
+			],
+			[
+				"snipp",
+				"Snippet: + Shortcut to Include"
+			],
+			[
+				"ipad",
+				"Snippet: ipad"
+			],
+			[
+				"snippet ",
+				"Snippet: ipad"
+			],
+			[
+				"foundation",
+				"Snippet: Zurb Foundation - New Page"
+			],
+			[
+				"boots",
+				"Snippet: Bootstrap breadcrumb"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"nav",
+				"Snippet: nav - Placeholder"
+			],
+			[
+				"lorem <p",
+				"Snippet: lorem - Medium paragraph <p>"
+			],
+			[
+				"snippetnav",
+				"Snippet: nav - Placeholder"
+			],
+			[
+				"ntml",
+				"Snippet: html"
+			],
+			[
+				"gistop",
+				"Gist: Open Gist"
+			],
+			[
+				"gist",
+				"Gist: Create Public Gist"
+			],
+			[
+				"snippet nav",
+				"Snippet: nav - Placeholder"
+			],
+			[
+				"sn",
+				"Snippet: nav - Placeholder"
+			],
+			[
+				"shop",
+				"Shopify: Edit asset"
+			],
+			[
+				"shopi",
+				"Shopify: Edit asset"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"shopify",
+				"Shopify: Choose store"
+			],
+			[
+				"sideb",
+				"View: Toggle Side Bar"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snippet ips",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"fet",
+				"Fetch"
+			],
+			[
+				"sscss",
+				"Set Syntax: CSS"
+			],
+			[
+				"fe",
+				"Fetch: Manage remote files"
+			],
+			[
+				"feth",
+				"Fetch: Manage remote files"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"padk",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: <head>"
+			],
+			[
+				"html5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 122.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_font-awesome-ie7.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_font-awesome.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/old font/_font-awesome.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_bootstrap-add-ons.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_responsive.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/new font/_font-awesome-ie7.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/header.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/old font/_font-awesome-ie7.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/css/global.css",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/config.rb",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/global.scss",
+		"/Users/M8M/.bash_profile",
+		"/Users/M8M/.zshrc",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/config.rb",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/ife.sublime-project",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_includes/custom/asides/aboutmetwitter.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_layouts/about_default.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/_config.yml",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_layouts/about_page.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/about/index.markdown",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_includes/head.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_includes/about_head.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_layouts/about_defalut.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_layouts/about.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_includes/about-head.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_layouts/about-page.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/about.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_layouts/default.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_layouts/page.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_includes/custom/header.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/blog.sublime-project",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-backtick-code-blocks.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-code.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-blockquote.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-gist.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-image.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-include-array.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-include-code.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-jsFiddle-tag.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-pullquote.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/octopress-video.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/M8M-Octopress-Snippets/vimeo.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_posts/2012-11-16-2nd-post.markdown",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_posts/2012-11-16-what-am-i-doing-here.markdown",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/vimeo.sublime-snippet",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/sass/custom/_styles.scss",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-video.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-pullquote.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-blockquote.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-code.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-gist.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-image.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-include-array.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-include-code.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-jsFiddle-tag.sublime-snippet",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/Octopress-Snippets-for-Sublime-Text-2/octopress-backtick-code-blocks.sublime-snippet",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_includes/custom/navigation.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/blog.sublime-workspace",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/blog/about/index.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/blog/archives/index.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/sass/custom/_colors.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/test/test.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/test.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/asides/gravatar.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/sass/base/_theme.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/blog/about/about.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/index.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/about.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/source/_includes/custom/asides/about.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/plugins/wikipedia.rb",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/plugins/wikipedia.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/sass/custom/_wikipedia.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/.themes/classic/sass/custom/_colors.scss",
+		"/Users/M8M/.rvm/gems/ruby-1.9.3-p286/gems/compass-0.12.2/lib/compass/sass_extensions/functions/inline_image.rb",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/sass/custom/_layout.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/.themes/classic/sass/custom/_styles.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/.themes/classic/sass/base/_theme.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/.sass-cache/9ecbded999f1fbca680f99caf4bbf17ef7b48fb0/_styles.scssc",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/octopress/Rakefile",
+		"/Users/M8M/Library/Containers/at.EternalStorms.Yoink/Data/Documents/YoinkPromisedFiles/Snippets/F5A7D8B5-DEF6-4437-A477-4ABD193874B9.txt",
+		"/tmp/subl stdin 3hJCxj.txt",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_layouts/default.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global_v1.5.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global_v1.4.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/fruitcake/index.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_fruit-cake.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global_v1.3.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global_v1.2.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_site/css/global_v1.2.css",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/.htaccess",
+		"/Users/M8M/Library/Application Support/Flow/Editor/home5/middleei/public_html/tifn/_site/application/online-app.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/index.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global_v1.1.scss",
+		"/Users/M8M/Library/Application Support/Flow/Editor/home5/middleei/public_html/tifn/_site/index.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_site/bylaws.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_site/index.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_site/fruitcake/index.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_site/application/online-app.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_site/application/paypal.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/bylaws.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/application/paypal.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/application/online-app.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/send_form_email.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global_v1.0.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_config.yml",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/.sass-cache/0717e7fc8bac787e981ce39fa7e64424c7fbf1df/global.scssc",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/js/app.js",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global?v1.0.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/fruitcake",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/fruitcake.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/fruitcake/",
+		"/Users/M8M/Library/Application Support/Flow/Editor/home5/middleei/public_html/tifn/_site/fruitcake.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_plugins/version.rb",
+		"/Users/M8M/Library/Caches/TemporaryItems/.htaccess",
+		"/Users/M8M/Library/Application Support/Flow/Editor/home5/middleei/public_html/.htaccess",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/config.rb",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/jekyll/_config.yml",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_skeleton.scss",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/User/SublimeLint.sublime-settings",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/sublimelint/SublimeLint.sublime-settings",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_variables.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/index-old.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_zen-grids.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_grid.scss",
+		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/css/style.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"btn",
+			"-4",
+			"btn",
+			"boot",
+			"btn",
+			"margin-top",
+			"margin-bottom",
+			"btn",
+			"import",
+			"btn-navbar",
+			"icon-bar",
+			"boot",
+			"icon-bar",
+			"icon",
+			"bar",
+			"subtitle",
+			"Octopress-Blog",
+			"archive",
+			"blog",
+			"noki",
+			"w.png",
+			"wi",
+			"''\n",
+			"w.png",
+			"png",
+			"click",
+			"160",
+			"here",
+			"home",
+			"box",
+			"href=\"fruitcake.php\"",
+			"style=\"float:left;\"",
+			"please",
+			"application",
+			"please",
+			"bylaws",
+			"float",
+			"em",
+			"r",
+			"em",
+			"font",
+			"font-size",
+			"font",
+			"#",
+			"px",
+			"#about",
+			"fruit",
+			"grids",
+			"top",
+			"5px",
+			"header",
+			"614px",
+			"content",
+			"links",
+			"prefix",
+			"pref",
+			"content",
+			"container_12",
+			"container-12",
+			"scrollspy",
+			"easing",
+			"Fruitcake",
+			"top",
+			"10",
+			"contact",
+			"h3",
+			"linear",
+			"ease",
+			"options",
+			"1px",
+			"20deg",
+			"90deg",
+			"8s",
+			"10px",
+			"6s",
+			"3s",
+			"5s",
+			"bounce",
+			"6s",
+			"8px",
+			"50",
+			"8px",
+			"1s",
+			"20px",
+			"0",
+			"15px",
+			"30px",
+			"20px",
+			"bold",
+			"E3",
+			"top",
+			"text",
+			"content",
+			"logo",
+			"header",
+			"2000",
+			"container",
+			"2000",
+			"2000px",
+			"header",
+			"file",
+			"h2",
+			"h1",
+			"footer",
+			"super+k",
+			"keys",
+			"sid",
+			"0px",
+			"m8m",
+			"footer",
+			"shadow",
+			"footer",
+			"&nbsp;",
+			"box-sizing",
+			"auto",
+			"em",
+			"class",
+			"word",
+			"Word",
+			"word",
+			"Word",
+			"word",
+			"h3",
+			"h2",
+			"block",
+			"spotlight",
+			"boot",
+			"about"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"container",
+			"h4",
+			"h3",
+			"$basespace",
+			"../images",
+			"darkgray",
+			"$darkgray",
+			"$j",
+			"h3",
+			"http://qbeasy.com",
+			"#fff",
+			"&",
+			"big",
+			"30",
+			"25",
+			"36",
+			"h4",
+			"Norma",
+			"@font-awesome",
+			"@fontface",
+			"@textcolor",
+			"color",
+			"Governor",
+			"Average",
+			"headphones",
+			"headphone",
+			"h3",
+			"Cubano",
+			"message",
+			"h1",
+			"h2",
+			"bottom-pic",
+			"ad2.jpg",
+			"ad1.jpg",
+			"nav"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wp-content/themes/standard-child-theme-kit/scss/global.scss",
+					"settings":
+					{
+						"buffer_size": 7487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								139
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"xiki": false
+						},
+						"translation.x": 1.0,
+						"translation.y": 2039.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/standard-child-theme-kit/scss/_wells.scss",
+					"settings":
+					{
+						"buffer_size": 3069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"xiki": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/standard-child-theme-kit/header.php",
+					"settings":
+					{
+						"buffer_size": 9402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3184,
+								3076
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"xiki": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1213.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 2449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								695,
+								690
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"xiki": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 142.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"page",
+				"source/_layouts/page.html"
+			],
+			[
+				"posts",
+				"source/_posts/2012-11-16-2nd-post.markdown"
+			],
+			[
+				"config",
+				"_config.yml"
+			],
+			[
+				"confi",
+				"_config.yml"
+			],
+			[
+				"_style",
+				".themes/classic/sass/custom/_styles.scss"
+			],
+			[
+				"style",
+				"sass/custom/_styles.scss"
+			],
+			[
+				"rake",
+				"Rakefile"
+			],
+			[
+				"defa",
+				"TIFN/_layouts/default.html"
+			],
+			[
+				"fruit",
+				"TIFN/scss/_fruit-cake.scss"
+			],
+			[
+				"global",
+				"TIFN/scss/global_v1.0.scss"
+			],
+			[
+				"eas",
+				"js/jquery.easing.js"
+			],
+			[
+				"setting",
+				"config/settings.yml"
+			],
+			[
+				"global.scss",
+				"wp-content/themes/standard-child-theme-kit/scss/global.scss"
+			],
+			[
+				"ifewell",
+				"ife/wp-content/themes/standard-child-theme-kit/scss/_wells.scss"
+			],
+			[
+				"nav",
+				"nav.php"
+			],
+			[
+				"",
+				"/Users/M8M/Dropbox/M8M/HORSE/character studies"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 310.0,
+	"status_bar_visible": true
+}

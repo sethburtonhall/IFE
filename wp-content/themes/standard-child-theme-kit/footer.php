@@ -25,7 +25,7 @@
 		<div id="sub-floor" class="clearfix">
 			<div class="container">
 				<div class="row">
-					<div id="footer-links" class="span8">
+					<div id="footer-links" class="span7">
 						<?php
 							if( has_nav_menu( 'footer_menu' ) ) {
 								wp_nav_menu(
@@ -45,8 +45,8 @@
 						<?php printf( __( '%1$s by %2$s', 'standard' ), '<a href="http://standardtheme.com">Standard</a>', '<a href="http://8bit.io/">8BIT</a>' ); ?>
 					</div> -->
 
-					<div id="credit" class=" footer_menu span4">
-						© 2012 <a href="http://newriverreleasing.com" target="_blank" title="New River Releasing">New River Releasing</a> | a <a href="http://middle8media.com" target="_blank" title="M8M">M8M</a> Website
+					<div id="credit" class=" footer_menu span5">
+						© 2012 - <?php echo date('Y'); ?> <a href="http://newriverreleasing.com" target="_blank" title="New River Releasing">New River Releasing</a> | a <a href="http://middle8media.com" target="_blank" title="M8M">M8M</a> Website
 					</div>
 					<!-- /#credits -->
 
@@ -57,10 +57,10 @@
 	<?php wp_footer(); ?>
 
 	<script type="text/javascript">
-		jQuery("h1").fitText(1.7, { minFontSize: '23px', maxFontSize: '33px' });
-	  jQuery("#hero-h1").fitText(1.2, { minFontSize: '30px', maxFontSize: '50px' });
+		jQuery("h1").fitText(1.7, { minFontSize: '22px', maxFontSize: '33px' });
+	  jQuery(".hero-h1").fitText(1.2, { minFontSize: '25px', maxFontSize: '50px' });
 	  jQuery("h2").fitText(2, { minFontSize: '20px', maxFontSize: '24px' });
-	  jQuery("h3").fitText(1, { minFontSize: '14px', maxFontSize: '20px' });
+	  // jQuery("h3").fitText(1.5, { minFontSize: '16px', maxFontSize: '20px' });
 	  jQuery("").fitText(1, { minFontSize: '14px', maxFontSize: '20px' });
 	</script>
 

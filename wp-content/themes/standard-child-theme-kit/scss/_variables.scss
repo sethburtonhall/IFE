@@ -1,15 +1,24 @@
+// --------------------------- Fonts
+
+$headerFont: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$baseFont: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monoFont: Menlo, Monaco, "Courier New", monospace;
+
 $base-font-size: 13px;
 $base-line-height: 24px;
 
-// --------------------------- Site Colors
+// --------------------------- Colors
 $blue: #82AFCD;
 $green: #A2D38A;
+$success: #52B661;
 $yellow: #DCD592;
 $orange: #DCB48F;
 $red: #D38697;
+
 $black: #000;
-$darkgray: #222;
-$midgray: #333;
+$darkgray: #111;
+$midgray: #222;
+$lightgray: #333;
 
 $twitter: #00ACEE;
 

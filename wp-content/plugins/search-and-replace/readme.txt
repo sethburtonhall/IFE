@@ -1,10 +1,10 @@
 === Search and Replace ===
-Contributors: Bueltge
+Contributors: Bueltge, inpsyde
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RHWH8VG798CSC
 Tags: database, mysql, search, replace, admin, security
 Requires at least: 1.5
-Tested up to: 3.4-RC1
-Stable tag: 2.6.4
+Tested up to: 3.5-Beta2
+Stable tag: 2.6.5
 
 A simple search for find strings in your database and replace the string.
 
@@ -13,17 +13,13 @@ A simple search for find strings in your database and replace the string. You ca
 
 "Search and Replace" Originalplugin ist von [Mark Cunningham](http://thedeadone.net/ "Mark Cunningham") and was advanced (comments and comment-author) by [Gonahkar](http://www.gonahkar.com/ "Gonahkar"). More increments by my, Frank Bültge.
 
-**More Plugins**
+**Made by [Inpsyde](http://inpsyde.com) &middot; We love WordPress**
 
-Please see also my [Premium Plugins](http://wpplugins.com/author/malo.conny/). Maybe you find an solution for your requirement.
-
-**Interested in WordPress tips and tricks**
-
-You may also be interested in WordPress tips and tricks at [WP Engineer](http://wpengineer.com/) or for german people [bueltge.de](http://bueltge.de/) 
+Have a look at the premium plugins in our [market](http://marketpress.com).
 
 == Installation ==
 = Requirements =
-* WordPress version 3.0 and later (tested at 3.4 (RC1) and 3.3.2)
+* WordPress version 3.0 and later (tested at 3.5-Beta2 and 3.3.2)
 
 = Installation =
 1. Unpack the download-package
@@ -50,7 +46,7 @@ You may also be interested in WordPress tips and tricks at [WP Engineer](http://
 * Belarusian laguage files, thanks to [Alexander Ovsov](http://webhostinggeeks.com/)
 * Lithuanian translation files by [Vincent G](http://www.host1plus.com)
 
-= Licence =
+= License =
 Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, you can thank me and leave a [small donation](http://bueltge.de/wunschliste/ "Wishliste and Donate") for the time I've spent writing and supporting this plugin. And I really don't want to know how many hours of my life this plugin has already eaten ;)
 
 = Translations =
@@ -58,6 +54,9 @@ The plugin comes with various translations, please refer to the [WordPress Codex
 
 
 == Changelog ==
+= v2.6.5 =
+* Fix for change User-ID, add table `comments`
+
 = v2.6.4 =
 * Fix capability check, if the constant `DISALLOW_FILE_EDIT` ist defined
 

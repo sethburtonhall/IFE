@@ -1,0 +1,69 @@
+.standard-pi-pic {
+  padding: 13px;
+}
+#sidebar, #sidebar .widget-title {
+  color: #fff;
+}
+
+.screen-reader {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 20px 20px 20px 10px;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  margin-top: -1px;
+}
+
+#mc_embed_signup {
+  background:transparent;
+  clear:left;
+  @include adjust-font-size-to(14px);
+  font-family: 'Helvetica-Neue' Helvetica,Arial,sans-serif;
+}
+
+#mc_embed_signup form {
+  padding: 10px 0 10px 0 !important;
+}
+
+#mc_embed_signup input.email {
+  width: 100% !important;
+  padding: 17px 0px !important;
+}
+
+input[type="submit"]{
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  background-color: $success;
+  filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+  @include box-shadow(0px 2px black);
+  background-image:none;
+  border:0;
+  @include border-radius(0);
+  padding: 9px 14px !important;
+  @include adjust-font-size-to(15px);
+  line-height: normal;
+}
+
+input[type="submit"]:hover {
+  background-position: 0 -15px;
+  color: #fff;
+  text-decoration: none;
+  background-color: darken($success, 5%);
+}
+
+input[type="submit"]:active {
+  position: relative;
+  top: 2px;
+  background-position: 0 -15px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0px 0px;
+}

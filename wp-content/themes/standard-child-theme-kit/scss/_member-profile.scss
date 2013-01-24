@@ -1,0 +1,74 @@
+/*
+******************************
+* Member Profile
+******************************
+*/
+
+.login-well {
+  h1 {
+    margin: 0;
+    line-height: 1.3em;
+  }
+  h3 {
+    margin-bottom: 5px;
+    line-height: 1.3em;
+  }
+    ul li {
+      padding-bottom: 2px;
+    }
+}
+
+.ife-member-details {
+  float: left;
+  width: 100%;
+  background: lighten($green, 9);
+  border-bottom: $lightgray 2px solid;
+}
+
+.ife-avatar {
+  float: left;
+  padding: $basespace - 15px $basespace - 5px $basespace - 15px $basespace - 15px;
+  width: 45%;
+  img {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.ife-user-info {
+  float: right;
+  width: 55%;
+  padding: 4px 0 0 0;
+  [class^="icon-"] {
+    margin-right: 3px;
+  }
+    .icon-cog{
+      position: relative;
+      left: -1px;
+    }
+}
+
+.rcp_sub_details_current_level {
+  background: lighten($green, 9) ;
+  padding: 2px 6px 4px;
+  color: #222;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.subscription-details {
+  clear: left;
+  padding-top: $basespace;
+  margin-bottom: $basespace;
+  li:last-child {
+    margin-bottom: $basespace;
+  }
+/*  li:nth-child(1) .rcp_sub_details_separator{
+  display: none;
+  }*/
+}
+
+#wpbody .rcp-payment-history {
+  margin-top: 30px !important;
+  background: #ECECEC !important;
+}

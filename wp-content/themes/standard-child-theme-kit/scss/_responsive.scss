@@ -1,0 +1,133 @@
+/* Smartphones */
+@media (max-width: 480px) {
+
+.navbar-inner {
+  padding: 0px 0px 9px 0px !important;
+}
+
+#site-description {
+  color: $darkgray;
+  @include adjust-font-size-to(13px);
+  letter-spacing: .1em;
+}
+
+#hgroup {
+  padding: 10px 0px 10px 0;
+  position: relative;
+}
+
+.home .hero-unit {
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.home-well {
+  padding: 87px 0px 0px 0px;
+}
+
+.well, .investment-well {
+  margin-bottom: $basespace !important;
+}
+
+.step-one-well,
+.step-two-well,
+.step-three-well,
+.step-four-well,
+.home2-well,
+.home3-well {
+  margin-bottom: $basespace !important;
+}
+
+.spotlight-hr {
+  border-top: 1px solid $darkgray;
+  margin: 18px 0px !important;
+}
+
+h3 {
+  @include adjust-font-size-to(16px);
+  letter-spacing: .05em;
+}
+
+.ife-avatar {
+  width: 50%;
+}
+
+.ife-user-info {
+  width: 50%;
+}
+
+}
+
+/* Tablet and Mobile */
+@media (max-width: 979px) {
+
+.navbar .btn, .navbar .btn-group {
+    margin-top: 3px;
+  }
+
+.home-icon{
+  display: none;
+}
+
+.navbar-fixed-top .navbar-inner {
+padding: 0 5px 9px;
+}
+
+.navbar .nav-menu li > a:hover, .navbar .nav .active > a, .navbar .nav .active > a:hover {
+  color: white;
+  background-color: rgb(17, 17, 17);
+}
+
+.navbar .social-icons > li {
+  margin: 5px 0 0px 12px;
+}
+
+.step-three-well {
+  padding: 67px 14px 19px 19px;
+}
+
+.well::before {
+  @include adjust-font-size-to(18px);
+}
+
+.login-well {
+  padding: 64px 10px;
+}
+
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+
+#footer .container {
+  padding-left: $basespace;
+  padding-right: $basespace;
+}
+
+}
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+.ife-avatar {
+  float: none;
+  padding-right: 5px;
+  width: 100%;
+}
+
+.ife-user-info {
+  float: none;
+  width: 100%;
+  padding: 8px 0px 8px 10px;
+}
+
+.the-study-wrapper .row-fluid > [class*="span"] {
+  width: 100%;
+}
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+
+}

@@ -1,0 +1,1788 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Restrict Content Pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-15 17:30+0300\n"
+"PO-Revision-Date: 2012-11-25 20:15-0600\n"
+"Last-Translator: Pippin Williamson <pippin@pippinsplugins.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: includes\n"
+
+#: includes/admin-ajax-actions.php:59
+msgid "No users found"
+msgstr "لم يتم العثور على مستخدمين"
+
+#: includes/admin-notices.php:7
+msgid "You should now configure your Restrict Content Pro settings"
+msgstr "يجب عليك الآن تهيئة اعدادات تقييد المحتوى الإحترافي"
+
+#: includes/admin-notices.php:14
+msgid "The Restrict Content Pro database needs updated: "
+msgstr "قاعدة بيانات تقييد المحتوى الإحترافي تحتاج للتحديث:"
+
+#: includes/admin-notices.php:14
+msgid "upgrade now"
+msgstr "ترقية الآن"
+
+#: includes/admin-notices.php:17
+msgid "The Restrict Content Pro database has been updated"
+msgstr "تم تحديث قاعدة بيانات تقييد المحتوى الإحترافي"
+
+#: includes/admin-notices.php:24
+msgid "Database upgrade complete"
+msgstr "انتهت ترقية قاعدة البيانات"
+
+#: includes/admin-pages.php:12
+#: includes/admin-pages.php:17
+msgid "Restrict Content Pro Settings"
+msgstr "اعدادات تقييد المحتوى الإخترافي"
+
+#: includes/admin-pages.php:12
+msgid "Restrict"
+msgstr "تقييد"
+
+#: includes/admin-pages.php:13
+msgid "Members"
+msgstr "الأعضاء"
+
+#: includes/admin-pages.php:14
+#: includes/admin-pages/subscription-levels.php:12
+msgid "Subscription Levels"
+msgstr "مستويات الإشتراك"
+
+#: includes/admin-pages.php:15
+msgid "Discounts"
+msgstr "التخفيضات"
+
+#: includes/admin-pages.php:15
+#: includes/admin-pages/discount-codes.php:12
+msgid "Discount Codes"
+msgstr "اكواد التخفيضات"
+
+#: includes/admin-pages.php:16
+#: includes/admin-pages/payments-page.php:9
+#: includes/admin-pages/settings.php:33
+#: includes/admin-pages/view-member.php:83
+msgid "Payments"
+msgstr "المدفوعات"
+
+#: includes/admin-pages.php:17
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: includes/admin-pages.php:18
+msgid "Export Member Data"
+msgstr "تاريخ انتهاء صلاحية العضو"
+
+#: includes/admin-pages.php:18
+#: includes/admin-pages/export.php:8
+msgid "Export"
+msgstr "تصدير"
+
+#: includes/admin-pages.php:19
+msgid "Help"
+msgstr "المساعدة"
+
+#: includes/captcha-functions.php:34
+msgid "The words/numbers you entered did not match the reCaptcha"
+msgstr "الأرقام والأحرف التي قمت بادخالها لم تتطابق مع reCaptcha"
+
+#: includes/discount-functions.php:229
+#: includes/admin-pages/view-member.php:76
+msgid "None"
+msgstr "بدون"
+
+#: includes/email-functions.php:21
+#: includes/email-functions.php:33
+#: includes/email-functions.php:46
+#: includes/email-functions.php:59
+#: includes/email-functions.php:72
+msgid "Hello"
+msgstr "السلام عليكم"
+
+#: includes/email-functions.php:21
+#: includes/email-functions.php:59
+#: includes/email-functions.php:72
+msgid "is now subscribed to"
+msgstr "مشترك الآن في"
+
+#: includes/email-functions.php:21
+#: includes/email-functions.php:59
+#: includes/email-functions.php:72
+msgid "Subscription level"
+msgstr "مستوى الإشتراك"
+
+#: includes/email-functions.php:23
+#: includes/email-functions.php:35
+#: includes/email-functions.php:48
+#: includes/email-functions.php:61
+#: includes/email-functions.php:74
+msgid "Thank you"
+msgstr "شكرا لك"
+
+#: includes/email-functions.php:24
+msgid "New subscription on "
+msgstr "اشتراك جديد على"
+
+#: includes/email-functions.php:33
+msgid "has cancelled their subscription to"
+msgstr "الغى اشتراكه على"
+
+#: includes/email-functions.php:33
+msgid "Their subscription level was"
+msgstr "مستوى اشراكه كان"
+
+#: includes/email-functions.php:36
+msgid "Cancelled subscription on "
+msgstr "الغاء الإشتراك في"
+
+#: includes/email-functions.php:46
+msgid "subscription has expired"
+msgstr "الإشتراك انتهت صلاحيته"
+
+#: includes/email-functions.php:49
+msgid "Expired subscription on "
+msgstr "ينتهي الإشتراك في"
+
+#: includes/email-functions.php:62
+msgid "New free subscription on "
+msgstr "اشتراك مجاني جديد في"
+
+#: includes/email-functions.php:75
+msgid "New trial subscription on "
+msgstr "اشتراك تجريبي جديد في"
+
+#: includes/error-tracking.php:15
+msgid "Error"
+msgstr "خطاء"
+
+#: includes/handle-registration-login.php:46
+msgid "Username already taken"
+msgstr "هذا الاسم تم اخذه بالفعل"
+
+#: includes/handle-registration-login.php:50
+#: includes/handle-registration-login.php:279
+msgid "Invalid username"
+msgstr "اسم مستخدم غير صالح"
+
+#: includes/handle-registration-login.php:54
+msgid "Please enter a username"
+msgstr "الرجاء قم بادخال اسم المستخدم"
+
+#: includes/handle-registration-login.php:58
+msgid "Invalid email"
+msgstr "بريد الكتروني غير صالح"
+
+#: includes/handle-registration-login.php:62
+msgid "Email already registered"
+msgstr "بريد الكتروني مسجل"
+
+#: includes/handle-registration-login.php:66
+#: includes/handle-registration-login.php:284
+msgid "Please enter a password"
+msgstr "الرجاء ادخال كلمة المرور"
+
+#: includes/handle-registration-login.php:70
+#: includes/handle-registration-login.php:331
+msgid "Passwords do not match"
+msgstr "كلمات المرور لم تتطابق"
+
+#: includes/handle-registration-login.php:75
+msgid "Please choose a subscription level"
+msgstr "الرجاء اختار مستوى اشتراكك"
+
+#: includes/handle-registration-login.php:80
+msgid "You may only sign up for a free trial once"
+msgstr "أنت قد تسجل فقط لتجربة مجانية لمرّة واحدة"
+
+#: includes/handle-registration-login.php:86
+msgid "The discount you entered is invalid"
+msgstr "التخفيض الذي قمت بادخاله غير صالح"
+
+#: includes/handle-registration-login.php:89
+msgid "You can only use the discount code once"
+msgstr "يمكنك استخدام كود التخفيض لمرة واحدة فقط"
+
+#: includes/handle-registration-login.php:94
+msgid "Free subscriptions cannot be automatically renewed"
+msgstr "الاشتراكات المجانية لا يمكن لها ان تتجدد بشكل ذاتي"
+
+#: includes/handle-registration-login.php:291
+msgid "Incorrect password"
+msgstr "كلمة مرور غير صالحة"
+
+#: includes/handle-registration-login.php:327
+msgid "Please enter a password, and confirm it"
+msgstr "الرجاء ادخل كلمة المرور ، وقم بتأكيدها"
+
+#: includes/member-forms.php:28
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: includes/member-forms.php:33
+#: includes/member-forms.php:34
+#: includes/member-forms.php:98
+#: includes/member-forms.php:99
+#: includes/admin-pages/members-page.php:205
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: includes/member-forms.php:37
+#: includes/member-forms.php:38
+#: includes/member-forms.php:117
+#: includes/member-forms.php:118
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: includes/member-forms.php:40
+msgid "Lost your password?"
+msgstr "هل فقدت كلمة المرور؟"
+
+#: includes/member-forms.php:51
+msgid "You are logged in."
+msgstr "انت مسجل دخولك."
+
+#: includes/member-forms.php:51
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: includes/member-forms.php:77
+msgid "Register New Account"
+msgstr "تسجيل حساب جديد"
+
+#: includes/member-forms.php:81
+msgid "Add a Subscription"
+msgstr "إضافة اشتراك"
+
+#: includes/member-forms.php:102
+#: includes/member-forms.php:103
+#: includes/admin-pages/members-page.php:110
+#: includes/admin-pages/members-page.php:124
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: includes/member-forms.php:107
+#: includes/member-forms.php:108
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#: includes/member-forms.php:111
+#: includes/member-forms.php:112
+msgid "Last Name"
+msgstr "الاسم الأخير"
+
+#: includes/member-forms.php:121
+#: includes/member-forms.php:122
+msgid "Password Again"
+msgstr "اعد كلمة المرور"
+
+#: includes/member-forms.php:135
+msgid "Choose your subscription level"
+msgstr "قم باختيار مستوى الاشتراك"
+
+#: includes/member-forms.php:142
+#: includes/member-functions.php:224
+msgid "free"
+msgstr "مجاني"
+
+#: includes/member-forms.php:143
+#: includes/admin-pages/subscription-levels.php:60
+msgid "unlimited"
+msgstr "غير محدد"
+
+#: includes/member-forms.php:152
+msgid "You have not created any subscription levels yet"
+msgstr "لم تقم بإنشاء اس مستويات اشتراك حتى الآن"
+
+#: includes/member-forms.php:160
+#: includes/member-forms.php:164
+msgid "Discount Code"
+msgstr "كود التخفيض"
+
+#: includes/member-forms.php:161
+msgid "Valid"
+msgstr "متاح"
+
+#: includes/member-forms.php:162
+msgid "Invalid"
+msgstr "غير متاح"
+
+#: includes/member-forms.php:179
+msgid "Choose Your Payment Method"
+msgstr "اختار طريقة الدفع التي ترغب بها"
+
+#: includes/member-forms.php:194
+msgid "Register"
+msgstr "تسجيل"
+
+#: includes/member-forms.php:225
+msgid "Password changed successfully"
+msgstr "تم تغيير كلمة المرور بنجاح"
+
+#: includes/member-forms.php:231
+msgid "New Password"
+msgstr "كلمة مرور جديدة"
+
+#: includes/member-forms.php:235
+msgid "Password Confirm"
+msgstr "تأكيد كلمة المرور"
+
+#: includes/member-forms.php:242
+msgid "Change Password"
+msgstr "تغيير كلمة المرور"
+
+#: includes/member-forms.php:256
+msgid "Auto Renew"
+msgstr "تجديد آلي"
+
+#: includes/member-functions.php:196
+#: includes/admin-pages/discount-codes.php:71
+#: includes/admin-pages/subscription-levels.php:54
+msgid "none"
+msgstr "بدون"
+
+#: includes/member-functions.php:238
+#: includes/admin-pages/edit-subscription.php:75
+#: includes/admin-pages/export.php:28
+#: includes/admin-pages/members-page.php:60
+#: includes/admin-pages/subscription-levels.php:155
+msgid "Active"
+msgstr "تفعيل"
+
+#: includes/member-functions.php:241
+#: includes/admin-pages/export.php:30
+#: includes/admin-pages/members-page.php:70
+msgid "Expired"
+msgstr "منتهي"
+
+#: includes/member-functions.php:244
+#: includes/admin-pages/export.php:29
+#: includes/admin-pages/members-page.php:65
+msgid "Pending"
+msgstr "معلق"
+
+#: includes/member-functions.php:247
+#: includes/admin-pages/export.php:31
+#: includes/admin-pages/members-page.php:75
+msgid "Cancelled"
+msgstr "ملغي"
+
+#: includes/member-functions.php:250
+#: includes/admin-pages/export.php:32
+#: includes/admin-pages/members-page.php:80
+#: includes/admin-pages/subscription-levels.php:144
+msgid "Free"
+msgstr "مجاني"
+
+#: includes/member-functions.php:316
+#: includes/admin-pages/payments-page.php:38
+#: includes/admin-pages/payments-page.php:50
+msgid "Date"
+msgstr "التاريخ"
+
+#: includes/member-functions.php:317
+#: includes/user-page-columns.php:4
+#: includes/admin-pages/members-page.php:111
+#: includes/admin-pages/members-page.php:125
+#: includes/admin-pages/payments-page.php:36
+#: includes/admin-pages/payments-page.php:48
+msgid "Subscription"
+msgstr "الإشتراك"
+
+#: includes/member-functions.php:318
+msgid "Payment Type"
+msgstr "نوع الدفع"
+
+#: includes/member-functions.php:319
+#: includes/admin-pages/payments-page.php:37
+#: includes/admin-pages/payments-page.php:49
+msgid "Subscription Key"
+msgstr "مفتاح الإشتراك"
+
+#: includes/member-functions.php:321
+#: includes/member-functions.php:323
+#: includes/admin-pages/discount-codes.php:21
+#: includes/admin-pages/discount-codes.php:37
+#: includes/admin-pages/discount-codes.php:136
+#: includes/admin-pages/payments-page.php:39
+#: includes/admin-pages/payments-page.php:51
+msgid "Amount"
+msgstr "المبلغ"
+
+#: includes/member-functions.php:328
+msgid "No payments recorded"
+msgstr "لم يتم تسجيل اي مدفوعات"
+
+#: includes/metabox.php:12
+msgid "Restrict this content"
+msgstr "تقييد هذا المحتوى"
+
+#: includes/metabox.php:17
+#: includes/admin-pages/help-page.php:91
+msgid "Paid Only?"
+msgstr "لمن دفع فقط؟"
+
+#: includes/metabox.php:20
+msgid "Restrict this entry to active paid users only."
+msgstr "حصر هذه المدخلة على المستخدمين الدافعين والمفعلين فقط."
+
+#: includes/metabox.php:23
+#: includes/admin-pages/help-page.php:92
+msgid "Show Excerpt?"
+msgstr "عرض المقتطف؟"
+
+#: includes/metabox.php:26
+msgid "Allow non active users to view the excerpt? If left unchecked, the message defined in settings will be used"
+msgstr "إسمح للمستخدمين الغير نشطين لمشاهدة المقتطف؟ إذا تركتها غير مفعلة،سوف تستخدم الرسالة التي عرفتها في الإعدادات ."
+
+#: includes/metabox.php:29
+#: includes/admin-pages/help-page.php:93
+msgid "Hide from Feed?"
+msgstr "إخفاء من التغذية؟"
+
+#: includes/metabox.php:32
+msgid "Hide the excerpt of this post / page from the Feed?"
+msgstr "إخفاء المقتطف لهذه المقالة / الصفحة من التغذية؟"
+
+#: includes/metabox.php:35
+#: includes/admin-pages/edit-subscription.php:33
+#: includes/admin-pages/help-page.php:94
+#: includes/admin-pages/subscription-levels.php:21
+#: includes/admin-pages/subscription-levels.php:35
+#: includes/admin-pages/subscription-levels.php:108
+msgid "Access Level"
+msgstr "مستوى الوصول"
+
+#: includes/metabox.php:38
+msgid "Choose the access level required see this content. The access level is determined by the subscription the member is subscribed to."
+msgstr "اختار مستوى الوصول المطلوب لمشاهدة هذا المحتوى. مستوى الوصول محدد بالإشتراك الذي اشترك به العضو."
+
+#: includes/metabox.php:43
+#: includes/shortcodes.php:250
+#: includes/admin-pages/edit-member.php:32
+#: includes/admin-pages/help-page.php:95
+#: includes/admin-pages/members-page.php:216
+#: includes/admin-pages/view-member.php:22
+msgid "Subscription Level"
+msgstr "مستوى الإشتراك"
+
+#: includes/metabox.php:46
+msgid "Choose the subscription level a user must be subscribed to in order to view this content."
+msgstr "اختار مستوى الإشتراك الذي يتوجب على المستخدم الإشتراك فيع لعرض هذا المحتوى."
+
+#: includes/metabox.php:50
+#: includes/admin-pages/help-page.php:96
+msgid "User Level"
+msgstr "مستوى المستخدم"
+
+#: includes/metabox.php:53
+msgid "Choose the user level that can see this post / page's content. Users of this level and higher will be the only ones able to view the content."
+msgstr "اختار مستوى العمستخدم الذي يمكنه مشاهدة محتوى التدوينة / الصفحة. مستخدمي هذا المستوى واعلى سوف يكونون الوحيدين القادرين على عرض المحتوى."
+
+#: includes/metabox.php:86
+#, php-format
+msgid "Use these options to restrict this entire entry, or the [restrict] ... [/restrict] short code to restrict partial content. %sView documentation%s."
+msgstr "استخدم هذا الخيار لتقييد هذه المدخلة، أو استخدم كود الإختصار [restrict] ... [/restrict] لتقييد جزء من المحتوى. %sاعرض وثائق المساعدة%s."
+
+#: includes/metabox.php:110
+#: includes/admin-pages/export.php:14
+msgid "All"
+msgstr "الكل"
+
+#: includes/metabox.php:124
+msgid "Note 1"
+msgstr " 1ملاحظة"
+
+#: includes/metabox.php:124
+msgid "To hide this content from logged-out users, but allow free and paid, set the User Level to \"Subscriber\"."
+msgstr "لإخفاء هذا المحتوى من المستخدمين الذين سجلوا خروجهم, ولكن السماح للمجاني والمدفوع, ضع مستوى المستخدم على \"مشترك\"."
+
+#: includes/metabox.php:125
+msgid "Note 2"
+msgstr "ملاحظة 2"
+
+#: includes/metabox.php:125
+msgid "Access level, subscription level, and user level can all be combined to require the user meet all three specifications."
+msgstr "يمكن الدمج بين مستوى الوصول، ومستوى الإشتراك, ومستوى المستخدم لتجبر المستخدم على مقابلة كل المتطلبات الثلاثة."
+
+#: includes/misc-functions.php:72
+msgid "US Dollars (&#36;)"
+msgstr "الدولار الأمريكي (&#36;)"
+
+#: includes/misc-functions.php:73
+msgid "Euros (&euro;)"
+msgstr "اليورو (&euro;)"
+
+#: includes/misc-functions.php:74
+msgid "Pounds Sterling (&pound;)"
+msgstr "الجنيه الاسترليني  (&#36;)"
+
+#: includes/misc-functions.php:75
+msgid "Australian Dollars (&#36;)"
+msgstr "الدولار الاسترالي (&#36;)"
+
+#: includes/misc-functions.php:76
+msgid "Brazilian Real (&#36;)"
+msgstr "الريال البرازيلي (&#36;)"
+
+#: includes/misc-functions.php:77
+msgid "Canadian Dollars (&#36;)"
+msgstr "الدولار الكندي (&#36;)"
+
+#: includes/misc-functions.php:78
+msgid "Czech Koruna"
+msgstr "الكورون التشيكي"
+
+#: includes/misc-functions.php:79
+msgid "Danish Krone"
+msgstr "الكورون الدنمركي"
+
+#: includes/misc-functions.php:80
+msgid "Hong Kong Dollar (&#36;)"
+msgstr "دولار هونج كونج (&#36;)"
+
+#: includes/misc-functions.php:81
+msgid "Hungarian Forint"
+msgstr "الفورنت الهنجاري"
+
+#: includes/misc-functions.php:82
+msgid "Israeli Shekel"
+msgstr "الشيكل الاسرائيلي"
+
+#: includes/misc-functions.php:83
+msgid "Japanese Yen (&yen;)"
+msgstr "الين الياباني (&yen;)"
+
+#: includes/misc-functions.php:84
+msgid "Malaysian Ringgits"
+msgstr "الرنجيتس الماليزي"
+
+#: includes/misc-functions.php:85
+msgid "Mexican Peso (&#36;)"
+msgstr "البيزة المكسيكية  (&#36;)"
+
+#: includes/misc-functions.php:86
+msgid "New Zealand Dollar (&#36;)"
+msgstr "الدولار النيوزلندي  (&#36;)"
+
+#: includes/misc-functions.php:87
+msgid "Norwegian Krone"
+msgstr "الكورن النرويجي"
+
+#: includes/misc-functions.php:88
+msgid "Philippine Pesos"
+msgstr "البيزة الفلبينية"
+
+#: includes/misc-functions.php:89
+msgid "Polish Zloty"
+msgstr "الزولتي البولندي"
+
+#: includes/misc-functions.php:90
+msgid "Singapore Dollar (&#36;)"
+msgstr "الدولار السنغافوري (&#36;)"
+
+#: includes/misc-functions.php:91
+msgid "Swedish Krona"
+msgstr "كرون السويدي"
+
+#: includes/misc-functions.php:92
+msgid "Swiss Franc"
+msgstr "الفرنك السويسري"
+
+#: includes/misc-functions.php:93
+msgid "Taiwan New Dollars"
+msgstr "دولار تايوان الجديد"
+
+#: includes/misc-functions.php:94
+msgid "Thai Baht"
+msgstr "بشت تايلاندي"
+
+#: includes/misc-functions.php:95
+msgid "Turkish Lira"
+msgstr "الليرة التركية"
+
+#: includes/shortcodes.php:151
+msgid "You are already registered and have an active subscription."
+msgstr "انت بالفعل مسجل لدينا ولديك اشتراك مفعل."
+
+#: includes/shortcodes.php:172
+msgid "User registration is not enabled."
+msgstr "السماح بالتسجيل غير متاح من لوحة التحكم."
+
+#: includes/shortcodes.php:252
+msgid "Expiration Date"
+msgstr "تاريخ الإنتهاء"
+
+#: includes/shortcodes.php:254
+#: includes/admin-pages/edit-member.php:56
+#: includes/admin-pages/members-page.php:113
+#: includes/admin-pages/members-page.php:127
+msgid "Recurring"
+msgstr "متكرر"
+
+#: includes/shortcodes.php:255
+#: includes/admin-pages/members-page.php:158
+msgid "yes"
+msgstr "نعم"
+
+#: includes/shortcodes.php:255
+#: includes/admin-pages/members-page.php:158
+msgid "no"
+msgstr "لا"
+
+#: includes/shortcodes.php:256
+msgid "Current Status"
+msgstr "الحالات الحالية"
+
+#: includes/shortcodes.php:258
+msgid "Renew your subscription"
+msgstr "تجديد اشتراكك"
+
+#: includes/shortcodes.php:260
+msgid "Upgrade your subscription"
+msgstr "ترقية اشتراكك"
+
+#: includes/shortcodes.php:262
+msgid "Cancel your subscription"
+msgstr "الغاء اشتراكك"
+
+#: includes/shortcodes.php:267
+msgid "Your Payment History"
+msgstr "تاريخ مدفوعاتك"
+
+#: includes/shortcodes.php:272
+msgid "You must be logged in to view your subscription details"
+msgstr "يجب عليك تسجيل الدخول لعرض بيانات اشتراكك"
+
+#: includes/subscription-functions.php:81
+msgid "No subscription"
+msgstr "لا يوجد اشتراك"
+
+#: includes/subscription-functions.php:237
+msgid "Days"
+msgstr "ايام"
+
+#: includes/subscription-functions.php:239
+msgid "Day"
+msgstr "يوم"
+
+#: includes/subscription-functions.php:243
+msgid "Months"
+msgstr "الأشهر"
+
+#: includes/subscription-functions.php:245
+msgid "Month"
+msgstr "شهر"
+
+#: includes/subscription-functions.php:249
+msgid "Years"
+msgstr "سنوات"
+
+#: includes/subscription-functions.php:251
+msgid "Year"
+msgstr "سنة"
+
+#: includes/user-page-columns.php:5
+#: includes/admin-pages/discount-codes.php:23
+#: includes/admin-pages/discount-codes.php:39
+#: includes/admin-pages/edit-member.php:15
+#: includes/admin-pages/edit-subscription.php:71
+#: includes/admin-pages/members-page.php:112
+#: includes/admin-pages/members-page.php:126
+#: includes/admin-pages/subscription-levels.php:151
+#: includes/admin-pages/view-member.php:14
+msgid "Status"
+msgstr "الحالات"
+
+#: includes/user-page-columns.php:6
+#: includes/admin-pages/discount-codes.php:28
+#: includes/admin-pages/discount-codes.php:44
+#: includes/admin-pages/members-page.php:117
+#: includes/admin-pages/members-page.php:131
+#: includes/admin-pages/subscription-levels.php:26
+#: includes/admin-pages/subscription-levels.php:40
+msgid "Actions"
+msgstr "الاحداث"
+
+#: includes/user-page-columns.php:20
+msgid "Edit Subscription"
+msgstr "تحرير الإشتراك"
+
+#: includes/user-page-columns.php:21
+msgid "View Details"
+msgstr "عرض البيانات"
+
+#: includes/user-page-columns.php:23
+msgid "Add Subscription"
+msgstr "إضافة اشتراك"
+
+#: includes/admin-pages/discount-codes.php:17
+#: includes/admin-pages/discount-codes.php:33
+#: includes/admin-pages/members-page.php:109
+#: includes/admin-pages/members-page.php:123
+#: includes/admin-pages/payments-page.php:35
+#: includes/admin-pages/payments-page.php:47
+#: includes/admin-pages/subscription-levels.php:18
+#: includes/admin-pages/subscription-levels.php:32
+msgid "ID"
+msgstr "العنوان"
+
+#: includes/admin-pages/discount-codes.php:18
+#: includes/admin-pages/discount-codes.php:34
+#: includes/admin-pages/discount-codes.php:97
+#: includes/admin-pages/edit-subscription.php:15
+#: includes/admin-pages/subscription-levels.php:19
+#: includes/admin-pages/subscription-levels.php:33
+#: includes/admin-pages/subscription-levels.php:90
+msgid "Name"
+msgstr "الاسم"
+
+#: includes/admin-pages/discount-codes.php:19
+#: includes/admin-pages/discount-codes.php:35
+#: includes/admin-pages/discount-codes.php:106
+#: includes/admin-pages/edit-subscription.php:24
+#: includes/admin-pages/subscription-levels.php:20
+#: includes/admin-pages/subscription-levels.php:34
+#: includes/admin-pages/subscription-levels.php:99
+msgid "Description"
+msgstr "الوصف"
+
+#: includes/admin-pages/discount-codes.php:20
+#: includes/admin-pages/discount-codes.php:36
+#: includes/admin-pages/discount-codes.php:115
+msgid "Code"
+msgstr "الكود"
+
+#: includes/admin-pages/discount-codes.php:22
+#: includes/admin-pages/discount-codes.php:38
+#: includes/admin-pages/discount-codes.php:124
+#: includes/admin-pages/payments-page.php:40
+#: includes/admin-pages/payments-page.php:52
+msgid "Type"
+msgstr "الوصف"
+
+#: includes/admin-pages/discount-codes.php:24
+#: includes/admin-pages/discount-codes.php:40
+msgid "Uses"
+msgstr "الاستخدام"
+
+#: includes/admin-pages/discount-codes.php:25
+#: includes/admin-pages/discount-codes.php:41
+msgid "Uses Left"
+msgstr "مغادرة المستخدمين"
+
+#: includes/admin-pages/discount-codes.php:26
+#: includes/admin-pages/discount-codes.php:42
+#: includes/admin-pages/members-page.php:114
+#: includes/admin-pages/members-page.php:128
+msgid "Expiration"
+msgstr "الإنتهاء"
+
+#: includes/admin-pages/discount-codes.php:59
+#: includes/admin-pages/discount-codes.php:128
+msgid "Percentage"
+msgstr "النسبة"
+
+#: includes/admin-pages/discount-codes.php:59
+msgid "Flat"
+msgstr "المسطح"
+
+#: includes/admin-pages/discount-codes.php:63
+msgid "active"
+msgstr "مفعل"
+
+#: includes/admin-pages/discount-codes.php:63
+msgid "disabled"
+msgstr "اخفاء"
+
+#: includes/admin-pages/discount-codes.php:65
+msgid "expired"
+msgstr "منتهي"
+
+#: includes/admin-pages/discount-codes.php:74
+#: includes/admin-pages/members-page.php:164
+#: includes/admin-pages/subscription-levels.php:68
+msgid "Edit"
+msgstr "تحرير"
+
+#: includes/admin-pages/discount-codes.php:76
+#: includes/admin-pages/members-page.php:168
+#: includes/admin-pages/subscription-levels.php:70
+msgid "Deactivate"
+msgstr "تعطيل"
+
+#: includes/admin-pages/discount-codes.php:78
+#: includes/admin-pages/members-page.php:166
+#: includes/admin-pages/subscription-levels.php:72
+msgid "Activate"
+msgstr "مفعل"
+
+#: includes/admin-pages/discount-codes.php:80
+#: includes/admin-pages/subscription-levels.php:74
+msgid "Delete"
+msgstr "حذف"
+
+#: includes/admin-pages/discount-codes.php:87
+msgid "No discount codes added yet."
+msgstr "لم يتم إضافة اكواد تخفيضات حتى الآن."
+
+#: includes/admin-pages/discount-codes.php:91
+msgid "Add New Discount"
+msgstr "إضافة تخفيض جديد"
+
+#: includes/admin-pages/discount-codes.php:101
+msgid "The name of this discount"
+msgstr "اسم هذا التخفيض"
+
+#: includes/admin-pages/discount-codes.php:110
+msgid "The description of this discount code"
+msgstr "وصف كود التخفيض"
+
+#: includes/admin-pages/discount-codes.php:119
+msgid "Enter a code for this discount, such as 10PERCENT"
+msgstr "ادخل كود تخفيض، على سبيل المثال <strong>10PERCENT</strong>"
+
+#: includes/admin-pages/discount-codes.php:129
+msgid "Flat amount"
+msgstr "كمية المسطح"
+
+#: includes/admin-pages/discount-codes.php:131
+msgid "The kind of discount to apply for this discount."
+msgstr "نوع التخفيض لتقديم طلب لهذا التخفيض."
+
+#: includes/admin-pages/discount-codes.php:140
+msgid "The amount of this discount code."
+msgstr "كمية كود التخفيض هذا."
+
+#: includes/admin-pages/discount-codes.php:145
+#: includes/admin-pages/edit-member.php:47
+#: includes/admin-pages/members-page.php:232
+#: includes/admin-pages/view-member.php:30
+msgid "Expiration date"
+msgstr "تاريخ الإنتهاء"
+
+#: includes/admin-pages/discount-codes.php:149
+msgid "Enter the expiration date for this discount code in the format of yyyy-mm-dd. For no expiration, leave blank"
+msgstr "ادخل تاريخ انتهاء كود التخفيض بالصيغة dd/mm/yyyy . ارتكه فارغ لكي لا تحدد تاريخ انتهاء معين"
+
+#: includes/admin-pages/discount-codes.php:154
+msgid "Max Uses"
+msgstr "الاستخدامات القصوى"
+
+#: includes/admin-pages/discount-codes.php:158
+msgid "The maximum number of times this discount can be used. Leave blank for unlimited."
+msgstr "اقصى حد لعدد مرات استخدام كود التخفيضات هذا. اترك الخانة فارغة لجعله غير محدد"
+
+#: includes/admin-pages/discount-codes.php:166
+msgid "Add Discount Code"
+msgstr "اضف كود التخفيض"
+
+#: includes/admin-pages/edit-discount.php:5
+msgid "Edit Discount Code:"
+msgstr "تحرير كود التخفيض:"
+
+#: includes/admin-pages/edit-discount.php:7
+#: includes/admin-pages/edit-member.php:7
+#: includes/admin-pages/edit-subscription.php:7
+msgid "Cancel"
+msgstr "الغاء"
+
+#: includes/admin-pages/edit-discount.php:15
+msgid " Name"
+msgstr "الاسم"
+
+#: includes/admin-pages/edit-discount.php:19
+msgid " The name of this discount"
+msgstr "اسم هذا التخفيض"
+
+#: includes/admin-pages/edit-discount.php:24
+msgid " Description"
+msgstr "الوصف"
+
+#: includes/admin-pages/edit-discount.php:28
+msgid " The description of this discount code"
+msgstr "وصف كود التخفيض هذا"
+
+#: includes/admin-pages/edit-discount.php:33
+msgid " Code"
+msgstr "الكود"
+
+#: includes/admin-pages/edit-discount.php:37
+msgid " Enter a code for this discount, such as 10PERCENT"
+msgstr "ادخل كود تخفيض، على سبيل المثال <strong>10PERCENT</strong>"
+
+#: includes/admin-pages/edit-discount.php:42
+msgid " Type"
+msgstr "النوع"
+
+#: includes/admin-pages/edit-discount.php:46
+msgid " Percentage"
+msgstr "النسبة"
+
+#: includes/admin-pages/edit-discount.php:47
+msgid " Flat amount"
+msgstr "كمية المسطح"
+
+#: includes/admin-pages/edit-discount.php:49
+msgid " The kind of discount to apply for this discount."
+msgstr "نوع التخفيض لتقديم طلب لهذا التخفيض."
+
+#: includes/admin-pages/edit-discount.php:54
+msgid " Amount"
+msgstr "الكمية"
+
+#: includes/admin-pages/edit-discount.php:58
+msgid " The amount of this discount code."
+msgstr "كمية كود التخفيض هذا."
+
+#: includes/admin-pages/edit-discount.php:63
+msgid " Expiration date"
+msgstr "تاريخ الإنتهاء"
+
+#: includes/admin-pages/edit-discount.php:67
+msgid " Enter the expiration date for this discount code in the format of yyyy-mm-dd. Leave blank for no expiration"
+msgstr "ادخل تاريخ الإنتهاء لكود التخفيض هذا بهذه الصيغة yyy-mm-dd"
+
+#: includes/admin-pages/edit-discount.php:72
+msgid " Status"
+msgstr "الحالة"
+
+#: includes/admin-pages/edit-discount.php:76
+msgid " Active"
+msgstr "مفعل"
+
+#: includes/admin-pages/edit-discount.php:77
+msgid " Disabled"
+msgstr "اخفاء"
+
+#: includes/admin-pages/edit-discount.php:79
+msgid " The status of this discount code."
+msgstr "الحالات لكود التخفيض هذا."
+
+#: includes/admin-pages/edit-discount.php:84
+msgid " Max Uses"
+msgstr "اقصى استخدام"
+
+#: includes/admin-pages/edit-discount.php:88
+msgid " The maximum number of times this discount can be used. Leave blank for unlimited."
+msgstr "عدد مرات استخدام هذا التخفيض. اترك الخيار فارغ لعدم التحديد."
+
+#: includes/admin-pages/edit-discount.php:96
+msgid " Update Discount"
+msgstr "تحديث التخفيض"
+
+#: includes/admin-pages/edit-member.php:5
+msgid "Edit Member:"
+msgstr "تحرير العضو:"
+
+#: includes/admin-pages/edit-member.php:27
+msgid "The status of this user's subscription"
+msgstr "الحالات لاشتراك المستخدمين هذا"
+
+#: includes/admin-pages/edit-member.php:42
+#: includes/admin-pages/members-page.php:227
+msgid "Choose the subscription level for this user"
+msgstr "اختار مستوى الإشتراك لهذا المستخدم"
+
+#: includes/admin-pages/edit-member.php:51
+#: includes/admin-pages/members-page.php:236
+msgid "Enter the expiration date for this user in the format of yyyy-mm-dd"
+msgstr "ادخل تاريخ الإنتهاء لهذا المستخدم بهذه الصيغة yyy-mm-dd"
+
+#: includes/admin-pages/edit-member.php:61
+msgid "Is this user's subscription recurring?"
+msgstr "هل اشتراك العضو هذا متجدد؟"
+
+#: includes/admin-pages/edit-member.php:67
+msgid "Sign Up Method"
+msgstr "طريقة تسجيل الدخول"
+
+#: includes/admin-pages/edit-member.php:72
+msgid "User Signup"
+msgstr "تسجل دخول المستخدمين"
+
+#: includes/admin-pages/edit-member.php:73
+msgid "Added by admin manually"
+msgstr "إضافة بواسطة المدير يدوياً"
+
+#: includes/admin-pages/edit-member.php:75
+msgid "Was this a real signup or a membership given to the user"
+msgstr "كان هذا تسجيل دخول حقيقي أو عضوية اعطيت إلى مستخدم"
+
+#: includes/admin-pages/edit-member.php:83
+msgid "Update User Subscription"
+msgstr "تحديث اشتراك المستخدم"
+
+#: includes/admin-pages/edit-subscription.php:5
+msgid "Edit Subscription Level:"
+msgstr "تحرير مستوى الاشتراك:"
+
+#: includes/admin-pages/edit-subscription.php:19
+msgid "The name of this subscription. This is shown on the registration page."
+msgstr "اسم هذا الإشتراك. هذا الاسم سوف يظهر في صفحة الاشتراك."
+
+#: includes/admin-pages/edit-subscription.php:28
+msgid "The description of this subscription. This is shown on the registration page."
+msgstr "وصف هذا الإشتراك. هذا الوصف سوف يظهر في صفحة الاشتراك."
+
+#: includes/admin-pages/edit-subscription.php:43
+msgid "Level of access this subscription gives."
+msgstr "مستوى الوصول المعطى لهذا الاشتراك."
+
+#: includes/admin-pages/edit-subscription.php:48
+#: includes/admin-pages/subscription-levels.php:22
+#: includes/admin-pages/subscription-levels.php:36
+#: includes/admin-pages/subscription-levels.php:124
+msgid "Duration"
+msgstr "المدة"
+
+#: includes/admin-pages/edit-subscription.php:53
+#: includes/admin-pages/subscription-levels.php:129
+msgid "Days(s)"
+msgstr "يوم/ايام"
+
+#: includes/admin-pages/edit-subscription.php:54
+#: includes/admin-pages/subscription-levels.php:130
+msgid "Month(s)"
+msgstr "شهر/اشهر"
+
+#: includes/admin-pages/edit-subscription.php:55
+#: includes/admin-pages/subscription-levels.php:131
+msgid "Years(s)"
+msgstr "سنه/سنوات"
+
+#: includes/admin-pages/edit-subscription.php:57
+#: includes/admin-pages/subscription-levels.php:133
+msgid "Length of time for this membership level. Enter 0 for unlimited."
+msgstr "مدة وقت مستوى العضويات هذا. وضع القيمة 0 لغير محددة."
+
+#: includes/admin-pages/edit-subscription.php:62
+#: includes/admin-pages/subscription-levels.php:23
+#: includes/admin-pages/subscription-levels.php:37
+#: includes/admin-pages/subscription-levels.php:138
+msgid "Price"
+msgstr "السعر"
+
+#: includes/admin-pages/edit-subscription.php:66
+#: includes/admin-pages/subscription-levels.php:146
+msgid "The price of this membership level. Enter 0 for free."
+msgstr "سعر مستوى الإشتراك هذا. اترك القيمة 0 لجعلها مجانية."
+
+#: includes/admin-pages/edit-subscription.php:76
+#: includes/admin-pages/subscription-levels.php:156
+msgid "Inactive"
+msgstr "غير مفعلة"
+
+#: includes/admin-pages/edit-subscription.php:78
+#: includes/admin-pages/subscription-levels.php:158
+msgid "Members may only sign up for active subscription levels."
+msgstr "الأعضاء يجب عليهم فقط تسجيل الدخول لتفعيل مستويات اشتراكهم."
+
+#: includes/admin-pages/edit-subscription.php:86
+msgid "Update Subscription"
+msgstr "تحديث الإشتراك"
+
+#: includes/admin-pages/export.php:9
+msgid "Members Export"
+msgstr "تصدير الأعضاء"
+
+#: includes/admin-pages/export.php:10
+msgid "Download member data as a CSV file. This is useful for tasks such as importing batch users into Mail Chimp, or other systems."
+msgstr "تنزيل بيانات الاعضاء كملف CSV. هذا مفيد للمهام كباتش استيراد المستخدمين إلى Mail Chimp, او اي انظمة اخرى."
+
+#: includes/admin-pages/export.php:24
+msgid "Choose the subscription to export members from"
+msgstr "اختار نوع الاشتراك لتصدير الاعضاء من"
+
+#: includes/admin-pages/export.php:34
+msgid "Choose the status to export"
+msgstr "اختار الحالات لتصديرها"
+
+#: includes/admin-pages/export.php:37
+msgid "Download Member CSV"
+msgstr "تنزيل CSV الاعضاء"
+
+#: includes/admin-pages/export.php:41
+msgid "Payments Export"
+msgstr "تصدير المدفوعات"
+
+#: includes/admin-pages/export.php:42
+msgid "Download payment data as a CSV file. Use this file for your own record keeping or tracking."
+msgstr "تنزيل بيانات المدفوعات كملف CSV. استخدم هذا الملف في سجلك الخاص او للتتبع"
+
+#: includes/admin-pages/export.php:45
+msgid "Download Payments CSV"
+msgstr "تنزيل CVS للمدفوعات"
+
+#: includes/admin-pages/help-menus-setup-old.php:17
+#: includes/admin-pages/help-menus-setup-old.php:33
+#: includes/admin-pages/help-menus-setup-old.php:49
+#: includes/admin-pages/help-menus-setup-old.php:65
+#: includes/admin-pages/help-menus-setup-old.php:72
+#: includes/admin-pages/help-menus-setup.php:22
+#: includes/admin-pages/help-menus-setup.php:53
+#: includes/admin-pages/help-menus-setup.php:84
+#: includes/admin-pages/help-menus-setup.php:115
+#: includes/admin-pages/help-menus-setup.php:125
+#: includes/admin-pages/settings.php:75
+msgid "General"
+msgstr "عام"
+
+#: includes/admin-pages/help-menus-setup-old.php:20
+#: includes/admin-pages/help-menus-setup-old.php:36
+#: includes/admin-pages/help-menus-setup.php:29
+#: includes/admin-pages/help-menus-setup.php:60
+msgid "Adding Subscriptions"
+msgstr "إضافة اشتراكات"
+
+#: includes/admin-pages/help-menus-setup-old.php:23
+#: includes/admin-pages/help-menus-setup.php:36
+msgid "Member Details"
+msgstr "بيانات العضو"
+
+#: includes/admin-pages/help-menus-setup-old.php:26
+#: includes/admin-pages/help-menus-setup.php:43
+msgid "Editing Members"
+msgstr "تحرير الاعضاء"
+
+#: includes/admin-pages/help-menus-setup-old.php:39
+#: includes/admin-pages/help-menus-setup.php:67
+msgid "Editing Subscriptions"
+msgstr "تحرير المشتركين"
+
+#: includes/admin-pages/help-menus-setup-old.php:42
+#: includes/admin-pages/help-menus-setup.php:74
+msgid "Deleting Subscriptions"
+msgstr "حذف المشتركين"
+
+#: includes/admin-pages/help-menus-setup-old.php:52
+#: includes/admin-pages/help-menus-setup.php:91
+msgid "Adding Discounts"
+msgstr "اضافة تخفيضات"
+
+#: includes/admin-pages/help-menus-setup-old.php:55
+#: includes/admin-pages/help-menus-setup.php:98
+msgid "Editing Discounts"
+msgstr "تحرير التخفيضات"
+
+#: includes/admin-pages/help-menus-setup-old.php:58
+#: includes/admin-pages/help-menus-setup.php:105
+msgid "Using Discounts"
+msgstr "استخدام التخفيضات"
+
+#: includes/admin-pages/help-menus-setup-old.php:75
+#: includes/admin-pages/help-menus-setup.php:132
+#: includes/admin-pages/settings.php:32
+msgid "Messages"
+msgstr "الرسائل"
+
+#: includes/admin-pages/help-menus-setup-old.php:78
+#: includes/admin-pages/help-menus-setup.php:139
+msgid "PayPal"
+msgstr "باي بال"
+
+#: includes/admin-pages/help-menus-setup-old.php:81
+#: includes/admin-pages/help-menus-setup.php:146
+#: includes/admin-pages/settings.php:34
+msgid "Signup Forms"
+msgstr "حقول التسجيل"
+
+#: includes/admin-pages/help-menus-setup-old.php:84
+#: includes/admin-pages/help-menus-setup.php:153
+#: includes/admin-pages/settings.php:35
+msgid "Emails"
+msgstr "البريد الإلكتروني"
+
+#: includes/admin-pages/help-menus-setup-old.php:87
+#: includes/admin-pages/help-menus-setup.php:160
+#: includes/admin-pages/settings.php:36
+msgid "Misc"
+msgstr "مكملات"
+
+#: includes/admin-pages/help-menus-setup-old.php:90
+#: includes/admin-pages/help-menus-setup.php:167
+#: includes/admin-pages/settings.php:37
+msgid "Logging"
+msgstr "السجل"
+
+#: includes/admin-pages/help-page.php:9
+msgid "Help Documentation"
+msgstr "وثائق المساعدة"
+
+#: includes/admin-pages/help-page.php:15
+#: includes/admin-pages/settings.php:31
+msgid "Restrict Content Pro"
+msgstr "تقييد المحتوى الإحترافي"
+
+#: includes/admin-pages/help-page.php:23
+msgid "Index"
+msgstr "الفهرس"
+
+#: includes/admin-pages/help-page.php:44
+msgid "Finding Documentation and About this Help Page"
+msgstr "العثور على صفحة وثائق المساعدة وحول هذا"
+
+#: includes/admin-pages/help-page.php:53
+msgid "Quick Video Tutorials"
+msgstr "تمارين فيديو سريعة"
+
+#: includes/admin-pages/help-page.php:82
+msgid "Restricting Post/Page Content"
+msgstr "تقييد محتوى المقالة / الصفحة"
+
+#: includes/admin-pages/help-page.php:144
+msgid "Frequently Asked Questions"
+msgstr "الأسئلة المتكررة"
+
+#: includes/admin-pages/help-page.php:161
+msgid "Short Code Reference"
+msgstr "مرجع الإختصارات"
+
+#: includes/admin-pages/help-page.php:247
+msgid "Template Tag Reference"
+msgstr "مرجع وسوم القالب"
+
+#: includes/admin-pages/help-page.php:316
+msgid "Filter Reference"
+msgstr "مرجع الفلاتر"
+
+#: includes/admin-pages/help-page.php:344
+msgid "Action Reference"
+msgstr "مرجع الحدث"
+
+#: includes/admin-pages/members-page.php:15
+msgid "Paid Subscribers"
+msgstr "الاشتراكات المدفوعة"
+
+#: includes/admin-pages/members-page.php:57
+msgid "Status: "
+msgstr "الحالات:"
+
+#: includes/admin-pages/members-page.php:59
+msgid "View all active subscribers"
+msgstr "عرض كافة الإشتراكات المفعلة"
+
+#: includes/admin-pages/members-page.php:64
+msgid "View all pending subscribers"
+msgstr "عرض كافة الإشتراكات المعلقة"
+
+#: includes/admin-pages/members-page.php:69
+msgid "View all expired subscribers"
+msgstr "عرض كافة الإشتراكات المنتهية"
+
+#: includes/admin-pages/members-page.php:74
+msgid "View all cancelled subscribers"
+msgstr "عرض كافة الإشتراكات الملغية"
+
+#: includes/admin-pages/members-page.php:79
+msgid "View all free members"
+msgstr "عرض كافة الإشتراكات المجانية"
+
+#: includes/admin-pages/members-page.php:89
+msgid "All Subscriptions"
+msgstr "كافة الإشتراكات"
+
+#: includes/admin-pages/members-page.php:98
+msgid "Newest First"
+msgstr "الأحدث اولاً"
+
+#: includes/admin-pages/members-page.php:99
+msgid "Oldest First"
+msgstr "الأقدم اولاً"
+
+#: includes/admin-pages/members-page.php:103
+msgid "Filter"
+msgstr "ترشيح"
+
+#: includes/admin-pages/members-page.php:108
+#: includes/admin-pages/members-page.php:122
+#: includes/admin-pages/payments-page.php:41
+#: includes/admin-pages/payments-page.php:53
+msgid "User"
+msgstr "المستخدم"
+
+#: includes/admin-pages/members-page.php:115
+#: includes/admin-pages/members-page.php:129
+msgid "User Role"
+msgstr "رتبة المستخدم"
+
+#: includes/admin-pages/members-page.php:163
+msgid "Details"
+msgstr "البيانات"
+
+#: includes/admin-pages/members-page.php:175
+msgid "No subscribers found"
+msgstr "لا يوجد مشتركين حتى الآن"
+
+#: includes/admin-pages/members-page.php:187
+#: includes/admin-pages/payments-page.php:93
+msgid "&laquo; Previous"
+msgstr "&laquo; السابق"
+
+#: includes/admin-pages/members-page.php:188
+#: includes/admin-pages/payments-page.php:94
+msgid "Next &raquo;"
+msgstr "التالي &raquo;"
+
+#: includes/admin-pages/members-page.php:199
+msgid "Add New Subscription (for existing user)"
+msgstr "إضافة مشترك جديد (للمستخدمين المسجلين بالفعل)"
+
+#: includes/admin-pages/members-page.php:211
+msgid "Begin typing the user name to add a subscription to."
+msgstr "قم بكتابة اسم المستخدم لكي يتم إضافته إلى المشتركين."
+
+#: includes/admin-pages/members-page.php:220
+msgid "--choose--"
+msgstr "--اختيار--"
+
+#: includes/admin-pages/members-page.php:243
+msgid "Add User Subscription"
+msgstr "إضافة اشتراك مستخدم"
+
+#: includes/admin-pages/payments-page.php:31
+msgid "Total Earnings"
+msgstr "مجموع الدخل"
+
+#: includes/admin-pages/payments-page.php:78
+msgid "No payments recorded yet"
+msgstr "لم يتم تسجيل أي مدفوعات بعد"
+
+#: includes/admin-pages/screen-options.php:21
+msgid "Members per page"
+msgstr "الأعضاء لكل صفحة"
+
+#: includes/admin-pages/screen-options.php:30
+msgid "Payments per page"
+msgstr "المدفوعات في كل صفحة"
+
+#: includes/admin-pages/settings.php:22
+msgid "Options saved"
+msgstr "حفظ الخيارات"
+
+#: includes/admin-pages/settings.php:46
+msgid "Free Content Message"
+msgstr "رسالة المحتوى المجاني"
+
+#: includes/admin-pages/settings.php:52
+msgid "This is the message shown to users that do not have privilege to view free, user only content."
+msgstr "هذه هي الرسالة التي سوف تعرض للزوار الغير مشتركين في الموقع ولن يتمكنوا من عرض اي محتوى مقيد إلا إذا قاموا بالإشتراك"
+
+#: includes/admin-pages/settings.php:57
+msgid "Premium Content Message"
+msgstr "رسالة المحتوى الإستثنائي"
+
+#: includes/admin-pages/settings.php:63
+msgid "This is the message shown to users that do not have privilege to view premium content."
+msgstr "هذه الرسالة هي التي سوف تظهر للمشتركين الذين ليس لديهم امتياز لعرض المحتوى الإستثنائي."
+
+#: includes/admin-pages/settings.php:80
+msgid "Currency"
+msgstr "العملة"
+
+#: includes/admin-pages/settings.php:91
+msgid "Choose your currency."
+msgstr "اختر العملة التي تستخدمها."
+
+#: includes/admin-pages/settings.php:96
+msgid "Currency Position"
+msgstr "موضع العملة"
+
+#: includes/admin-pages/settings.php:100
+msgid "Before - $10"
+msgstr "قبل - 10$"
+
+#: includes/admin-pages/settings.php:101
+msgid "After - 10$"
+msgstr "بعد - 10$"
+
+#: includes/admin-pages/settings.php:103
+msgid "Show the currency sign before or after the price?"
+msgstr "عرض علامة العملة قبل أم بعد السعر ؟"
+
+#: includes/admin-pages/settings.php:110
+msgid "Gateways"
+msgstr "بوابات الدفع"
+
+#: includes/admin-pages/settings.php:113
+msgid "Check each of the payment gateways you would like to enable. Configure the selected gateways below."
+msgstr "اشر على كل بوابات الدفع الإلكترونية التي ترغب بتفعيلها. هيئ بوابة الدفع الإلكترونية في الاسفل."
+
+#: includes/admin-pages/settings.php:117
+msgid "Enabled Gateways"
+msgstr "بوابات دفع مفعلة"
+
+#: includes/admin-pages/settings.php:131
+msgid "PayPal Settings"
+msgstr "اعدادات PayPal"
+
+#: includes/admin-pages/settings.php:135
+msgid "PayPal Address"
+msgstr "عنوان الباي بال"
+
+#: includes/admin-pages/settings.php:139
+msgid "Enter your PayPal email address."
+msgstr "ادخل عنوان بريد الباي بال الإلكتروني."
+
+#: includes/admin-pages/settings.php:144
+msgid "Sandbox Mode"
+msgstr "وضع التجربة"
+
+#: includes/admin-pages/settings.php:148
+msgid "Use PayPal in Sandbox mode. This allows you to test the plugin with the <a href=\"http://developer.paypal.com\">PayPal test account</a>"
+msgstr "استخدام الباي بال في وضع التجربة. هذا يسمح لك بتجربة الإضافة مع <a href=\"http://developer.paypal.com\">حساب تجربة PayPal</a>"
+
+#: includes/admin-pages/settings.php:153
+msgid "Disable CURL"
+msgstr "أخفاء CURL"
+
+#: includes/admin-pages/settings.php:157
+msgid "Only check this option if your host does not allow cURL"
+msgstr "اشر على هذا الخيار فقط في حالة كان مستضيفك لا يسمح بروابط cURL"
+
+#: includes/admin-pages/settings.php:162
+msgid "Disable IPN Verification"
+msgstr "إخفاء تحقق IPN"
+
+#: includes/admin-pages/settings.php:166
+msgid "Only check this option if your members statuses are not getting changed to \"active\""
+msgstr "اشر على هذا الخيار فقط في حالة كانت حالات الاعضاء لم تتغير إلى \"مفعل\""
+
+#: includes/admin-pages/settings.php:178
+msgid "jQuery Validation"
+msgstr "تدقيق jQuery"
+
+#: includes/admin-pages/settings.php:182
+msgid "Check this to enable live, front end form validation. If this is disabled, all validation will be done server side and will require a page reload."
+msgstr "اشر على هذا الخيار لتفعيل خاصية التدقيق المباشر في واجهة الإستخدام. إذا جعلت هذا الخيار معطل, كافة عمليات التدقيق سوف تحصل في الخادم الثانوي وسوف تتطلب إعادة تحميل الصفحة عند وجود خطاء في ادخال المستخدم."
+
+#: includes/admin-pages/settings.php:187
+msgid "Disable Form CSS"
+msgstr "اخفاء تنسيق الحقول"
+
+#: includes/admin-pages/settings.php:191
+msgid "Check this to disable all included form styling."
+msgstr "اشر على هذا الخيار لإلغاء كافة تنسيقات المتضمنة للحقول."
+
+#: includes/admin-pages/settings.php:196
+#: includes/admin-pages/settings.php:470
+msgid "Redirect Page"
+msgstr "صفحة التحويل"
+
+#: includes/admin-pages/settings.php:209
+#: includes/admin-pages/settings.php:231
+#: includes/admin-pages/settings.php:483
+#: includes/admin-pages/settings.php:514
+msgid "No pages found"
+msgstr "لم يتم العثور على الصفحة"
+
+#: includes/admin-pages/settings.php:213
+msgid "This is the page users are redirected to after a successful registration"
+msgstr "هذه الصفحة هي التي سوف يتم تحويل المستخدمين اليها بعد التسجيل بنجاح."
+
+#: includes/admin-pages/settings.php:218
+msgid "Registration Page"
+msgstr "صفحة التسجيل"
+
+#: includes/admin-pages/settings.php:235
+msgid "Choose the page that has the [register_form] short code"
+msgstr "اختر الصفحة التي تحتوي على الإختصار <strong>[register_form] </strong>"
+
+#: includes/admin-pages/settings.php:240
+msgid "Enable reCaptcha"
+msgstr "تفعيل reCaptcha"
+
+#: includes/admin-pages/settings.php:244
+msgid "Check this to enable reCaptcha on the registration form."
+msgstr "اشر على هذا الخيار لتفعيل خاصية reCaptcha على حقل التسجيل."
+
+#: includes/admin-pages/settings.php:249
+msgid "reCaptcha Public Key"
+msgstr "مفتاح reCaptcha العام"
+
+#: includes/admin-pages/settings.php:253
+msgid "This your own personal reCaptcha Public key. Go to"
+msgstr "هذا مفتاح reCaptcha العام المحدد لك. اذهب إلى"
+
+#: includes/admin-pages/settings.php:253
+#: includes/admin-pages/settings.php:262
+msgid "your account"
+msgstr "حسابك"
+
+#: includes/admin-pages/settings.php:253
+msgid "then click on your domain (or add a new one) to find your public key."
+msgstr "ثم انقر على نطاقك (او اضف واحد جديد) للعثور على مفتاحك العام."
+
+#: includes/admin-pages/settings.php:258
+msgid "reCaptcha Private Key"
+msgstr "مفتاح reCaptcha  الخاص"
+
+#: includes/admin-pages/settings.php:262
+msgid "This your own personal reCaptcha Private key. Go to"
+msgstr "هذا مفتاح reCaptcha الخاص المحدد لك"
+
+#: includes/admin-pages/settings.php:262
+msgid "then click on your domain (or add a new one) to find your private key."
+msgstr "ثم انقر على نطاقك (او اضف واحد جديد) للعثور على مفتاحك الخاص."
+
+#: includes/admin-pages/settings.php:267
+msgid "reCaptcha Style"
+msgstr "تنسيق reCaptcha"
+
+#: includes/admin-pages/settings.php:282
+msgid "Choose the style you wish to use for your reCaptcha form"
+msgstr "اختار التنسيق الذي ترغب باستخدامه على حقل reCaptcha خاصتك"
+
+#: includes/admin-pages/settings.php:287
+msgid "SSL"
+msgstr "SSL"
+
+#: includes/admin-pages/settings.php:291
+msgid "Check this option if your registration page is using the https:// protocol. This will be the case if you have an SSL certificate installed."
+msgstr "اشر على هذا الخيار إذا كانت صفحة التسجيل تستخدم بروتوكول https:// هذا سوف يكون في حالة إذا ما كنت تمتلك شهادة SSL مركبة."
+
+#: includes/admin-pages/settings.php:296
+msgid "Disable Auto Renew"
+msgstr "تعطيل التجديد الآلي"
+
+#: includes/admin-pages/settings.php:300
+msgid "Check this option if you do NOT want to allow recurring subscriptions"
+msgstr "اشر على هذا الخيار إذا كنت لا تريد السماح بتجديد الإشتراكات"
+
+#: includes/admin-pages/settings.php:314
+msgid "Active Subscription Email"
+msgstr "تفعيل بريد الإشتراك"
+
+#: includes/admin-pages/settings.php:318
+#: includes/admin-pages/settings.php:364
+#: includes/admin-pages/settings.php:387
+#: includes/admin-pages/settings.php:410
+msgid "Subject"
+msgstr "العنوان"
+
+#: includes/admin-pages/settings.php:322
+msgid "The subject line for the email sent to users when their subscription becomes active."
+msgstr "عنوان البريد الإلكتروني الذي سوف يرسل إلى المستخدمين عندما يصبح اشتراكهم فعال."
+
+#: includes/admin-pages/settings.php:327
+#: includes/admin-pages/settings.php:350
+#: includes/admin-pages/settings.php:373
+#: includes/admin-pages/settings.php:396
+msgid "Email Body"
+msgstr "جسم البريد الإلكتروني"
+
+#: includes/admin-pages/settings.php:331
+msgid "This is the email message that is sent to users when their subscription becomes active."
+msgstr "رسالة البريد الإلكتروني التي سوف ترسل المستخدمين عندما عندما يصبح اشتراكهم فعال."
+
+#: includes/admin-pages/settings.php:336
+msgid "Cancelled Subscription Email"
+msgstr "بريد الإشتراك الملغي"
+
+#: includes/admin-pages/settings.php:341
+msgid "Subject line"
+msgstr "سطر الموضوع"
+
+#: includes/admin-pages/settings.php:345
+msgid "The subject line for the email sent to users when their subscription is cancelled."
+msgstr "عنوان البريد الإلكتروني الذي سوف يرسل إلى المستخدمين عندما يتم الغاء إشتراكهم."
+
+#: includes/admin-pages/settings.php:354
+msgid "This is the email message that is sent to users when their subscription is cancelled."
+msgstr "رسالة البريد الإلكتروني الذي سوف يرسل إلى المستخدمين الذين يتم الغاء اشتراكهم"
+
+#: includes/admin-pages/settings.php:359
+msgid "Expired Subscription Email"
+msgstr "بريد الإشتراك المنتهي "
+
+#: includes/admin-pages/settings.php:368
+msgid "The subject line for the email sent to users when their subscription is expired."
+msgstr "عنوان البريد الإلكتروني الذي سوف يرسل إلى المستخدمين الذين انتهت فترة اشتراكهم."
+
+#: includes/admin-pages/settings.php:377
+msgid "This is the email message that is sent to users when their subscription is expired."
+msgstr "رسالة البريد الإلكرتوني التي سوف ترسل إلى المستخدمين الذين انتهت فترة اشتراكهم."
+
+#: includes/admin-pages/settings.php:382
+msgid "Free Subscription Email"
+msgstr "بريد مشتركين مجاني"
+
+#: includes/admin-pages/settings.php:391
+msgid "The subject line for the email sent to users when they sign up for a free membership."
+msgstr "عنوان البريد الإلكتروني الذي سوف يرسل إلى المستخدمين عندما يقومون بالتسجيل في العضوية المجانية."
+
+#: includes/admin-pages/settings.php:400
+msgid "This is the email message that is sent to users when they sign up for a free account."
+msgstr "رسالة البريد الإلكتروني هذه هي التي سوف ترسل إلى المستخدمين عندما يحاولون التسجيل في محتوى مجاني."
+
+#: includes/admin-pages/settings.php:405
+msgid "Trial Subscription Email"
+msgstr "بريد اشتراك الكتروني تجريبي"
+
+#: includes/admin-pages/settings.php:414
+msgid "The subject line for the email sent to users when they sign up for a free trial."
+msgstr "عنوان البريد الإلكتروني الذي سوف يرسل إلى المستخدمين عندما يسجلون في الفترة التجريبية."
+
+#: includes/admin-pages/settings.php:419
+msgid "Trial Email Message"
+msgstr "رسالة بريد الكتروني تجريبية"
+
+#: includes/admin-pages/settings.php:423
+msgid "This is the email message that is sent to users when they sign up for a free trial."
+msgstr "الرسالة التي سوف ترسل إلى المستخدمين عندما يسجلون في الفترة التجريبية"
+
+#: includes/admin-pages/settings.php:428
+msgid "New User Notifications"
+msgstr "اشعارات المستخدم الجديد"
+
+#: includes/admin-pages/settings.php:433
+msgid "Disable New User Notifications"
+msgstr "اخفاء اشعارات المستخدمين الجدد"
+
+#: includes/admin-pages/settings.php:437
+msgid "Check this option if you do NOT want to receive emails when new users signup"
+msgstr "اشر على هذا الخيار عندما لا تريد ان يتم مراسلتك عندما يقوم مستخدم جديد بالتسجيل في الموقع"
+
+#: includes/admin-pages/settings.php:445
+msgid "Available Template Tags"
+msgstr "وسوم قالب متاحة"
+
+#: includes/admin-pages/settings.php:447
+msgid "will be replaced with the name of your site"
+msgstr "سوف يستبدل باسم موقعك الإلكتروني"
+
+#: includes/admin-pages/settings.php:448
+msgid "will be replaced with the user name of the person receiving the email"
+msgstr "سوف يستبدل مع اسم المستخدم الذي سيقوم باستقبال الرسالة"
+
+#: includes/admin-pages/settings.php:449
+msgid "will be replaced with the expiration date of subscription"
+msgstr "سوف تستبدل مع تاريخ انتهاء الإشتراك"
+
+#: includes/admin-pages/settings.php:450
+msgid "will be replaced with the name of the subscription"
+msgstr "سوف تستبدل مع اسم الإشتراك"
+
+#: includes/admin-pages/settings.php:451
+msgid "will be replaced with the unique, 32 character key created when the user is registered"
+msgstr "سوف يستبدل مع المحارف الـ 32 الفريدة والتي تم توليدها عندما قام المشترك بالتسجيل"
+
+#: includes/admin-pages/settings.php:461
+msgid "Hide Premium Posts"
+msgstr "اخفاء التدوينات المدفوعة"
+
+#: includes/admin-pages/settings.php:465
+msgid "Check this to hide all premium posts from queries when user is not logged in. Note, this will only hide posts that have the \"Paid Only?\" checkbox checked."
+msgstr "اشر على هذا الخيار لاخفاء كافة استفسارات حقول المقالات الاستثنائية عندما يكون المستخدمين غير مسجلي الدخول. ملاحظة، هذا الخيار سوف يخفي فقط المقالات تم التأشير على خيار \"لمن دفع فقط؟\" عند كتابتها."
+
+#: includes/admin-pages/settings.php:487
+msgid "This is the page non-subscribed users are redirected to when attempting to access a premium post or page"
+msgstr "هذه هي الصفحة التي سوف يعاد توجيه المستخدمين الغير مشتركين عندما يحاولون الدخول إلى محتوى صفحات او مقالات استثنائية"
+
+#: includes/admin-pages/settings.php:492
+msgid "Redirect Default Login URL"
+msgstr "إعادة توجيه رابط تسجيل الدخول الإفتراضي"
+
+#: includes/admin-pages/settings.php:496
+msgid "Check this to force the default login URL to redirect to the page specified below."
+msgstr "اشر على هذا الخيار لإجبار وصلة تسجيل الدخول الإفتراضية على إعادة التوجيه إلى الصفحة المحددة في الاسفل."
+
+#: includes/admin-pages/settings.php:501
+msgid "Login Page"
+msgstr "صفحة تسجيل الدخول"
+
+#: includes/admin-pages/settings.php:518
+msgid "This is the page the default login URL redirects to, if the option above is checked. This should be the page that contains the [login_form] short code."
+msgstr "هذه هي الصفحة التي سوف يتم إعادة توجيه صفحة الدخول الإفتراضية للوردبريس اليها, إذا تم التأشير على الخيار في الأعلى. يجب ان تكون الصفحة المعاد التوجيه اليها هي التي تحتوي على كود الإختصار [login_form]"
+
+#: includes/admin-pages/settings.php:529
+msgid "Email IPN reports"
+msgstr "تقارير بريد IPN الإلكترونية"
+
+#: includes/admin-pages/settings.php:533
+msgid "Check this to send an email each time an IPN request is made with PayPal. The email will contain a list of all data sent. This is useful for debugging in the case that something is not working with the PayPal integration."
+msgstr "اشر على هذا المربع لارسال بريد الكتروني في كل مرة يتطلب IPN المصنوع بواسطة الباي بال. البريد الإلكتروني سيحتوي على قائمة بكل البيانات التي يتم ارسالها. هذا الخيار مفيد في حالة التنقيح إذا حصل شيء ما لا يعمل بتكامل مع الباي بال."
+
+#: includes/admin-pages/settings.php:544
+msgid "Save Options"
+msgstr "حفظ الخيارات"
+
+#: includes/admin-pages/subscription-levels.php:17
+#: includes/admin-pages/subscription-levels.php:31
+msgid "Order"
+msgstr "ترتيب"
+
+#: includes/admin-pages/subscription-levels.php:24
+#: includes/admin-pages/subscription-levels.php:38
+msgid "Subscribers"
+msgstr "المشتركين"
+
+#: includes/admin-pages/subscription-levels.php:80
+msgid "No subscription levels added yet."
+msgstr "لم يتم إضافة اي مستوى اشتراك حتى اللحظة."
+
+#: includes/admin-pages/subscription-levels.php:84
+msgid "Add New Level"
+msgstr "إضافة مستوى جديد"
+
+#: includes/admin-pages/subscription-levels.php:94
+msgid "The name of the membership level."
+msgstr "اسم مستوى العضوية."
+
+#: includes/admin-pages/subscription-levels.php:103
+msgid "Membership level description. This is shown on the registration form."
+msgstr "اشتراك مستوى العضوية. هذا سوف يعرض في حقل التسجيل"
+
+#: includes/admin-pages/subscription-levels.php:119
+msgid "Level of accesss this subscription gives. Leave at 0 for default or you are unsure what this is."
+msgstr "مستوى الوصول المعطى لهذا الإشتراك. اترك القيمة الإفتراضية 0 إذا لم تكن تعلم ما هذا."
+
+#: includes/admin-pages/subscription-levels.php:165
+msgid "Add Membership Level"
+msgstr "مستوى المشتركين"
+
+#: includes/admin-pages/view-member.php:5
+msgid "View Member Details:"
+msgstr "عرض بيانات العضو:"
+
+#: includes/admin-pages/view-member.php:7
+msgid "Go Back"
+msgstr "الرجوع إلى الخلف"
+
+#: includes/admin-pages/view-member.php:38
+msgid "Subscription key"
+msgstr "مفتاح الإشتراك"
+
+#: includes/admin-pages/view-member.php:46
+msgid "Signup Method"
+msgstr "طريقة التسجيل"
+
+#: includes/admin-pages/view-member.php:54
+msgid "Regular user signup"
+msgstr "تسجيل مستخدم عادي"
+
+#: includes/admin-pages/view-member.php:57
+msgid "Manually added by an admin"
+msgstr "تم إضافته بواسطة المدير"
+
+#: includes/admin-pages/view-member.php:66
+msgid "Discount codes used"
+msgstr "اكواد تخفيض مستخدمة"
+
+#: includes/gateways/paypal/paypal.php:125
+msgid "IPN report"
+msgstr "تقرير IPN"
+
+#: includes/gateways/paypal/paypal.php:288
+msgid "Invalid IPN"
+msgstr "IPN غير صالح"
+
+#, fuzzy
+#~ msgid "Register &raquo;"
+#~ msgstr "التالي &raquo;"

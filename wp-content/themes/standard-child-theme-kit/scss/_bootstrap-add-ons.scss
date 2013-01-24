@@ -1,0 +1,90 @@
+.btn [class^="icon-"], .nav [class^="icon-"], .btn [class*=" icon-"], .nav [class*=" icon-"] {
+vertical-align: inherit;
+margin-top: 0px;
+padding-top: 0px;
+margin-bottom: 0px;
+padding-bottom: 3px;
+}
+
+.navbar .dropdown-menu .caret {
+  position: relative;
+  top: -4px;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid black;
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.btn-flat {
+  filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+  @include box-shadow(0px 2px $midgray);
+  background-image:none;
+  border:0;
+  @include border-radius(0);
+  letter-spacing: .1em;
+    &:active {
+      position: relative;
+      top: 2px;
+      box-shadow: 0 0;
+    }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+/*#film-page .offset1 {
+  margin-left: 95px;
+}*/
+
+blockquote {
+  border-left: 2px solid $lightgray;
+  @include box-shadow(#7CAACD -5px 0px);
+  font-style: italic;
+    p {
+      color: lighten($lightgray, 10%);
+    }
+}
+
+.img-rounded {
+    -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+        border-radius: 4px;
+}
+
+.img-circle {
+    -webkit-border-radius: 500px;
+      -moz-border-radius: 500px;
+        border-radius: 500px;
+  margin-bottom: 0;
+}
+
+ul.inline, ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+
+ul.inline > li, ol.inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+
+.btn-group .btn:first-child, .btn-group .dropdown-toggle {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}

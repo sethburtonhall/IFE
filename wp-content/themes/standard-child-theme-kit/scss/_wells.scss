@@ -1,5 +1,3 @@
-/* ------------------------------------------------------------------------ Wells*/
-
 .well {
   position: relative;
   padding: 65px 19px 19px 19px;
@@ -13,16 +11,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $headerFont;
   @include adjust-font-size-to(18px);
   font-weight: bold;
-  color: $darkgray;
+  color: $midgray;
   padding: 14px 28px 14px 8px;
   line-height: 1em;
+  border-bottom: $lightgray 2px solid;
+  letter-spacing: .1em;
 }
 
 .global-well {
   background-color: lighten($blue, 20%);
+  padding-top: 73px;
 }
 
 .global-well::before {
@@ -93,6 +94,7 @@
   background: $darkgray url('../images/video.png') no-repeat 97% 50%;
   @include background-size(30px auto);
   color: #fff;
+  border-bottom: #fff 2px solid;
 }
 
 .step-one-well {
@@ -104,12 +106,12 @@
   @include background-size(43px auto);
 }
 
-.step-one-well p,
+/*.step-one-well p,
 .step-two-well p,
 .step-three-well p,
 .step-four-well p {
   margin-bottom: 0px;
-}
+}*/
 
 .step-two-well {
   background-color: lighten($yellow, 20%);
@@ -137,3 +139,25 @@
   background: $red url('../images/handshake.png') no-repeat 93% 50%;
   @include background-size(45px auto);
 }
+
+.well blockquote {
+  border-color: $lightgray;
+  margin-bottom: 30px;
+}
+
+.login-well {
+  background-color: lighten($green, 20%);
+  color: $lightgray;
+  padding: 60px 10px 10px;
+}
+
+.login-well::before {
+  background: $green url('../images/symbol2.png') no-repeat 98% 50%;
+  @include background-size(30px auto);
+}
+
+.subscribe-well {
+  background-color: lighten($green, 20%);
+  padding: 20px;
+}
+
