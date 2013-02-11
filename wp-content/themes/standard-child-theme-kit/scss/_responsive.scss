@@ -104,7 +104,22 @@ padding: 0 5px 9px;
   padding-right: $basespace;
 }
 
+.video-well, .poster-well {
+  padding: 74px 19px 19px 19px;
 }
+
+}
+
+
+/* Mobile to Portrait Tablet */
+@media only screen and (max-width: 768px) {
+
+.video-well, .poster-well {
+  padding: 68px 14px 15px 14px;
+}
+
+}
+
 
 /* Landscape Tablets */
 @media (min-width: 768px) and (max-width: 979px) {

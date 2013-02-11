@@ -85,12 +85,13 @@
   margin-bottom: 0px;
 }
 
-.video-well {
+.video-well, .poster-well {
   background-color: lighten($darkgray, 40%);
   margin-bottom: $basespace;
+  padding: 65px 19px 19px 19px;
 }
 
-.video-well::before {
+.video-well::before, .poster-well::before {
   background: $darkgray url('../images/video.png') no-repeat 97% 50%;
   @include background-size(30px auto);
   color: #fff;

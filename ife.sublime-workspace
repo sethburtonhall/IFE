@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"add",
+				"add_action"
+			],
+			[
+				"nth-chil",
+				":nth-child(|)"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"divider",
+				"divider2	divider2"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
 				"octo",
 				"octo	Backtick Code"
 			],
@@ -40,20 +76,8 @@
 				"text-decoration"
 			],
 			[
-				"padding",
-				"padding-left"
-			],
-			[
-				"font",
-				"font-weight"
-			],
-			[
 				"u",
 				"url()"
-			],
-			[
-				"back",
-				"background-image"
 			],
 			[
 				"font-s",
@@ -74,10 +98,6 @@
 			[
 				"url",
 				"url(image-url.gif)"
-			],
-			[
-				"margin",
-				"margin-left"
 			],
 			[
 				"border-b",
@@ -235,31 +255,39 @@
 			"file": "wp-content/themes/standard-child-theme-kit/scss/global.scss",
 			"settings":
 			{
-				"buffer_size": 7487,
+				"buffer_size": 7118,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/standard-child-theme-kit/scss/_wells.scss",
+			"file": "wp-content/themes/standard-child-theme-kit/includes/member-details.php",
 			"settings":
 			{
-				"buffer_size": 3069,
+				"buffer_size": 1746,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/standard-child-theme-kit/header.php",
+			"file": "wp-content/themes/standard-child-theme-kit/functions.php",
 			"settings":
 			{
-				"buffer_size": 9402,
+				"buffer_size": 13878,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "  <div class=\"row-fluid\">\n    <div class=\"span12\">\n  [caption align=\"aligncenter\" width=\"900\"]<img class=\"size-full\" title=\"Wrightsville\" src=\"[bloginfo key='stylesheet_directory']/images/wrightsville-logo.jpg\" alt=\"Wrightsville\" width=\"900\" height=\"392\" />Wrightsville - Where Love Conquers Fear[/caption]\n    </div>\n  </div>\n\n<div class=\"container-fluid\">\n  <div id=\"film-page\" class=\"row-fluid\">\n      <div class=\"span7\">\n      <h1>The Motion Picture</h1>\n      <h3>Tagline:</h3>\n      <p>Where love conquers fear.</p>\n      <h3>Logline:</h3>\n      <p>A college coed confronts her fear of breast cancer and reveals a dark secret about her mother’s death.</p>\n      <h2>Rating</h2>\n      PG-13\n      Production Company: Highway 29 Motion Pictures\n      <h3>Synopsis:</h3>\n      <p></p>\n      <h3>Themes:</h3>\n      <p></p>\n      <h3>Production Overview:</h3>\n      <p></p>\n      <h3>Target Market:</h3>\n      <p></p>\n      <h3>Marketing Hook:</h3>\n      <p></p>\n    </div>\n    \n    <div class=\"span5\">\n      <div class=\"row-fluid\">\n        <div rel=\"The Investment\" class=\"span12 well investment-well\">\n          <p></p>\n          <h3>Marketing Attributes:</h3>\n          <p></p>\n          <h3>Features of the Investment:</h3>\n          <ul>\n            <li>100% Priority Return</li>\n            <li>100% Tax Deduction</li>\n            <li>40% Percentage of LLC (40% Profit Distribution after breakeven)</li>\n          </ul>\n        </div>\n      </div>\n\n      <div class=\"row-fluid\">\n        <div rel=\"Video\" class=\"span12 well video-well\">\n          <iframe src=\"http://player.vimeo.com/video/21266868\" width=\"500\" height=\"281\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\n        </div>\n      </div>\n\n      <div class=\"row-fluid\">\n        <div rel=\"Get More Info\" class=\"span12 well get-info-well\"><p> To see the full business plan and register as an IFE Accredited Investor, click the green button below.</p>\n        <a class=\"btn btn-success btn-large btn-flat\" href=\"#myModal\" data-toggle=\"modal\">Get More Info</a>\n      </div>\n    \n      <div id=\"myModal\" class=\"modal hide fade\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h3>Please fill out this form. Thank you.</h3>\n        </div>\n        <div class=\"modal-body\">\n          [customcontact form=3]\n        </div>\n      </div>\n\n      </div>\n\n  </div>\n</div>\n</div>",
+			"file": "wp-content/themes/standard-child-theme-kit/ife-login.php",
 			"settings":
 			{
-				"buffer_size": 2449,
+				"buffer_size": 29614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/standard-child-theme-kit/ife-login-header.php",
+			"settings":
+			{
+				"buffer_size": 6576,
 				"line_ending": "Unix"
 			}
 		}
@@ -267,12 +295,28 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 331.0,
 		"selected_items":
 		[
 			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
 				"html",
 				"Set Syntax: HTML"
+			],
+			[
+				"stack",
+				"Stackoverflow: Search Selection"
+			],
+			[
+				"mailto",
+				"Snippet: <a href=\"mailto:\">"
+			],
+			[
+				"anchor",
+				"Snippet: anchored-text"
 			],
 			[
 				"lint",
@@ -527,7 +571,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 593.0
+		"width": 602.0
 	},
 	"console":
 	{
@@ -544,17 +588,41 @@
 	},
 	"file_history":
 	[
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_font-awesome-ie7.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_font-awesome.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/old font/_font-awesome.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_bootstrap-add-ons.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_responsive.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/new font/_font-awesome-ie7.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-login.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/login-header.php",
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/header.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/loginheader.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/login_header.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_wells.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_responsive.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_nav.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_member-profile.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/includes/member-details.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/functions.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_study.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_font-awesome.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_bootstrap-add-ons.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/js/script.js",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/footer.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_font-awesome-ie7.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/global.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_font-awesome-old.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/plugins/IFE-custom-admin-bar-logo/ife-custom-admin-bar-logo.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/includes/random-snippets.html",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_subscribe.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_mixins.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/includes/widget code",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/includes/member.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/gravatar.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_variables.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/_sidebar.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard/js/lib/bootstrap/bootstrap.js",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/investment-spotlight.php",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/old font/_font-awesome.scss",
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/new font/_font-awesome-ie7.scss",
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/old font/_font-awesome-ie7.scss",
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/css/global.css",
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/config.rb",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/standard-child-theme-kit/scss/global.scss",
 		"/Users/M8M/.bash_profile",
 		"/Users/M8M/.zshrc",
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/ife/wp-content/themes/config.rb",
@@ -647,31 +715,7 @@
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/bylaws.php",
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/application/paypal.php",
 		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/application/online-app.php",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/send_form_email.php",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global_v1.0.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_config.yml",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/.sass-cache/0717e7fc8bac787e981ce39fa7e64424c7fbf1df/global.scssc",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/js/app.js",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global?v1.0.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/global.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/fruitcake",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/fruitcake.php",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/fruitcake/",
-		"/Users/M8M/Library/Application Support/Flow/Editor/home5/middleei/public_html/tifn/_site/fruitcake.php",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/_plugins/version.rb",
-		"/Users/M8M/Library/Caches/TemporaryItems/.htaccess",
-		"/Users/M8M/Library/Application Support/Flow/Editor/home5/middleei/public_html/.htaccess",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/config.rb",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/jekyll/_config.yml",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_skeleton.scss",
-		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/User/SublimeLint.sublime-settings",
-		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/sublimelint/SublimeLint.sublime-settings",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_variables.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/index-old.php",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_zen-grids.scss",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/scss/_grid.scss",
-		"/Users/M8M/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/css/style.css"
+		"/Users/M8M/Dropbox/webdesign/localroot_db/htdocs/TIFN/send_form_email.php"
 	],
 	"find":
 	{
@@ -690,6 +734,89 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"css",
+			"colors",
+			"css",
+			"title",
+			"lost",
+			"login",
+			"title",
+			"site",
+			"cover",
+			"iframe",
+			"well",
+			"10",
+			"19",
+			"btn",
+			"icon",
+			"2",
+			"LLC Agreement",
+			"downloads/Investment Memorandum",
+			"ppm",
+			"PPM",
+			"ppm",
+			"PPM",
+			"ppm",
+			"PPM",
+			"ppm",
+			"PPM",
+			"..",
+			"<h1>Downloads</h1>",
+			"icon-magic",
+			"icon-file-alt",
+			"icon",
+			"cog",
+			"study",
+			"icon-large",
+			"Private Placement Memorandum",
+			"martop",
+			"span8",
+			"&nbsp;",
+			"<h1>Downloads</h1>",
+			"admin",
+			"get_",
+			"get_field",
+			"1",
+			"amount_1",
+			"1",
+			"film_1",
+			"1",
+			"twitter",
+			"2",
+			"1",
+			"custom",
+			"ife_investment_details_custom_fields",
+			"my_save_extra_profile",
+			"my_show_extra_profile",
+			"1",
+			"film_1",
+			"1",
+			"ilm_1",
+			"1",
+			"btn-block",
+			"step",
+			"spotlight",
+			"top",
+			"spot",
+			"hero",
+			"theme",
+			"btn-block",
+			"inline",
+			"nav",
+			"artisan",
+			"avatar",
+			"gravatar",
+			"btndfadf",
+			"btn",
+			"flat",
+			"></",
+			"sub",
+			"rdp",
+			"sidebar",
+			"submit",
+			"boot",
+			"modal",
+			"boot",
 			"btn",
 			"-4",
 			"btn",
@@ -734,90 +861,7 @@
 			"font-size",
 			"font",
 			"#",
-			"px",
-			"#about",
-			"fruit",
-			"grids",
-			"top",
-			"5px",
-			"header",
-			"614px",
-			"content",
-			"links",
-			"prefix",
-			"pref",
-			"content",
-			"container_12",
-			"container-12",
-			"scrollspy",
-			"easing",
-			"Fruitcake",
-			"top",
-			"10",
-			"contact",
-			"h3",
-			"linear",
-			"ease",
-			"options",
-			"1px",
-			"20deg",
-			"90deg",
-			"8s",
-			"10px",
-			"6s",
-			"3s",
-			"5s",
-			"bounce",
-			"6s",
-			"8px",
-			"50",
-			"8px",
-			"1s",
-			"20px",
-			"0",
-			"15px",
-			"30px",
-			"20px",
-			"bold",
-			"E3",
-			"top",
-			"text",
-			"content",
-			"logo",
-			"header",
-			"2000",
-			"container",
-			"2000",
-			"2000px",
-			"header",
-			"file",
-			"h2",
-			"h1",
-			"footer",
-			"super+k",
-			"keys",
-			"sid",
-			"0px",
-			"m8m",
-			"footer",
-			"shadow",
-			"footer",
-			"&nbsp;",
-			"box-sizing",
-			"auto",
-			"em",
-			"class",
-			"word",
-			"Word",
-			"word",
-			"Word",
-			"word",
-			"h3",
-			"h2",
-			"block",
-			"spotlight",
-			"boot",
-			"about"
+			"px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -870,7 +914,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -878,135 +922,15 @@
 					"file": "wp-content/themes/standard-child-theme-kit/scss/global.scss",
 					"settings":
 					{
-						"buffer_size": 7487,
+						"buffer_size": 7118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								162,
-								139
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"xiki": false
-						},
-						"translation.x": 1.0,
-						"translation.y": 2039.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "wp-content/themes/standard-child-theme-kit/scss/_wells.scss",
-					"settings":
-					{
-						"buffer_size": 3069,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1830,
+								1830
 							]
 						],
 						"settings":
@@ -1020,25 +944,38 @@
 							"xiki": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2100.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "wp-content/themes/standard-child-theme-kit/header.php",
+					"buffer": 1,
+					"file": "wp-content/themes/standard-child-theme-kit/includes/member-details.php",
 					"settings":
 					{
-						"buffer_size": 9402,
+						"buffer_size": 1746,
 						"regions":
 						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										49,
+										99
+									]
+								],
+								"scope": "variable.parameter"
+							}
 						},
 						"selection":
 						[
 							[
-								3184,
-								3076
+								1110,
+								1110
 							]
 						],
 						"settings":
@@ -1048,34 +985,84 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false,
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
 							"xiki": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1213.0,
+						"translation.y": 358.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
+					"file": "wp-content/themes/standard-child-theme-kit/functions.php",
 					"settings":
 					{
-						"buffer_size": 2449,
+						"buffer_size": 13878,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								695,
-								690
+								10885,
+								10885
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
 							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"xiki": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7196.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/standard-child-theme-kit/ife-login.php",
+					"settings":
+					{
+						"buffer_size": 29614,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										23952,
+										23958
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								86,
+								46
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
@@ -1083,6 +1070,39 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/standard-child-theme-kit/ife-login-header.php",
+					"settings":
+					{
+						"buffer_size": 6576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								474,
+								431
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"xiki": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1139,6 +1159,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"resp",
+				"standard-child-theme-kit/scss/_responsive.scss"
+			],
+			[
+				"member",
+				"standard-child-theme-kit/scss/_member-profile.scss"
+			],
 			[
 				"page",
 				"source/_layouts/page.html"

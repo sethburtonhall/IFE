@@ -31,7 +31,7 @@
       echo '</div>';
 
       // hides user's film investments and amounts if none exist
-      // 
+
       global $current_user; 
       get_currentuserinfo();
       $author_id = $current_user->ID;

@@ -327,6 +327,10 @@ function ife_display_payment_history( $user ) {
 function my_login_logo() { ?>
     <style type="text/css">
 
+        html {
+        margin-top: 0px !important;
+        }
+
         .login.login-action-login.wp-core-ui {
           background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/study-bg.jpg) 50% 50%;
           -webkit-background-size: cover;

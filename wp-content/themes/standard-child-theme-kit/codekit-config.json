@@ -2,6 +2,17 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8248",
   "files" : {
+    "\/images\/harmonia-poster.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/harmonia-poster.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/harmonia-poster.jpg",
+      "initialSize" : 813110,
+      "fileType" : 4096
+    },
     "\/images\/first-look.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -13,15 +24,6 @@
       "initialSize" : 118378,
       "fileType" : 4096
     },
-    "\/header.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/header.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/images\/twitter.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -32,6 +34,15 @@
       "outputAbbreviatedPath" : "\/images\/twitter.png",
       "initialSize" : 2630,
       "fileType" : 8192
+    },
+    "\/header.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/header.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/faq.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -118,16 +129,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/js\/app.js" : {
+    "\/images\/jobs-act.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/app.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/app-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/images\/jobs-act.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/jobs-act.jpg",
+      "initialSize" : 34447,
+      "fileType" : 4096
     },
     "\/images\/facebook.png" : {
       "ignoreWasSetByUser" : 0,
@@ -160,17 +171,6 @@
       "initialSize" : 1374222,
       "fileType" : 4096
     },
-    "\/js\/script.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/script.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/script-ck.js",
-      "fileType" : 64
-    },
     "\/js\/lib\/jquery.fitvids.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -180,6 +180,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/lib\/jquery.fitvids-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/app.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/app.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/app-ck.js",
       "fileType" : 64
     },
     "\/scss\/_variables.scss" : {
@@ -194,16 +205,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/images\/jobs-act.jpg" : {
+    "\/js\/script.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/jobs-act.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/jobs-act.jpg",
-      "initialSize" : 34447,
-      "fileType" : 4096
+      "inputAbbreviatedPath" : "\/js\/script.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/script-ck.js",
+      "fileType" : 64
     },
     "\/images\/best-practices.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -327,6 +338,15 @@
       "initialSize" : 621542,
       "fileType" : 4096
     },
+    "\/ife-login.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/ife-login.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/includes\/random-snippets.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -423,6 +443,37 @@
       "initialSize" : 1577,
       "fileType" : 8192
     },
+    "\/images\/pen.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/pen.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/pen.png",
+      "initialSize" : 795,
+      "fileType" : 8192
+    },
+    "\/js\/theme.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/theme.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/theme-ck.js",
+      "fileType" : 64
+    },
+    "\/investment-spotlight.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/investment-spotlight.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/images\/bigfoot-logo.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -445,37 +496,6 @@
       "outputAbbreviatedPath" : "\/css\/global.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/investment-spotlight.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/investment-spotlight.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/images\/pen.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/pen.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/pen.png",
-      "initialSize" : 795,
-      "fileType" : 8192
-    },
-    "\/js\/theme.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/theme.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/theme-ck.js",
-      "fileType" : 64
     },
     "\/images\/harmonia-logo.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -626,17 +646,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/scss\/_bootstrap-add-ons.scss" : {
+    "\/images\/investment2.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scss\/_bootstrap-add-ons.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_bootstrap-add-ons.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/images\/investment2.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/investment2.png",
+      "initialSize" : 971,
+      "fileType" : 8192
     },
     "\/scss\/_font-awesome-ie7.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -650,16 +669,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/images\/investment2.png" : {
+    "\/scss\/_bootstrap-add-ons.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/investment2.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/investment2.png",
-      "initialSize" : 971,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/scss\/_bootstrap-add-ons.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_bootstrap-add-ons.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/images\/loop.png" : {
       "ignoreWasSetByUser" : 0,
@@ -707,6 +727,15 @@
       "initialSize" : 10372,
       "fileType" : 8192
     },
+    "\/ife-login-header.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/ife-login-header.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/functions.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -727,14 +756,16 @@
       "initialSize" : 790,
       "fileType" : 8192
     },
-    "\/kses.php" : {
+    "\/images\/metrics.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/kses.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/images\/metrics.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/metrics.png",
+      "initialSize" : 286,
+      "fileType" : 8192
     },
     "\/images\/video.png" : {
       "ignoreWasSetByUser" : 0,
@@ -747,27 +778,26 @@
       "initialSize" : 1189,
       "fileType" : 8192
     },
-    "\/js\/lib\/jquery.fittext.js" : {
+    "\/footer.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/lib\/jquery.fittext.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/lib\/jquery.fittext-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/footer.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
-    "\/images\/metrics.png" : {
+    "\/scss\/_study.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/metrics.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/metrics.png",
-      "initialSize" : 286,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/scss\/_study.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_study.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/scss\/_responsive.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -792,23 +822,23 @@
       "initialSize" : 539171,
       "fileType" : 4096
     },
-    "\/js\/script-ck.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/script-ck.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/script-ck-ck.js",
-      "fileType" : 64
-    },
-    "\/footer.php" : {
+    "\/js\/lib\/jquery.fittext.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/footer.php",
+      "inputAbbreviatedPath" : "\/js\/lib\/jquery.fittext.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/lib\/jquery.fittext-ck.js",
+      "fileType" : 64
+    },
+    "\/kses.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/kses.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -823,27 +853,6 @@
       "outputAbbreviatedPath" : "\/js\/admin.template-sitemap-ck.js",
       "fileType" : 64
     },
-    "\/scss\/_study.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scss\/_study.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_study.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/includes\/member-details.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/includes\/member-details.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/images\/maf-slide.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -855,17 +864,25 @@
       "initialSize" : 356768,
       "fileType" : 4096
     },
-    "\/scss\/_member-profile.scss" : {
+    "\/includes\/member-details.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/includes\/member-details.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/js\/script-ck.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scss\/_member-profile.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_member-profile.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/js\/script-ck.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/script-ck-ck.js",
+      "fileType" : 64
     },
     "\/images\/info.png" : {
       "ignoreWasSetByUser" : 0,
@@ -888,6 +905,18 @@
       "outputAbbreviatedPath" : "\/images\/glasses.png",
       "initialSize" : 1197,
       "fileType" : 8192
+    },
+    "\/scss\/_member-profile.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scss\/_member-profile.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_member-profile.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     }
   },
   "manualImportLinks" : [
